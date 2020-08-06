@@ -1,0 +1,1 @@
+{'Pillow', 'django', 'registration', 'timezone', 'field', 'rosetta', 'realtime', 'git', 'https', 'github', 'com', 'anishmenon', 'upgrade', 'pip', 'install', 'treebeard', 'linguist', 'sudo', 'apt', 'get', 'python'}

@@ -1,0 +1,1 @@
+[{'word': 'Meta', 'menu': 'SignUpform', 'kind': 'c', 'abbr': 'Meta: <class>'}, {'word': 'SignUpform', 'menu': '[I]', 'kind': 'c', 'abbr': 'SignUpform(forms.Modelform): <class>'}, {'word': 'model', 'menu': 'SignUpform.Meta', 'kind': 'v', 'abbr': 'model = SignUp'}]

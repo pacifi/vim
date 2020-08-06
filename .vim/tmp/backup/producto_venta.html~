@@ -1,0 +1,72 @@
+{% extends "base_venta.html" %}
+{% block title %} Lista de Productos {% endblock %}
+{% block scripts %}
+    <script>
+    $(document).ready(function(){
+     $("a.compra").click(function(evt){
+         console.log("click")
+         id = $(this).attr("id")
+         $.get("ventas/venta/producto/"+id+"/",function(){
+             $.get("{% url 'ventas:get_carrito' %}",function(data){
+                 $("#cuerpo_carrito").html(data)
+             })
+         });
+     });
+    });
+    </script>
+{% endblock scripts %}
+{%block content %}
+<h3>Catalogo de Productos:</h3>
+{% if user.is_authenticated %}
+<a href="{% url 'compras:crear_orden_compra' %}" class="btn btn-info"><i class="glyphicon glyphicon-plus"></i> Nuevo</a><br>
+{% endif %}
+<br>
+{% if productos %}
+    <table class="table table-hover">
+    	<thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                </tr>
+        </thead>
+    {% for p in productos %}
+     	<tbody>
+     		<tr>
+				<td>{{ p.producto.nombre }}</td>
+				<td>{{ p.producto.p_venta }}</td>
+				<td>{{ p.cantidad }}</td>
+                <td><a class="btn btn-default" href="{% url 'compras:detalle_orden_compra' p.pk %}"><i class="glyphicon glyphicon-search"></i>   Ver</a></td>
+				<td><a class="btn btn-info" id="{{ p.id }}"><i class="glyphicon glyphicon-shopping-cart"></i> Añadir al carrito</a></td>
+				{% if user.is_authenticated and user.is_staff %}
+                <td><a class="btn btn-default" href="{% url 'compras:editar_orden_compra' p.pk %}"><i class="glyphicon glyphicon-pencil"></i>  Editar </a></td>
+				{% endif %}				
+			</tr>
+		</tbody>
+	{% endfor %}
+    </table>
+	
+{% else %}
+	<h2>No existen productos activos a la venta :( </h2>
+{% endif %}
+<br>
+{% if productos %}
+    <div class="pagination">
+    <ul class="pagination">
+        <li><a href="{{page_request_var}}=1"> << </a></li>
+	{% if productos.has_previous %}
+    <li><a href="?{{page_request_var}}={{productos.previous_page_number }}/"> Prev </a></li>
+	{% else %}
+		<li><a href="#"> Prev </a></li>
+	{% endif %}
+	{% if productos.has_next %}
+    <li><a href="?{{page_request_var}}={{productos.next_page_number }}/"> Next </a></li>
+	{% else %}
+		<li><a href="#"> Next </a></li>
+	{% endif %}
+    <li><a href="?{{page_request_var}}={{productos.paginator.num_pages }} "> >> </a><li>
+	</ul>
+	</div>
+	<h4> Página {{ productos.number }} de {{ productos.paginator.num_pages }}</h4>
+{% endif %}
+{% endblock %}

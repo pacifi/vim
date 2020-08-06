@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system("clear")
+import sys
+
+if len(sys.argv) < 3:
+    print("Usa: grepword.py  trabaja en_arhivo1 [en_archivo2 [...en_arhivoN]]")
+    sys.exit()
+
+word = sys.argv[1]
+
+for filename in sys.argv[2:]:
+    # Usa 'rb' en vez de 'r' si se trata de un fichero binario.
+    # rb => Archivo binario, example: .doc, .pdf => open(filename, 'rb')
+    # r => Archivo normal, example: .txt => open(filename, 'r')
+    for lino, line in enumerate(open(filename, 'rb'), start=1):
+        if word in line:
+            print("{0}:{1}:{2:.40}".format(filename, lino, line.rstrip()))

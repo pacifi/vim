@@ -1,0 +1,124 @@
+DISEÑO DE UNA SALIDA EFECTIVA
+
+La salida es información que se entrega a los usuarios por medio del sistema de
+información a través de intranets, extranets o la World Wide Web.
+Los usuarios califican el mérito del sistema, solamente
+tomando la salida como único factor.
+
+Objetivos de Diseño de la Salida
+1. Diseñar la salida para servir al propósito previsto.
+2. Diseñar la salida para ajustarla al usuario.
+3. Entregar la cantidad apropiada de salida.
+4. Asegurarse que la salida esté donde se necesite.
+5. Proveer la salida en forma oportuna.
+6. Elegir el método de salida correcto.
+
+Es necesario relacionar el contenido de la salida con el método de salida, se
+debe pensar la salida en un sentido generalizado, hay salidas internas como
+externas. Las salidas externas deben incluir instrucciones para que el receptor
+pueda utilizarlos en forma correcta; las salidas internas incluyen varios
+informes para los encargados de tomar decisiones, también incluyen los informes
+históricos y los informes de excepciones.
+
+Tecnologías de salida:
+1. Impresoras.- Factores clave de las Impresoras:
+    1.1 Confiabilidad
+    1.2 Compatibilidad con software y hardware.
+    1.3 Soporte del fabricante.
+2. Pantallas como salida
+3. Video, audio y animación
+4. CD-ROM y DVD
+5. Salida Electrónica.- Email, sitios Web, blogs y fuentes RSS
+6. Tecnología PULL
+7. Tecnología PUSH
+
+Factores a considerar al elegir la tecnología de salida
+1. ¿Quién utilizará (verá) la salida (calidad requerida)?
+2. ¿Cuántas personas necesitan la salida?
+3. ¿Dónde se necesita la salida (distribución, logística)?
+4. ¿Cuál es el propósito de la salida? ¿Qué tareas de usuario y organizacionales se admiten?
+5. ¿Cuál es la velocidad con la que se necesita la salida?
+6. ¿Con qué frecuencia se accederá a la salida?
+7. ¿Cuánto tiempo se almacenará (o se debe almacenar) la salida?
+8. ¿Bajo qué leyes especiales se produce, almacena y distribuye la salida?
+9. ¿Cuáles son los costos iniciales y continuos del mantenimiento y los suministros?
+10. ¿Cuáles son los requerimientos humanos y ambientales (accesibilidad,
+absorción de ruido, temperatura, controlada, espacio para equipo, cableado y 
+proximidad a los transmisores o puntos de acceso Wi-Fi; es decir, los 
+“”puntos calientes” o hot spots) para las tecnologías de salida?
+
+Al examinar cada factor por separado, usted podrá ver las interrelaciones y cómo se pueden realizar concesiones
+entre uno y otro en un sistema específico.
+
+Comprender como afecta la predisposición en la Salida a los Usuarios
+
+1. Cómo reconocer la predisposición en la forma en que se utiliza la salida:
+   1.1 Las presentaciones de la salida se predisponen involuntariamente en tres formas principales:
+       1.1.1 En el orden de la información.
+       1.1.2 En el establecimiento de los límites aceptables.
+       1.1.3 En la elección de las gráficas.
+   1.2 Cómo evitar la predisposición al diseñar la salida:
+       1.2.1 Estar consciente de las fuentes de predisposición.
+       1.2.2 Crear un diseño interactivo de la salida durante la creación de prototipos, fase en la que se incluya a los
+       usuarios y una variedad de sistemas configurados en forma distinta al momento de evaluar la apariencia de
+       los documentos Web.
+       1.2.3 Trabajar con los usuarios de manera que estén informados de las predisposiciones de la salida y puedan
+       reconocer las implicaciones al personalizar sus pantallas.
+       1.2.4 Crear una salida flexible que permita a los usuarios modificar límites y rangos.
+       1.2.5 Capacitar a los usuarios para que se basen en varias salidas para realizar “pruebas de realidad” con la salida
+       del sistema.
+   1.3 Cómo diseñar la salida impresa.- La fuente de información que debemos incluir en los informes es el diccionario de datos
+                                        Los informes se clasifican en tres categorías: detallados, por excepciones y sintetizados.
+   1.4 Lineamientos para el diseño de informes impresos
+       1.4.1 CONVENCIONES DE DISEÑO DE LOS INFORMES
+       1.4.2 CALIDAD DE PAPEL, TIPO Y TAMAÑO
+       1.4.3 CONSIDERACIONES DE DISEÑO: Atributos funcionales
+
+Cómo diseñar salida de pantallas
+1. Lineamientos para el diseño de pantallas:
+   1.1 Mantenga la pantalla simplificada.
+   1.2 Mantenga la presentación consistente.
+   1.3 Facilite el movimiento del usuario entre la salida que se muestra en la pantalla.
+   1.4 Cree una pantalla atractiva y agradable.
+2. Uso de salida gráfica en el diseño de pantallas .- Al diseñar la salida 
+   gráfica, el analista de sistemas y cualquier usuario involucrado en la 
+   creación de prototipos de diseño deben determinar: 
+   1) el propósito del gráfico
+   2) el tipo de datos que hay que mostrar
+   3) su audiencia
+   4) los efectos sobre la audiencia de distintos tipos de salida gráfica.
+3. Tableros de control .-Los tableros de control se enfocan en comunicar las 
+                         mediciones al usuario. Un ejecutivo utiliza un tablero
+                         de control para revisar las medidas de desempeño y tomar 
+                         acción si la información en la pantalla lo requiere.
+
+4. Widgets y gadgets: modificación de la metáfora del escritorio:
+   Los Widgets (como los denomina Yahoo!), los Dashboard Widgets (como los denomina Apple) y los Gad-
+   gets (como los denominan Google y Microsoft) pueden ser cualquier tipo de programa que sea útil para alguien
+   que interactúe con una computadora.
+Es importante diseñar la salida para las pantallas de los
+usuarios, en especial para DSS y Web. La estética y la utilidad son 
+imprescindibles al crear una salida bien diseñada para las pantallas. 
+Es importante producir prototipos de pantallas y documentos Web que animen a los 
+usuarios a interactuar con estos prototipos y realizar las modificaciones cuando
+se desee.
+
+Diseño de un sitio Web
+1. Lineamientos generales para diseñar sitios Web
+   1.1 USE HERRAMIENTAS PROFESIONALES
+   1.2 ESTUDIE OTROS SITIOS WEB
+   1.3 USE LOS RECURSOS QUE OFRECE LA WEB
+   1.4 EXAMINE LOS SITIOS WEB DE DISEÑADORES PROFESIONALES
+   1.5 USE LAS HERRAMIENTAS QUE APRENDIÓ
+   1.6 CONSULTE ALGUNOS LIBROS
+   1.7 ANALICE TAMBIÉN MALOS EJEMPLOS DE PÁGINAS WEB
+   1.8 CREE SUS PROPIAS PLANTILLAS
+   1.9 USE COMPLEMENTOS, AUDIO Y VIDEO CON MEDIDA
+   1.10 PLANIFIQUE: Estructura, Contenido, Texto, Gráficos, Estilo de
+        Presentación, Navegación y Promoción
+2. Mantenimiento de los sitios Web.- Los sistemas de administración de contenido 
+  (CMS) son potentes herramientas de software que pueden permitir al analista 
+  desarrollar y dar mantenimiento a sitios Web y demás aplicaciones en línea.
+3. Creación de blogs (Weblogs).- Las empresas usan blogs para publicidad y para 
+   crear redes sociales para sus consumidores, clientes y distribuidores en 
+   torno a sus productos, con lo cual crean confianza y relaciones con los clientes.

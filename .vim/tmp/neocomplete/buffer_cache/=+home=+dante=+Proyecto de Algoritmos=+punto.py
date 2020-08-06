@@ -1,0 +1,1 @@
+{'coding', 'utf', 'import', 'os', 'system', 'clear', 'class', 'Punto', 'object', 'def', '__init__', 'self', 'x', 'y', 'setxy', 'nx', 'ny', 'setx', 'sety', 'getx', 'return', 'gety', 'getxy', 'i', 'impri'}

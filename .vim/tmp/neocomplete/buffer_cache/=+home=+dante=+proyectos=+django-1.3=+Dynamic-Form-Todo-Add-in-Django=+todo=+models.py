@@ -1,0 +1,1 @@
+{'from', 'django', 'db', 'import', 'models', 'class', 'TodoList', 'Model', 'name', 'CharField', 'max_length', 'def', '__unicode__', 'self', 'return', 'TodoItem', 'help_text', 'e', 'g', 'Buy', 'milk', 'wash', 'dog', 'etc', 'list', 'ForeignKey', 'str'}

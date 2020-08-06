@@ -1,0 +1,39 @@
+body {
+    background: white url('../images/background.jpg') no-repeat right bottom;
+    padding:0;
+    margin:0;
+    outline:0;
+}
+ul li a {
+    color: #004D40;
+    font-family:Verdana, Geneva, sans-serif;
+    text-decoration:none;
+    font-size:20px;
+    padding-bottom:2px;
+}
+li a:hover{
+    border-bottom:3px solid #009688;
+    border-radius: 8px;
+}
+
+ul li{
+    padding-bottom: 10px;
+    list-style-type: None;
+}
+form {
+    padding-left: 2em;
+    padding-bottom: 20px;
+}
+h1 {
+    text-align:center;
+}
+
+img {
+    border-radius:50%;
+}
+#nav-base {
+    background:#009688;
+}
+#footer-cm {
+    background:#00bfa5;
+}

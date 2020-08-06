@@ -1,0 +1,1 @@
+{'Crear', 'entornos', 'virtuales', 'con', 'virtualenv', 'esta', 'es', 'una', 'buena', 'practica', 'para', 'tener', 'distintas', 'versiones', 'de', 'librería', 'y', 'o', 'programa', 'crear', 'un', 'proyecto', 'virtualenvwrapper', 'el', 'nombre', 'skillshare', 'mkproject'}

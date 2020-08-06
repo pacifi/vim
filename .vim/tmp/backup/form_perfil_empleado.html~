@@ -1,0 +1,28 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block estilos %}
+<style>
+    #container{
+        width:30%;
+        margin:0 auto;
+    }
+    label{
+        position: relative;
+    }
+    input,select{
+        position:relative;
+        float: right;
+    }
+
+
+</style>
+{% endblock estilos %}
+{% block content %}
+<h1>Empleado {{object.user.username|upper}}</h1>  
+<form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar"> 
+</form>  
+<a href="{% url 'listar_empleados' %}" class="volver">Volver</a>
+{% endblock content %}

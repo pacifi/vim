@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<head>
+    <link href="{% static 'css/helper.css' %}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/horizontal-centering.css' %}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/dropdown.css' %}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/default.advanced.css' %}" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<div class="wrapper" style="z-index:3">
+  <div class="container">
+    {% if user.is_authenticated %}
+    <p class="main-site">
+    Logged in as {{ user.username }}
+    </p>
+    {% endif %}
+    <h1><img src="../static/images/vimeo.com/logo_lwis.png" alt="LWIS.net" /> Registro de Compras</h1>
+    <div class="horizontal-centering"><div><div>
+     <ul id="nav" class="dropdown dropdown-horizontal">
+        <li class="first"><a href="/">Home</a></li>
+        <li class="dir">Products
+          <ul>
+            <li class="last"><a href="/productos/page/1/">New</a></li>
+          </ul>
+        </li>
+        <li class="dir">Realizar Operaciones
+            <ul>
+            <li class="first"><a href="/productos/page/1/">Productos</a></li>
+            <li class="dir">Proveedores
+                <ul>
+                  <li class="first"><a href="{% url 'proveedor_create' %}">New</a></li>
+                  <li><a href="{% url 'proveedor_list' %}">Listar Proveedores</a></li>
+                  <li class="last"><a href="{% url 'product_provee_create' %}">Agregar Producto de Proveedor</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'comprador_create' %}">Crear Comprador</a></li>
+            <li><a href="{% url 'comprashechas_create' %}">Hacer Compras</a></li>
+            <li class="last"><a href="{% url 'visualizar_compra' %}">Reporte de Registro de Compras</a></li>
+            </ul>
+        </li>
+        <li><a href="{% url 'vista_about' %}">About Us</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'vista_logout' %}"> Cerrar Sesion </a></li>
+        {% else %}
+        <li><a href="{% url 'vista_login' %}"> Login </a></li>
+        {% endif %}
+        <li class="dir last">
+          <form method="get" action="/search/">
+            <fieldset>
+              <input type="text" name="buscar" min="1" max="11" id="search" class="text" value="Search!" onfocus="if (this.value == 'Search!') this.value = '';" onblur="if (this.value == '') this.value = 'Search!';" />
+              <input type="image" src="../static/images/vimeo.com/btn_search.png" class="button" />
+            </fieldset>
+          </form>
+        </li>
+      </ul>
+
+    </div></div></div>
+  </div>
+</div>

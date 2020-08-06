@@ -1,0 +1,19 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<h1>Nuevo Categoria</h1> 
+ 
+    {% if form.errors %} 
+        <p style="color: red;"> 
+            Por favor corrige lo siguiente: 
+        </p> 
+    {% endif %} 
+ 
+    <form method="post">{% csrf_token %} 
+        <div class="field"> 
+            {{ form.nombre.errors }} 
+            <label>Nombre:</label> 
+            {{ form.nombre }} 
+        </div> 
+        <input type="submit" value="Enviar"> 
+    </form> 
+{% endblock content %} 

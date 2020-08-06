@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'url', 'views', 'app_name', 'polls', 'urlpatterns', 'r', 'IndexView', 'as_view', 'name', 'index', 'add', 'CreateView', 'create', 'P', 'pk', 'DetailView', 'detail', 'results', 'ResultsView', 'question_id', 'vote'}

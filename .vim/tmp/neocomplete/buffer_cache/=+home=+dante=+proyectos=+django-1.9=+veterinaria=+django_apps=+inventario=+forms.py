@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'models', 'Articulo', 'Categoria', 'class', 'ArticuloForm', 'ModelForm', 'Meta', 'model', 'fields', 'nombre', 'marca', 'codigo', 'estado', 'p_compra', 'p_venta', 'descripcion', 'avatar', 'CategoriaForm'}

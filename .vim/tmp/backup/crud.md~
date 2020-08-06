@@ -1,0 +1,5 @@
+CREATE -- POST
+RETRIEVE o READ -- GET -- List / Search
+UPDATE --PUT/PATH -- Edit
+DELETE -- DELETE --Delete
+

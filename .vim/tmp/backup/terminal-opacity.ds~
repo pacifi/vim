@@ -1,0 +1,3 @@
+(if (matches (window_name) "Terminal")
+(opacity 95)
+)

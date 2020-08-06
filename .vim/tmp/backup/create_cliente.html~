@@ -1,0 +1,56 @@
+{% extends "base_sistema.html" %}
+{{ block.super }}
+{% block content %}
+<h1>Nuevo Cliente</h1> 
+ 
+    {% if form.errors %} 
+        <p style="color: red;"> 
+            Por favor corrige lo siguiente: 
+        </p> 
+    {% endif %} 
+ 
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %} 
+        <div class="field"> 
+            {{ form.nombre.errors }} 
+            <label for="id_nombre">Nombre:</label> 
+            {{ form.nombre }} 
+        </div> 
+        <div class="field"> 
+            {{ form.apellido_paterno.errors }} 
+            <label for="id_apellido_paterno">Apellido Paterno:</label> 
+            {{ form.apellido_paterno }} 
+        </div>
+        <div class="field"> 
+            {{ form.apellido_materno.errors }} 
+            <label for="id_apellido_materno">Apellido Materno:</label> 
+            {{ form.apellido_materno }} 
+        </div>  
+        <div class="field"> 
+            {{ form.dni.errors }} 
+            <label for="id_dni">DNI:</label> 
+            {{ form.dni }} 
+        </div>  
+        <div class="field"> 
+            {{ form.sexo.errors }} 
+            <label for="id_sexo">Sexo:</label> 
+            {{ form.sexo }} 
+        </div>  
+        <div class="field"> 
+            {{ form.domicilio.errors }} 
+            <label for="id_domicilio">Domicilio:</label> 
+            {{ form.domicilio }} 
+        </div>  
+        <div class="field"> 
+            {{ form.telefono.errors }} 
+            <label for="id_telefono">Teléfono:</label> 
+            {{ form.telefono }} 
+        </div> 
+        <div class="field"> 
+            {{ form.avatar.errors }} 
+            <label for="id_avatar">Avatar:</label> 
+            {{ form.avatar }} 
+        </div> 
+        <input type="submit" value="Enviar"> 
+        <a href="{% url 'persona:listar_clientes' %}">Ver Clientes</a>
+    </form> 
+{% endblock content %} 

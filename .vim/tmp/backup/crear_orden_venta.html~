@@ -1,0 +1,134 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load i18n admin_urls admin_static admin_modify %}
+{% load formset_tags %}
+{% block script %}
+<script src="{% static 'jquery/jquery.js' %}"></script>
+<script src="{% static 'js/jquery-1.3.2.min.js' %}"></script>
+<script src="{% static 'jquery/jquery.formset.js' %}"></script>
+<script src="{% static 'js/dynamic-formset.js' %}"></script>
+<script src="{% static 'js/inlines.js' %}"></script>
+<script type="text/javascript">     
+    $(function() {
+        $('#id_orders_table tbody tr').formset({
+            prefix: 'ordered_items',
+            addText: 'Agregar mas Productos',
+            deleteText: 'Eliminar'
+        })
+    }) 
+</script>       
+<script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                $('.add-another').click(function(e) {
+                    e.preventDefault();
+                    var event = $.Event('django:add-another-related');
+                    $(this).trigger(event);
+                    if (!event.isDefaultPrevented()) {
+                        showAddAnotherPopup(this);
+                    }
+                });
+                $('.related-lookup').click(function(e) {
+                    e.preventDefault();
+                    var event = $.Event('django:lookup-related');
+                    $(this).trigger(event);
+                    if (!event.isDefaultPrevented()) {
+                        showRelatedObjectLookupPopup(this);
+                    }
+                });
+
+            });
+        })(django.jQuery);
+    </script>
+ <script type="text/javascript">
+(function($) {
+    var field;
+
+
+})(django.jQuery);
+</script> 
+{% endblock script %}
+{% block estilos %}
+<style type="text/css">
+    .delete-row {
+        margin-left:5px;
+    }
+</style> 
+{% endblock estilos%}
+{% block content %}
+<div>
+    <h2>Nuevo Orden de Venta</h2>  
+    <form method="post">{{ form.errors }}{% csrf_token %} 
+        <div class="field"> 
+            {{ form.as_p }}
+        </div>        
+        <fieldset>
+            <legend>Productos para mascotas</legend>
+            <div class="inline-group" id="Ventas-group">
+            <table id="id_orders_table" border="0" cellpadding="0" cellspacing="5">
+                {% for form in detalletrans_form %}
+                <div class="tabular inline-related last-related">
+                    <tbody>
+                        <tr>
+                            <td>
+                                {{ form.producto.errors }}
+                                {{ form.producto.label_tag }}
+                                {{ form.producto }} 
+                            </td>
+                            <td>
+                                {{ form.cantidad.errors }}
+                                {{ form.cantidad.label_tag }}
+                                {{ form.cantidad }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </div>
+                {% endfor %}
+            </table>
+            <a href="javascript:void(0)" id="add_more">Add Producto</a>
+            <div id="empty_form" style="display:none">
+                <table class='no_error'>
+                    {{ detalletrans_form.empty_form.as_table }}
+                </table>
+            </div>
+            <script>
+ $('form fieldset input#add-more').click(function() {
+    toSanitize = new Array('id', 'product', 'price', 'type', 'valid_from', 'valid_until');
+    cloneMore('div.formtable table tr.form-row:last', 'form', toSanitize);
+});
+
+function cloneMore(selector, type, sanitize) {
+    var newElement = $(selector).clone(true);
+    var total = $('#id_' + type + '-TOTAL_FORMS').val();
+    newElement.find(':input').each(function() {
+        var namePure = $(this).attr('name').replace(type + '-' + (total-1) + '-', '');
+        var name = $(this).attr('name').replace('-' + (total-1) + '-','-' + total + '-');
+        var id = 'id_' + name;
+        $(this).attr({'name': name, 'id': id}).removeAttr('checked');
+
+        if ($.inArray(namePure, sanitize) != -1) {
+            $(this).val('');
+        }
+
+    });
+    newElement.find('label').each(function() {
+        var newFor = $(this).attr('for').replace('-' + (total-1) + '-','-' + total + '-');
+        $(this).attr('for', newFor);
+    });
+    total++;
+    $('#id_' + type + '-TOTAL_FORMS').val(total);
+    $(selector).after(newElement);
+}
+            </script>
+            </div>
+        </fieldset>
+            {{ detalletrans_form.management_form }}
+            {{ detalletrans_form.non_form_errors }}
+            <input type="submit" value="Guardar">
+            <a href="{% url 'home:inicio' %}">Volver</a>
+    </form>  
+
+</div> 
+
+{% endblock content %} 

@@ -1,0 +1,41 @@
+# coding: utf-8
+
+import os
+os.system("clear")
+
+import numpy
+import pylab
+
+x0 = 1.0
+error = 0.00001
+maxit = 100
+i = 0
+
+print "Método de Newton Raphson"
+print "x0=%s      error=%s      maxit=%s"
+print 'i     x0        fx0       fpx0      error'
+
+while True:
+    fx0 = x0**3 + 2*x0**2 + 10*x0 - 20
+    fpx0 = 3*x0**2 + 4*x0 + 10
+    x1 = x0 - (fx0/fpx0)
+    e = abs (x1 - x0)
+    print '%s      %s      %s      %s     %s     %s'  % (i,x0,x1,fx0,fpx0,e)
+    if e<error:
+        print 'La raiz de la funcion es %s' % x1
+        print 'fx en la raiz  seleccionada es %s' % (x1**3+2*x1**2+10*x1-20)
+        break
+    if i > maxit:
+        print "Se realizó %s iteraciones  y no se encontró la raíz  de la funcion" % i
+        break
+    i=i+1
+    x0=x1
+
+x = numpy.arange(-10,10,0.00001)
+fx = x**3 + 2*x**2+10*x - 20
+pylab.plot(x,fx)
+pylab.xlabel('x')
+pylab.xlabel('fx')
+pylab.title('fx = x**3 + 2*x**2 + 10*x - 20')
+pylab.grid(True)
+pylab.show()

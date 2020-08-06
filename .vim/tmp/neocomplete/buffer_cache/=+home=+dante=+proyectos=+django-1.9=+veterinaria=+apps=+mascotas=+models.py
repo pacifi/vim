@@ -1,0 +1,1 @@
+{'from', '__future__', 'import', 'unicode_literals', 'django', 'db', 'models', 'utils', 'timezone', 'persona', 'Persona', 'class', 'Cliente', 'Model', 'ManyToManyField', 'primer_apellido', 'CharField', 'max_length', 'cuenta_banco', 'cel', 'def', '__str__', 'self', 'return', 'nombre'}

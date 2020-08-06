@@ -1,0 +1,85 @@
+{% extends "base_sistema.html" %}
+{% block estilos %}
+<style>
+    #nohistorial{
+        width:28%;
+        font-family:sans-serif;
+        color: #212121;
+        padding:2em;
+        border:2px solid #00B0FF;
+        border-radius: 12px;
+        outline:0;
+        background:#E0F7FA;
+    }
+    h3 a, h4 a {
+        text-decoration:none;
+        color:#00B8D4
+    }
+    h3 a:hover, h4 a:hover {
+        color:#006064;
+    }
+    h3 a:active, h4 a:active {
+        cursor: pointer;
+        padding: 0.5em;
+        border-radius: 8px; 
+        font-size: 16px;
+    }
+</style>
+{% endblock estilos%}
+{% block content %}
+<div>
+    {% if list_seguimientos %}
+    {% for i in list_seguimientos|slice:"1" %}
+    <h2>Estados clínicos del paciente {{i.mascota.nombre}}</h2>
+    {% endfor %}
+    <div>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Motivo</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in list_seguimientos %}
+                <tr>
+                    <td><a href="{% url 'clinica:detalle_seguimiento' i.pk %}">{{i.creacion}}</a></td>
+                    <td>{{i.motivov}}</td>
+                    <td>
+                        <li>
+                            <a href="{% url 'clinica:detalle_seguimiento' i.pk %}">Detalle</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'clinica:editar_seguimiento' i.pk %}">Editar</a>
+                        </li>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        {% for i in list_seguimientos|slice:"1" %}
+        <a href="{% url 'clinica:listar_mascotas' i.pk %}">Volver</a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div id='nohistorial'>
+        <h3>La mascota {{pet.nombre|upper}} no tiene historial</h3>
+        <i>Para agregar un nuevo historial presione</i>
+        <h3>
+            <a href="{% url 'clinica:nuevo_seguimiento' pet.slug %}">AQUÍ</a>
+        </h3>
+        <h4>
+            <a href="{% url 'clinica:listar_mascotas' pet.propietario.slug %}">Volver</a>
+        </h4>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

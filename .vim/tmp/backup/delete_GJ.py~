@@ -1,0 +1,41 @@
+# coding: utf-8
+
+import os
+os.system("clear")
+
+from sympy import *
+# import pylab as plb
+
+x, y, z = symbols("x y z", float=True)
+init_printing(use_unicode=True)
+
+print"""Eliminación de Gauss-Jordan
+
+Encuentra los valores de las variables x, y, z
+"""
+
+M = []
+f = input("Ingrese el número de filas: ")
+c = input("Ingrese el número de columnas: ")
+for i in range(f):
+    print """
+    Ecuación %i
+    """ % (int(i+1))
+    mgj = []
+    for j in range(c):
+        coefic = input("Coeficiente %s,%s: " %(i,j))
+        mgj.append(coefic)
+    M.append(mgj)
+
+Mat = Matrix(M)
+
+# M = Matrix([[2,1,-1,8],[-3,-1,2,-11],[-2,1,2,-3]])
+result =  Mat.rref()
+
+print """
+Tipo: %s""" % type(result)
+
+print """
+Resultado:
+"""
+print result

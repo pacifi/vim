@@ -1,0 +1,1 @@
+{'usr', 'bin', 'env', 'python3', 'coding', 'utf', 'import', 'os', 'system', 'clear', 'a', 's', 'join', 'split', 'd', 'int', 'i', 'for', 'in', 'range', 'len', 'if', 'sum', 'print', 'Suma', 'de', 'los', 'n', 'meros', 'en', 'lugares', 'pares', 'Multiplicado', 'x', 'impares', 'e', 'total', 'res', 'else', 'Pr', 'ximo', 'm', 'ltiplo', 'D', 'gito', 'control'}

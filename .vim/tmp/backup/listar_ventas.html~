@@ -1,0 +1,79 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+{% if list_ventas %}
+<form action="{% url 'ventas:buscar-venta' %}" method="GET">
+    <label for="q">Search: </label>
+    <input type="text" name="q" value="{{ query|escape }}">
+    <input type="submit" value="Search">
+</form> 
+<table cellspacing="0">
+    <caption>Ventas Realizadas</caption>
+    <thead>
+        <tr>
+            <th>Nombre del Cliente</th>
+            <th>Apellidos del Cliente</th>
+            <th>DNI</th>
+            <th>Código Venta</th>
+            <th>Productos</th>
+            <th>Total</th>
+            <th>Fecha de Emision</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for venta in list_ventas %}
+        <tr>
+            <td>{{venta.cliente.nombre}}</td>
+            <td>{{venta.cliente.apellido_paterno}} {{venta.cliente.apellido_materno}}</td>
+            <td>{{venta.cliente.dni}}</td>
+            <td>{{venta.codigo}}</td>
+            <td>{{venta.get_productos}}</td>
+            <td>{{venta.total}}</td>
+            <td>{{venta.fecha}}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url 'ventas:editar_orden_venta' venta.pk %}">Editar</a></li>
+                    <li><a href="{% url 'ventas:detalle_orden_venta' venta.pk %}">Detalle</a></li>
+                    <li><a href="{% url 'ventas:eliminar_orden_venta' venta.pk %}">Eliminar</a></li>
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{total_ventas}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+{% if is_paginated %}
+<div class="pagination">
+    <span class="page-links">
+        {% if page_obj.has_previous %}    
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+        <span class="page-current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+
+{% else %}
+<h3>No hay ventas hechas</h3>
+{% endif %}
+<a href="{% url 'ventas:crear_orden_venta' %}">Nuevo Orden de Venta</a>
+<a href="{% url 'home:inicio' %}">Pagina Principal</a>
+{% endblock content %} 

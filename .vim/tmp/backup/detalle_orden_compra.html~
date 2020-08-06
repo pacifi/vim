@@ -1,0 +1,23 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block content %}
+
+<h1>{{ object.producto.nombre|upper }}</h1> 
+<figure>
+    <a href="/"><img src="{{MEDIA_URL}}{{object.producto.avatar}}" height="210"></a>
+</figure>
+<ul> 
+    <li>Proveedor:       {{ object.proveedor.razon_social }}</li> 
+    <li>Categoria:       {{ object.categoria.nombre }}</li> 
+    <li>Descripción:     {{ object.descripcion }}</li> 
+    <li>Precio Unitario: S/.{{ object.producto.p_compra }}</li>
+    <li>Cantidad:        {{ object.cantidad }}</li>
+    <li>Precio Real:     {{ object.precio_real }}</li> 
+    <li>IGV:             {{ object.iva }}</li>
+    <li>Descuento:       S/.{{ object.descuento }}</li>
+    <li>Total:           {{object.total}}</li>
+    <li>Fecha:           {{ ahora|date }}</li> 
+</ul>
+<a href="{% url 'compras:listar_compras' %}">Ver Compras</a>
+{% endblock content %}

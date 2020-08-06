@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'url', 'urlpatterns', 'account', 'views', 'r', 'inicio', 'index_view', 'name', 'vista_principal', 'about', 'about_view', 'vista_about', 'contacto', 'contacto_view', 'vista_contacto', 'login', 'login_view', 'vista_login', 'registro', 'register_view', 'vista_registro', 'logout', 'logout_view', 'vista_logout'}

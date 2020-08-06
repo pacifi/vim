@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'urlpatterns', 'r', 'ads', 'views', 'index', 'name', 'P', 'elemento_id', 'd', 'details', 'detalils', 'categoria', 'categorias', 'slug', 'w'}

@@ -1,0 +1,1 @@
+{'usr', 'bin', 'env', 'python3', 'coding', 'utf', 'import', 'random', 'def', 'get_int', 'msg', 'minimum', 'default', 'while', 'True', 'try', 'line', 'input', 'if', 'not', 'and', 'is', 'None', 'return', 'i', 'int', 'print', 'Debe', 'ser', 'else', 'except', 'ValueError', 'as', 'err', 'rows', 'columns', 'Minimum', 'or', 'Enter', 'for', 'maximum', 'Maximum', 'str'}

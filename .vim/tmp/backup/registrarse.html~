@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="{% static 'css/form.css' %}"/>
+</head>
+<body>
+	<div id="first">
+		  <h1>Contact Form</h1>
+		  <h4>Please fill all entries.</h4> <hr/>
+		  <label class="one">
+			<span>Name :</span>&nbsp 
+			<input class="name" type="text" name="dname"  />
+		  </label><br/>
+    
+		  <label class="two">
+			<span>Email :</span>&nbsp   
+			<input class="email" type="email" name="demail"  />
+		  </label><br/>
+    
+		  <label class="three">
+			<span>Message :</span>&nbsp 
+			<textarea class="msg" name="msg" ></textarea>
+		  </label> <br/>
+		  
+		  <label class="four">
+			<span>Subject :</span>&nbsp 
+			<select>
+			<option value="Product Inquiry">Product Inquiry</option>
+			<option value="Feedback">Feedback</option>
+			<option value="Complaint">Complaint</option>
+			</select>
+		  </label>   <br/> 
+		  
+		  <input type="submit" class="submit" name="dsubmit" value="Send" />
+	    </form> 
+	<form method="post">{% csrf_token%}
+        <label class="one">
+            {{form.as_p}}
+        </label> 
+		<input type="submit" class="submit" name="dsubmit" value="Registrar" />
+		
+	</form>
+	 </div>	
+	
+		
+</body>
+</html>

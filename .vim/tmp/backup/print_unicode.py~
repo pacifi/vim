@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import os
+os.system("clear")
+import sys
+import unicodedata
+
+def print_unicode_table(word):
+    print("decimal   hex  chr {0:^40}".format("name"))
+    print("-------  ----- --- {0:-<40}".format(""))
+
+    code = ord(" ")
+    end = sys.maxunicode
+
+    while code < end:
+        c = chr(code)
+        name = unicodedata.name(c, "*** unknown ***")
+        if len(word) == 1:
+            if word == [] or word[0] in name.lower():
+                print("{0:7} {0:5X} {0:^3c} {1}".format(code, name.title()))
+            code += 1
+        else:
+            if word == [] or word[0] and word[1] in name.lower():
+                print("{0:7} {0:5X} {0:^3c} {1}".format(code, name.title()))
+            code += 1
+
+# d = sys.argv
+
+word = []
+# for i in range(len(d)-1):
+#     word.append(d[i+1])
+
+
+if len(sys.argv) > 1:
+    if sys.argv[1] in ("-h", "--help"):
+        print("usage: {0} [string]".format(sys.argv[0]))
+        word = 0
+    else:
+        for i in range(len(sys.argv)-1):
+            word.append(sys.argv[i+1].lower())
+
+if len(word) != 0:
+    print_unicode_table(word)
+
+

@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'models', 'AntecedenteMedico', 'Distrito', 'Provincia', 'Departamento', 'FuncionesVitales', 'Diagnostico', 'Producto', 'UnidadMedida', 'DetalleReceta', 'Tratamiento', 'Consulta', 'Laboratorio', 'Historia', 'ConsultaEmergencia', 'Persona', 'Periodo', 'DiagnosticoConsulta', 'Register', 'your', 'here', 'site', 'register'}

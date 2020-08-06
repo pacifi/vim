@@ -1,0 +1,1 @@
+{'Django', '1', '7', 'bpython', 'django', 'braces', 'model', 'utils', 'logutils', 'Pillow', 'django_compressor', 'e', 'git', 'https', 'github', 'com', 'sehmaschine', 'grappelli', 'dev', '2', '6', 'x', 'egg', 'maraujop', 'crispy', 'forms'}

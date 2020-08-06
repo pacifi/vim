@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'models', 'Profiles', 'UserSettings', 'auth', 'UserAdmin', 'User', 'class', 'UserSettingsAdmin', 'ModelAdmin', 'list_display', 'username', 'time_zone', 'modified', 'created', 'site', 'register'}

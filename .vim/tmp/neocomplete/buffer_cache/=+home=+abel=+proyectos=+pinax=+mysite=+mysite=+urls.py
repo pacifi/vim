@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'import', 'settings', 'urls', 'patterns', 'include', 'url', 'static', 'views', 'generic', 'TemplateView', 'contrib', 'admin', 'urlpatterns', 'r', 'as_view', 'template_name', 'homepage', 'html', 'name', 'home', 'site', 'account', 'MEDIA_URL', 'document_root', 'MEDIA_ROOT'}

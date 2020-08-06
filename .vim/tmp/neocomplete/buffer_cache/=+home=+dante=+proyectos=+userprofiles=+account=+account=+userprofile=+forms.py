@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'contrib', 'auth', 'models', 'User', 'UserProfile', 'class', 'UserForm', 'ModelForm', 'password', 'CharField', 'widget', 'PasswordInput', 'Meta', 'model', 'fields', 'username', 'email', 'UserProfileForm', 'exclude', 'user'}

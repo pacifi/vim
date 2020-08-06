@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block estilos %}
+    <style>
+        th,td{
+            border: 1px solid #009688;
+            font-size:14px;            
+            padding: 1em;
+        }
+        th{
+            background:#dccdcd;
+        }
+    </style>
+{% endblock estilos %}
+{% block content %}
+    <table cellspacing="0">
+        <caption>Lugares</caption>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Areas</th>            
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for place in places %}
+            <tr>
+                <td>{{ place.name }}</td> 
+                <td>{{ place.get_areas }}</td> 
+            </tr>
+            {% endfor %}         
+        
+        </tbody>
+    </table>
+{% endblock content %}

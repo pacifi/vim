@@ -1,0 +1,46 @@
+Diseño de bases de datos
+
+El almacenamiento de datos es el corazón de un sistema de información. En primer 
+lugar, los datos tienen que estar disponibles cuando el usuario desee 
+utilizarlos; en segundo, deben ser precisos y consistentes (es decir, deben 
+poseer integridad).
+Hay dos metodologías para el almacenamiento de datos en un sistema basado en computa-
+dora. La primera es almacenar los datos en archivos individuales, cada uno de los cuales es único
+para cierta aplicación específica. La segunda implica la creación de una base de datos, es decir, un
+almacén de datos formalmente definido y controlado centralmente, creado para emplearse en
+distintas aplicaciones.
+Las bases de datos son planificadas, por lo que los datos se organizan de manera que se puedan
+almacenar y recuperar con eficiencia. Los almacenes de datos corporativos son bases de datos
+muy grandes que alojan datos sintetizados relacionados con un tema específico, para poder res-
+ponder a las consultas de una manera muy eficiente.
+
+Una base de datos es una fuente central de datos con el fin de que varios 
+usuarios la compartan para su uso en varias aplicaciones. El corazón de una base 
+de datos es el sistema de administración de bases de datos (DBMS), el cual 
+permite crear, modificar y actualizar la base de datos, la recuperación de los 
+datos y la generación de informes y pantallas.
+Los objetivos de efectividad de la base de datos incluyen lo siguiente:
+1. Asegurar que los datos se puedan compartir entre los usuarios y en varias aplicaciones.
+2. Mantener datos precisos y consistentes.
+3. Asegurar que todos los datos requeridos para las aplicaciones actuales y futuras estén siempre
+disponibles.
+4. Permitir que la base de datos evolucione a medida que aumenten las 
+necesidades de los usuarios.
+5. Permitir que los usuarios construyan su propia vista personal de los datos 
+sin preocuparse por la forma en que éstos se almacenan físicamente.
+
+Las bases de datos relacionales para las PC han mejorado considerablemente durante los últimos años.
+Uno de los principales cambios tecnológicos ha sido el diseño de software de base de datos que aprovecha
+la GUI. Con la llegada de programas como Microsoft Access, los usuarios pueden arrastrar y soltar campos
+entre dos o más tablas. El desarrollo de bases de datos relacionales con estas herramientas se ha facilitado
+
+Concepto de los datos
+1. Realidad, datos, y metadatos.- Nos referiremos al mundo real como la realidad. 
+Los datos que se recopilen sobre personas, lugares o eventos en la realidad se 
+almacenarán en un momento dado en un archivo o en una base de datos.
+    1.1 Entidades.- Cualquier objeto o evento sobre el que alguien decida 
+    recolectar datos es una entidad.
+    1.2 Relaciones.- Las relaciones son asociaciones entre entidades (algunas 
+    veces se les conoce como asociaciones de datos): Uno a uno (1:1), Uno  a 
+    muchos (1:M) ó Muchos a uno(M:1) y Muchos a muchos (M:N)
+

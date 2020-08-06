@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+import os
+os.system('clear')
+import math
+def invertir(num):
+     invertido = 0
+     while(num>=100 and num<=999):
+          while num>0:
+               invertido = invertido * 10 + num % 10
+               num = num/10
+          print "El numero invertido es: %s+297= %s" % (invertido,invertido+int(297))
+num = int(raw_input("Ingrese el numero: "))
+print  invertir(num)
+

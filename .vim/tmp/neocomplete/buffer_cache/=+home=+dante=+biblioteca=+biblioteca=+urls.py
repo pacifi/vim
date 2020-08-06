@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'contrib', 'admin', 'static', 'settings', 'urlpatterns', 'Examples', 'r', 'biblioteca', 'views', 'home', 'name', 'blog', 'media', 'P', 'path', 'serve', 'document_root', 'MEDIA_ROOT', 'site', 'inicio', 'autores', 'libros', 'MEDIA_URL'}

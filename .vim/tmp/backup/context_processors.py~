@@ -1,0 +1,17 @@
+# coding: utf-8
+from random import choice
+from tracks.models import Track
+
+frases = ['lol', 'hola', 'ke', 'hace']
+
+def basico(request):
+    # return {'titulo': 'Mi página'}
+    # return {'titulo': choice(frases)}
+    tracks = Track.objects.all()
+    track = None
+    import ipdb; ipdb.set_trace()
+    for t in tracks:
+        if request.path == t.get_absolute_url():
+            track = t
+            break
+    return {'titulo': choice(frases), 'tracks': tracks, 'selected_track': track}

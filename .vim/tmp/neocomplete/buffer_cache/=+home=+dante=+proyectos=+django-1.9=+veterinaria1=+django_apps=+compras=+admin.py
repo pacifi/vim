@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'models', 'CompraEmpresa', 'class', 'CompraEmpresaAdmin', 'ModelAdmin', 'fieldsets', 'Nueva', 'Compra', 'de', 'la', 'Empresa', 'fields', 'proveedor', 'categoria', 'cantidad', 'afecto', 'descuento', 'site', 'register'}

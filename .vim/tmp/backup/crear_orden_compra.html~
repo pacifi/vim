@@ -1,0 +1,49 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<h1>Nuevo Orden de Compra</h1> 
+ 
+    {% if form.errors %} 
+        <p style="color: red;"> 
+            Por favor corrige lo siguiente: 
+        </p> 
+    {% endif %} 
+ 
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %} 
+        <div class="field"> 
+            {{ form.proveedor.errors }} 
+            <label>{% trans "Proveedor" %}</label> 
+            {{ form.proveedor }} 
+        </div> 
+        <div class="field"> 
+            {{ form.categoria.errors }} 
+            <label>Categoria:</label> 
+            {{ form.categoria }} 
+        </div>
+        <div class="field"> 
+            {{ form.producto.errors }} 
+            <label>Producto:</label> 
+            {{ form.producto }} 
+        </div>  
+        <div class="field"> 
+            {{ form.afecto.errors }} 
+            <label>Afecto:</label> 
+            {{ form.afecto }} 
+        </div>  
+        <div class="field"> 
+            {{ form.cantidad.errors }} 
+            <label>Cantidad:</label> 
+            {{ form.cantidad }} 
+        </div>  
+        <div class="field"> 
+            {{ form.descuento.errors }} 
+            <label>Descuento %:</label> 
+            {{ form.descuento }} 
+        </div>  
+        <div class="field"> 
+            {{ form.descripcion.errors }} 
+            <label>Descripción:</label> 
+            {{ form.descripcion }} 
+        </div>  
+        <input type="submit" value="Enviar"> 
+    </form> 
+{% endblock content %} 

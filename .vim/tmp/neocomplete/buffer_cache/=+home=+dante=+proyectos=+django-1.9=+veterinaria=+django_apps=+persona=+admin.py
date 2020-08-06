@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'auth', 'UserAdmin', 'forms', 'UserChangeForm', 'models', 'Cliente', 'Proveedor', 'Empleado', 'PerfilEmpleado', 'class', 'EmpleadoChangeForm', 'Meta', 'model', 'PerfilEmpleadoInline', 'StackedInline', 'can_delete', 'False', 'EmpleadoAdmin', 'form', 'fieldsets', 'None', 'fields', 'alias', 'inlines', 'site', 'register'}

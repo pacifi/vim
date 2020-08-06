@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'models', 'OrdenCompra', 'class', 'OrdenCompraForm', 'ModelForm', 'Meta', 'model', 'fields', 'proveedor', 'categoria', 'producto', 'afecto', 'cantidad', 'descuento', 'descripcion'}

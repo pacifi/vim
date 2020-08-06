@@ -1,0 +1,19 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block content %}
+
+<h1>{{ object.nombre }} {{ object.apellido_paterno}} {{object.apellido_materno}}</h1> 
+<figure>
+     <a href="/"><img src="{{ object.avatar.url }}" height="300"></a>
+</figure>
+<ul> 
+    <li>DNI: {{ object.dni }}</li> 
+    <li>Sexo: {{ object.sexo }}</li> 
+    <li>Domicilio: {{ object.domicilio }}</li> 
+    <li>Telefono/Celular: {{ object.telefono }}</li> 
+    <li>Fecha: {{ ahora|date }}</li> 
+</ul>
+<a href="{% url 'persona:listar_clientes' %}">Ver Clientes</a>
+<a href="{% url 'persona:crear_cliente' %}">Nuevo Cliente</a>
+{% endblock content %}

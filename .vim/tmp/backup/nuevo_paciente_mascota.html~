@@ -1,0 +1,102 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% block titulo %}Multiple formsets on the same page{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/jquery-1.3.2.min.js' %}"></script>
+<script src="{% static 'jquery/jquery.formset.js' %}"></script>
+<script type="text/javascript">
+    // Define this so we don't have to bother with the admin jsi18n stuff:
+    function gettext(msgid) { return msgid; }
+</script>
+{{ vacuna_formset.media }}
+{{ desparacitar_formset.media }}
+<script type="text/javascript">
+    $(function() {
+        $('table.form-vacuna').formset({
+            formCssClass: 'dynamic-contact-form',
+            prefix: "{{ vacuna_formset.prefix }}",
+            
+        });
+        $('table.form-container').formset({
+            formCssClass: 'dynamic-event-form',
+            prefix: "{{ desparacitar_formset.prefix }}",
+            added: function(row) {
+                // Find the fields with the calendar widget
+                $(row).find('.vDateField').each(function(i) {
+                    // Remove the cloned spam element: it links to an incorrect calendar
+                    $(this).parent().find('span').remove();
+                    // DateTimeShortcuts is defined in DateTimeShortcuts.js in the Django admin media
+                    DateTimeShortcuts.addCalendar(this);
+                });
+            }
+        });
+    });
+</script>
+<style type="text/css">
+    .add-row {
+        padding-left:18px;
+        background:url({{ STATIC_URL }}images/add.png) no-repeat left center;
+    }
+    .delete-row {
+        float:right;
+        display:block;
+        margin-left:4px;
+        padding-left:18px;
+        background:url({{ STATIC_URL }}images/delete.png) no-repeat left center;
+    }
+    .dynamic-event-form th {
+        text-align:right;
+        font-weight:bold;
+    }
+    .dynamic-event-form td span img {
+        vertical-align:middle;
+        border:0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="entry">
+        <form method="post" action="">
+            <h2></h2>
+            <table cellspacing="0">
+                <thead>
+                </thead>
+                <tbody>
+                    {{mascota_form.as_p}}
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+            <h2>Vacuna formset</h2>
+           <table id="{{ form.prefix }}-row" class="form-vacuna" border="0" cellpadding="0" cellspacing="5">
+                <tbody>
+                    {% for form in vacuna_formset.forms %}
+                    <tr id="{{ form.prefix }}-row" class="form-container">
+                        <td style="text-align:center;">{{ form.preferred }}</td>
+                        <td>{{ form }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h2>Desparacitar formset</h2>
+            {% for form in desparacitar_formset.forms %}
+            <table id="{{ form.prefix }}-row" class="form-container" border="0" cellpadding="0" cellspacing="5">
+                <tbody>
+                    <tr>
+                        <td>{{ form }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {% endfor %}
+            <p>
+                {{ vacuna_formset.management_form }}
+                {{ desparacitar_formset.management_form }}
+                <input type="submit" value="Submit" />
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock %}

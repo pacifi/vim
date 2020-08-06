@@ -1,0 +1,1 @@
+[{'word': 'Distancia', 'menu': 'Vector', 'kind': 'm', 'abbr': 'def Distancia(self):'}, {'word': 'Vector', 'menu': '[I]', 'kind': 'c', 'abbr': 'Vector(object): <class>'}, {'word': '__init__', 'menu': 'Vector', 'kind': 'm', 'abbr': '__init__'}]

@@ -1,0 +1,50 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+{% if list_articulos %}
+<table cellspacing="0">
+    <caption>Articulos</caption>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Descripción</th>
+            <th>Fecha de Edición</th>
+            <th>Fecha de Creación</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for articulo in list_articulos %}
+        <tr>
+            <td>{{articulo.nombre}}</td>
+            <td>{{articulo.marca}}</td>
+            <td>{{articulo.descripcion}}</td>
+            <td>{{articulo.updated}}</td>
+            <td>{{articulo.timestamp}}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url 'inventario:editar_articulo' articulo.pk %}">Editar</a></li>
+                    <li><a href="{% url 'inventario:detalle_articulo' articulo.pk %}">Detalle</a></li>
+                    <li><a href="{% url 'inventario:eliminar_articulo' articulo.pk %}">Eliminar</a></li>
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+{% else %}
+<h3>No hay Articulos</h3>
+{% endif %}
+<a href="{% url 'inventario:crear_articulo' %}">Nuevo Articulo</a>
+<a href="{% url 'inicio' %}">Pagina Principal</a>
+{% endblock content %}

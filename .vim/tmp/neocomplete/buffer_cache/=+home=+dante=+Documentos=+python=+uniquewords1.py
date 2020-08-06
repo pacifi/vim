@@ -1,0 +1,1 @@
+{'usr', 'bin', 'env', 'python3', 'coding', 'utf', 'import', 'os', 'system', 'clear', 'string', 'sys', 'words', 'strip', 'whitespace', 'punctuation', 'digits', 'for', 'filename', 'in', 'argv', 'line', 'open', 'word', 'lower', 'split', 'if', 'len', 'get', 'sorted', 'print', 'occurs', 'times', 'format'}

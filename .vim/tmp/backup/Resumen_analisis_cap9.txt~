@@ -1,0 +1,21 @@
+ESPECIFICACIONES DE LOS PROCESOS Y DECISIONES ESTRUCTURADAS
+
+El analista de sistemas debe tener un amplio conocimiento sobre metodologías de
+recopilación de información, ya que es imprescindible para llevar a cabo la
+recopilación de datos de requerimientos de información.
+Las especificaciones de los procesos son creados para procesos primitivos en un
+DFD, para detallar partes de nivel más alto que se expanden en un diagrama hijo, 
+estas especificaciones explican la lógica de toma de decisiones y las fórmulas 
+que transformaran la entrada del proceso en su salida; las especificaciones de 
+procesos tiene tres objetivos:
+1.- Reducir la ambiguedad del proceso.
+2.- Obtener una descripción precisa de lo que se va a lograr.
+3.- Validar el sistema de diseño.(Tenga todos los datos de entrada necesarios.)
+
+Se presentan situaciones en las que un proyecto no requieren especificaciones,
+las categorias o procesos que por lo general no requieren especificaciones son:
+1.- Procesos que representan entrada o salida física, como lectura y escritura.
+2.- Procesos que representan una validación de datos simple.
+3.- Procesos que utilizan código escrito con anterioridad.
+
+

@@ -1,0 +1,1 @@
+{'Django', '1', '9', '2', 'sudo', 'apt', 'get', 'install', 'graphviz', 'libgraphviz', 'dev', 'pkg', 'config', 'pip', 'pygraphviz', 'django', 'extensions', 'suit', '0', '18', 'revproxy'}

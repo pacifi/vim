@@ -1,0 +1,30 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<div>
+    <h2>Nueva mascota {{propietario.nombre}}</h2>
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+        <div>
+            <ul>
+                {{form.as_p}}
+            </ul>
+        </div>
+        <div>
+            <ul>
+                {% for form in vacuna_form %}
+                    {{form}}
+                {% endfor %}
+                {{vacuna_form.management_form}}
+            </ul>
+        </div>
+        <div>
+            <ul>
+                {{desparacitar_form.management_form}}
+                {% for form in desparacitar_form %}
+                {{form}}
+                {% endfor %}
+            </ul>
+        </div>
+        <input type="submit" name="" value="Guardar">
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+{% if list_categorias %}
+<table cellspacing="0">
+    <caption>Categorias</caption>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for categoria in list_categorias %}
+        <tr>
+            <td>{{categoria.nombre}}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url 'inventario:editar_categoria' categoria.pk %}">Editar</a></li>
+                </ul>
+                <ul>
+                    <li><a href="{% url 'inventario:eliminar_categoria' categoria.pk %}">Eliminar</a></li>
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+{% else %}
+<h3>No hay categorias</h3>
+{% endif %}
+<a href="{% url 'inventario:crear_categoria' %}">Nueva Categoria</a>
+<a href="{% url 'inicio' %}">Pagina Principal</a>
+{% endblock content %}

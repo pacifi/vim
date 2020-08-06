@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'models', 'CompraEmpresa', 'class', 'CompraEmpresaForm', 'ModelForm', 'Meta', 'model', 'fields', 'proveedor', 'categoria', 'producto', 'cantidad', 'afecto', 'descuento', 'def', '__init__', 'self', 'args', 'kwargs', 'super', 'widget', 'attrs', 'update', 'chosen', 'form', 'control', 'input', 'mask', 'placeholder', 'eg', 'autocomplete', 'off'}

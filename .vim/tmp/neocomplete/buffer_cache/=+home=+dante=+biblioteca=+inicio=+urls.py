@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'views', 'registrarse', 'urlpatterns', 'r', 'contrib', 'auth', 'login', 'template_name', 'index', 'html', 'name', 'cerrar', 'logout_then_login', 'logout', 'as_view'}

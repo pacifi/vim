@@ -1,0 +1,149 @@
+USO DE DIAGRAMAS DE FLUJO DE DATOS
+==================================
+
+EL analista de sistemas puede libremente graficar el modelo de negocio, dando a
+entener minucionsamente las entradas,procesos y salidas del sistema, todo eso
+engloba el diagrama de flujo de datos.
+
+Para recoger requerimientos de información de la organización, se hace uso de
+entrevistas, encuestas y oralmente, pero eso no es suficiente para aclarar como
+funciona una empresa, por eso se hace uso de los diagramas de flujo de datos
+para cristalizar esta información, con el uso de 4 símbolos.
+
+Hay 4 ventajas de la metodología del flujo de Datos:
+1. No hay que comprometerse demasiado pronto con la implementación técnica del
+   sistema.
+2. Permite comprender con más detalle la capacidad de interrelación de los
+   sistemas y subsistemas.
+3. Se puede comunicar el conocimiento del sistema actual a los usuarios por
+   medio de diagramas de flujo de datos.
+4. Se puede analizar un sistema propuesto para determinar si se han definido
+   los datos y procesos necesarios.
+
+En los DFD (Diagramas de Flujo de Datos) se toman en cuenta 4 símbolos, que se
+usan para representar la información, son: 
+- Cuadrado doble.- Para describir una entidad externa
+- Flecha.- Muestra el movimiento de los datos de un punto a otro.
+- Rectángulo con esquinas redondeadas.- Muestra la ocurrencia de un proceso de
+                                        transformación.
+  Las palabras deben ser claras al categorizar cada nivel, dando a entender su
+  grado de nivel como sistema y como proceso, también debe recibir un número de
+  identificación que indique su nivel en el diagrama.
+- Rectángulo con un extremo abierto.- Representa a un alamcén de datos
+                                      (sustantivo).
+
+Para desarrollar DFD se necesita la historia de la organización, especificando
+las 4 categorías que son entidad externa, flujo de datos, proceso y almacén de
+datos, luego de eso se empezará a dibujar un diagrama de contexto.
+1.- Debe haber por lo menos un proceso y nada de objetos independientes
+2.- Un proceso recibirá por lo menos un flujo de datos entrante y generará un
+    flujo de datos saliente.
+3.- Un almacén de datoz debe estar conectado con por lo menos un proceso.
+4.- Las entidades externas no se deben conectar entre sí.
+
+El diagrama de contexto es el nivel más alto en un diagrama de flujo de datos y 
+contiene sólo un proceso, el cual representa a todo el sistema.
+El Diagrama 0 es la expansión del diagrama de contexto; puede incluir hasta 
+nueve procesos:
+1.- Empezar con el flujo de datos proveniente de una entidad en el lado de
+    entrada.
+2.- Trabaje en sentido inverso desde un flujo de datos de salida.
+3.- Examine el flujo de datos que entra o sale de un almacén de datos.
+4.- Analice un proceso bien definido.
+5.- Tome nota de cualquier área confusa en donde no esté seguro de lo que se
+    debería incluir o de la entrada o salida requerida.
+
+Cuando el Diagrama 0 se expande más a fondo se crea lo que son diagramas hijos,
+al proceso de expandir se le conoce como PROCESO PADRE y al resultado se le
+conoce como DIAGRAMA HIJO. Estos diagramas básicamente están conectados, por lo
+cual cualquier dato que se ingrese figurará en el diagrama hijo.
+
+Comprobación de errores en los diagramas:
+1.- Olvidar incluir un flujo de datos o apuntar una flecha en dirección
+    equivocada.
+2.- Conectar almacenes de datos y entidades externas directamente entre sí.
+3.- Etiquetar de manera incorrecta los procesos o el flujo de datos.
+4.- Incluir más de nueve procesos en un diagrama de flujo de datos.
+5.- Omitir el flujo de datos.
+6.- Crear una descomposición (o expansión) desbalanceada en los diagramas hijos.
+
+Diagramas de Flujo de Datos Lógico y Físicos
+
+Diagrama de flujo de datos lógicos.- Se enfoca en la empresa y la forma en que
+                                     esta opera.
+Diagrama de flujo de datos físico.- Muestra cómo se implementará el sistema,
+incluyendo hardware, software, los archivos y las personas involucradas en el 
+sistema.
+
+El proceso a seguir es: DFD lógico actual => DFD lógico propuesta => DFD físico,
+esto ayudará a quitar partes innecesarias en el nuevo sistema, dando un enfoque
+totalmente diferente a lo que se tenía anteriormente, aunque este proceso lleva
+tiempo, por eso se omite para pasar directamente al DFD físico.
+Pero el beneficio de seguir con el proceso DFD lógico es que quitas y pones
+procesos, que beneficiarán mejor al nuevo sistema.
+
+Características comunes para los diagramas de flujo de datos lógicos y físicos:
+- Que describe el modelo.
+- Que representan los procesos.
+- Que represntan los almacenes de datos.
+- Tipo de almacenes de datos.
+- Controles del sistema.
+
+Desarrollo de diagramas de flujo de datos lógicos
+Ventajas:
+1.- Mejor comunicación con los usuarios.
+2.- Sistemas más estables.
+3.- Los analistas comprenden mejor el funcionamiento de la empresa.
+4.- Flexibilidad y mantenimiento.
+5.- Se eliminan las redundancias y se facilita la creación del modelo físico.
+
+Desarrollo de diagramas de flujo de datos físicos
+Ventajas:
+1.- Aclarar qué procesos desempeñan los humanos (manuales) y cuáles son
+    automatizados.
+2.- Describir los procesos con más detalle que los DFD lógicos.
+3.- Secuenciar procesos que se tengan que realizar en cierto orden específico.
+4.- Identificar los almacenes de datos temporales.
+5.- Especificar los nombres reales de los archivos, tablas de bases de datos y
+    listados impresos.
+6.- Agregar controles para asegurar que los procesos se realicen en forma
+    apropiada.
+Los DFD físicos tienden a ser más complejos por el tema de mantenimiento el
+CRUD.
+
+Al flujo de datos de entreda se le denomina desencadenador y al flujo de datos
+de salida se le denomina respuesta.
+
+El modelado de eventos y diagramas de flujo de datos es una metodología práctica
+tanto para usuarios como el analista de sistemas, los empleados están
+familiarizados con los eventos que se llevan a cabo en su área de negocios y
+saben cómo estos eventos impulsan otras actividades.
+
+Los casos de uso y diagramas de flujo de datos se complementan ambos, el caso de
+uso mira un panorama general que ayudará a la creación del Diagrama 0, es
+necesario especificar cada actividad para evitar confusiones mas adelante, y
+pedir ayuda a los usuarios para la revisión y modificación de los casos de uso.
+
+Como particionar los diagramas de flujo de datos.- Analizar cada proceso para 
+    determinar si debe ser manual o automatizado.
+Motivos:
+1.- Distintos grupos de usuarios.
+2.- Sincronización
+3.- Tareas similares
+4.- Eficiencia
+5.- Consistencia de los datos
+6.- Seguridad
+
+Luego de la lista de actividades hay que crear un diagrama de flujo de datos a
+nivel de contexto, después hay que regresar a la lista de actividades y hacer
+una nueva lista de todos los procesos y almacenes de datos que podamos
+encontrar. Si cree tener suficiente información, dibujar el diagrama 0, pero a
+un nivel general.
+
+Sigue la creación de diagrama hijo, en este caso es mas detallado ya que ilustra
+la lógica para producir la salida.
+El proceso que se ha hecho es crear un diagrama de flujo de datos físico a
+partir del DFD lógico.
+La comunicación mediante el uso de diagramas de flujo de datos siempre va ser
+elemental en un proyecto, pués los flujos de datos existirán mucho más tiempo
+que los que lo realizaron, se usará también para la documentación del proyecto.

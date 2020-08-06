@@ -1,0 +1,55 @@
+<div ng-controller="productoController">
+ <md-content class="md-padding">
+    <md-card>   
+<form name="projectForm" >    
+    <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Producto</label>
+          <input type="text" ng-model="producto.nombre" required name="producto">
+        <div ng-messages="projectForm.producto.$error" multiple >
+              <div ng-message="required">This is required.</div>
+              <div ng-message="min">no puedes poner este valor</div>
+        </div> 
+        </md-input-container>
+        <md-input-container flex>
+          <label>Precio</label>
+          <input type="number" name="precio" required  min="1" ng-model="producto.precio">
+          <div ng-messages="projectForm.precio.$error" multiple >
+              <div ng-message="required">This is required.</div>
+              <div ng-message="min">no puedes poner este valor</div>
+        </div>
+          </md-input-container>
+      </div>
+    <md-button ng-click="save()" class="md-raised" ng-disabled="projectForm.$invalid">Button</md-button>
+    {{producto.id}}producto
+</form>
+</md-card>
+</md-content>
+<md-content class="md-padding">
+    <md-card>
+	<table>
+		<tr>
+			<td>abrev</td>
+			<td>desc</td>
+			<td>Edit</td>
+		</tr>
+		<tr ng-repeat="d in np_list ">
+			<td>{{ d.id }}</td>
+			<td>{{ d.nombre }}</td>
+			<td>{{ d.precio }}</td>
+			<td>{{ d.selection }}</td>
+			<td> <a href="" ng-click="sel(d)">Edit</a></td>
+            <td> <a href="" ng-click="delete(d)">x</a></td>
+            <td> <md-button class="md-primary md-raised" ng-click="showConfirm($event,d)" flex flex-md="100">
+      Delete
+      </md-button></td>
+		</tr>
+    </table>
+    <div><md-button>1</md-button><md-button>2</md-button></div>
+ <md-button class="md-raised" ng-click="showActionToast()">
+        Show With Action
+      </md-button>
+</md-card>
+</md-content>
+</div>
+ 

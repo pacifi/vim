@@ -1,0 +1,1 @@
+{'usr', 'bin', 'env', 'python3', 'coding', 'utf', 'import', 'os', 'system', 'clear', 'random', 'def', 'get_forenames_and_surnames', 'forenames', 'surnames', 'for', 'names', 'filename', 'in', 'data', 'txt', 'name', 'open', 'encoding', 'append', 'rstrip', 'return', 'fh', 'test', 'names1', 'w', 'utf8', 'i', 'range', 'line', 'n', 'format', 'choice', 'write'}

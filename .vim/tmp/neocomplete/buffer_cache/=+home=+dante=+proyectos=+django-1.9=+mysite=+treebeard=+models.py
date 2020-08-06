@@ -1,0 +1,1 @@
+{'from', '__future__', 'import', 'unicode_literals', 'django', 'db', 'models', 'treebeard', 'mp_tree', 'MP_Node', 'class', 'Category', 'name', 'CharField', 'max_length', 'node_order_by', 'def', '__str__', 'self', 'return'}

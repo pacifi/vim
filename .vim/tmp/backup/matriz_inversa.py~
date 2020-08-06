@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system("clear")
+
+fila = int(input("Tamaño de matriz fila: "))
+colum = int(input("Tamaño de matriz columna: "))
+
+m = []
+mx = []
+for i in range(fila):
+    for j in range(colum):
+        x = float(input("X[%s][%s]: "% (i,j)))
+        mx.append(x)
+    m.append(mx)
+    mx = []
+
+for j in m:
+    print(j)
+
+def m_trans(m):

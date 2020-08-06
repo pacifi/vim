@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system("clear")
+
+# a = '775201600010'
+# a = '123456789041'
+a = '775201600017'
+s = " ".join(a)
+
+s = s.split(" ")
+
+d = [int(s[i]) for i in range(len(s)) if i%2!=0]
+d = sum(d)
+print("Suma de los números en los lugares pares: %s" %d)
+d = d*3
+print("Multiplicado x 3: %s" %d)
+
+i = [int(s[i]) for i in range(len(s)) if i%2==0]
+i = sum(i)
+print("Suma de los números en los lugares impares: %s" %i)
+e = d + i
+print("Suma total: %s + %s = %s" % (d,i,e))
+if  e % 10 == 0:
+    res = 0
+    print(res)
+else:
+    s = (e + 9) - ((e + 9)%10)
+    print("Próximo múltiplo de 10 = %s " % s)
+    res = s - e
+    print("Dígito de control: %s - %s = %s "%(s,e,res))

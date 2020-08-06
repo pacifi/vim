@@ -1,0 +1,52 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block head_title %}Try Django 1.9{% endblock head_title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
+    <!-- <link href="{% static "css/base.css" %}" rel="stylesheet"> -->
+    {% block estilos %}{% endblock estilos %}
+    <style>
+       /* .img{
+            width:50%;
+            margin:0 auto;
+        }
+        h1{
+            color: #009688;
+            text-shadow: 0 2px 2px #00f700;
+            text-align:center;
+        }*/
+        img#img-dante{
+            width: 30%;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-left:40%;
+        }/*
+        figcaption{
+            font-size: 14px;
+            color: #009688;
+            font-weight: bold;
+            border-bottom: 4px solid #009688;
+            text-shadow: 2px 2px 2px #00f700;
+        }  */
+    </style>
+</head>
+<body>
+    <!-- <div class="img"> -->
+    <!--     <figure> -->
+    <!--         <img src="{% static "img/asuna.png" %}" class="img-responsive"/> -->
+    <!--         <figcaption>{% trans "Sword Art Online" %}</figcaption> -->
+    <!--     </figure> -->
+    <!-- </div> -->
+    {% include "messages_display.html" %}
+    <div class="jumbotron">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+</html>

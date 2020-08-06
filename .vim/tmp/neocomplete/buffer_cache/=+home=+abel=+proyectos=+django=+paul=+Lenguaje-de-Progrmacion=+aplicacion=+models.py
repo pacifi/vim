@@ -1,0 +1,1 @@
+{'from', 'django', 'db', 'import', 'models', 'Create', 'your', 'here', 'class', 'Probando', 'Model', 'HEAD', 'nombre', 'Field', 'max_length', 'Item', 'categoria', 'mdoels', 'CharField', 'descripcion', 'TextField', 'd9edfd6e6507c4118fd2ae8180757decd11a5b07'}

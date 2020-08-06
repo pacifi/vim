@@ -1,0 +1,4 @@
+\k\+
+/home/abel/.vim/tmp/neocomplete/tags_output/=+home=+abel=+proyectos=+skillshare=+taller_django=+django.txt
+
+text

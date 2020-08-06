@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<?php $saludo = "Hello World"; ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mejorando.la</title>
+</head>
+<body>
+<h1>Mejorando.la</h1>
+<?php echo $saludo; ?>
+</body>
+</html>

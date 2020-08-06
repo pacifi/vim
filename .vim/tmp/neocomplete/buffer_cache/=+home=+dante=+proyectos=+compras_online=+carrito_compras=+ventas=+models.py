@@ -1,0 +1,1 @@
+{'from', 'django', 'db', 'import', 'models', 'contrib', 'auth', 'User', 'producto', 'Producto', 'class', 'Factura', 'Model', 'total', 'DecimalField', 'max_digits', 'decimal_places', 'igv', 'FloatField', 'comprador', 'ForeignKey', 'producto_comprado', 'ManyToManyField', 'fecha', 'DateTimeField', 'auto_now', 'True', 'def', '__unicode__', 'self', 'return', 'u', 's'}

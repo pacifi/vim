@@ -1,0 +1,46 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+{% if list_proveedores  %}
+<table cellspacing="0">
+    <caption>Proveedores</caption>
+    <thead>
+        <tr>
+            <th>Razón Social</th>
+            <th>RUC</th>
+            <th>Contacto</th>
+            <th>Descripción</th>
+            <th>ACCIÓN</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for proveedor in list_proveedores %}
+        <tr>
+            <td>{{proveedor.razon_social}}</td>
+            <td>{{proveedor.ruc}}</td>
+            <td>{{proveedor.contacto}}</td>
+            <td>{{proveedor.descripcion}}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url 'persona:actualizar_proveedor' proveedor.pk %}">Editar</a></li>
+                    <li><a href="{% url 'persona:detalle_proveedor' proveedor.pk %}">Detallar</a></li>
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+{% else %}
+<h3>No hay Proveedores</h3>
+{% endif %}
+<a href="{% url 'persona:crear_proveedor' %}">Nuevo Proveedor</a>
+<a href="{% url 'inicio' %}">Pagina Principal</a>
+{% endblock content %}

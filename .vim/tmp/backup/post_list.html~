@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+    <h1>{{ title }}</h1>
+
+    {% for obj in object_list %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="thumbnail">
+                {% if obj.image %}
+                <img src="{{obj.image.url}}" class="img-responsive" />
+                {% endif %}
+                <div class="caption">
+                    <h3><a href="{{obj.get_absolute_url}}">{{ obj.titulo }}</a>
+                        <small>{{ obj.timestamp|timesince }} ago</small></h3>
+                    <p>{{ obj.contenido|linebreaks|truncatechars:120 }}</p>
+                    <p>
+                        <a href="{{obj.get_absolute_url}}" class="btn btn-info" role="button">View</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+    {% endfor %}
+    <div>
+        <ul class="pagination pagination-lg">
+            {% if object_list.has_previous %}
+            <li>
+                <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}"> << </a>
+            </li>
+            <li><a href="?{{ page_request_var }}={{ object_list.previous_page_number }}">previous</a></li>
+            {% endif %}
+            {% if object_list.has_next %}
+            <li><a href="?{{ page_request_var }}={{ object_list.next_page_number }}">next</a></li>
+            <li><a href="?{{ page_request_var }}={{ object_list.next_page_number }}"> >> </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <h3><span  class="label label-info">Page {{ object_list.number }} of {{object_list.paginator.num_pages }}</span></h3>
+</div>
+{% endblock content %}
+
+<!--         <h1>{{ title }}</h1> -->
+<!--         <h2>Usted ingreso a las {{ hora }}</h2> -->
+<!--         {% if user.is_authenticated %} -->
+<!--         <h3>Bienvenido, {{ user.get_username }}, gracias por visitarnos</h3> -->
+<!--         {% endif %} -->
+<!--         <table cellspacing="0"> -->
+<!--             <caption>Posts</caption> -->
+<!--             <thead> -->
+<!--                 <tr> -->
+<!--                     <th>Titulo</th> -->
+<!--                     <th>Contenido</th> -->
+<!--                     <th>Costo</th> -->
+<!--                     <th>Actualizado</th> -->
+<!--                     <th>Creado</th> -->
+<!--                     <th>Editar</th> -->
+<!--                 </tr> -->
+<!--             {% for obj in list_post %} -->
+<!--             <tbody> -->
+<!--                 <tr> -->
+<!--                     <td> -->
+<!--                         <a href="{{obj.get_absolute_url}}">{{ obj.titulo }}</a> -->
+<!--                      </td> -->
+<!--                      <td>{{obj.contenido}}</td> -->
+<!--                      <td>{{ obj.costo }}</td> -->
+<!--                      <td>{{ obj.updated }}</td> -->
+<!--                      <td>{{ obj.timestamp }}</td> -->
+<!--                      <td> -->
+<!--                         <a href="{% url 'posts:edit' obj.pk %}">Editar</a> -->
+<!--                     </td> -->
+<!--                </tr> -->
+<!--             </tbody> -->
+<!--             {% endfor %} -->
+
+<!--             <tfoot> -->
+<!--                 <tr> -->
+<!--                     <td>&nbsp;</td> -->
+<!--                     <td>&nbsp;</td> -->
+<!--                     <td>&nbsp;</td> -->
+<!--                     <td>&nbsp;</td> -->
+<!--                     <td>&nbsp;</td> -->
+<!--                     <td>&nbsp;</td> -->
+<!--                 </tr> -->
+<!--             </tfoot> -->
+<!--         </table> -->
+<!--         <div> -->
+<!--             <h2>PRECIO REAL:</h2><label>{{precio_real}}</label><br/> -->
+<!--             <h2>IVA:</h2><label>{{iva}}</label><br/> -->
+<!--             <h2>TOTAL:</h2><label>{{total}}</label> -->
+<!--         </div> -->      

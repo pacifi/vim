@@ -1,0 +1,12 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<div>
+    <h2>Nuevo Seguimiento</h2>
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+        <div>
+            {{form.as_ul}}
+        </div>
+        <input type="submit" name="" value="Guardar">
+    </form>
+</div>
+{% endblock content %}

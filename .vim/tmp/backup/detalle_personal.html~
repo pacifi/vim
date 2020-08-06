@@ -1,0 +1,27 @@
+{% extends "base_sistema.html" %}
+{% block estilos %}
+<style type="text/css">
+    small{
+        color:#717171;
+    }
+</style>
+{% endblock estilos %}
+{% block content %}
+{% if object.avatar %}
+<img src="{{object.avatar.url}}" id="img">
+{% endif %}
+<h2>{{object.username|upper}} <small>{{object.date_joined}}</small></h2>
+<div id="caja_menu">
+    <strong>Nombre: </strong>{{object.first_name}} <br>
+    <strong>Apellidos: </strong>{{object.last_name}} {{object.second_name}}<br>
+    <strong>DNI: </strong>{{object.dni}}<br>
+    <strong>Nació en: </strong>{{object.lugar_nac}}<br>
+    <strong>Educación: </strong>{{object.grado_instruc}}<br>
+    <strong>Género: </strong>{{object.sexo}}<br>
+    <strong>Fecha de Nacimiento: </strong>{{object.fecha_nac}}<br>
+    <strong>Domicilio: </strong>{{object.domicilio}}<br>
+    <strong>Telefono: </strong>{{object.telefono}}<br>
+    <strong>Estado Civil: </strong>{{object.est_civil}}
+</div>
+
+{% endblock content %}

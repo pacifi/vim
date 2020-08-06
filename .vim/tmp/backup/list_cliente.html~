@@ -1,0 +1,38 @@
+{% extends "base_sistema.html" %}
+
+{% block content %}
+{% for cliente in list_clientes %}
+<table cellspacing="0">
+    <caption>Clientes</caption>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>DNI</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido_paterno}} {{apellido_materno}}</td>
+            <td>{{cliente.dni}}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url 'persona:actualizar_cliente' cliente.pk %}">Editar</a></li>
+                    <li><a href="{% url 'persona:detalle_cliente' cliente.pk %}">Detallar</a></li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+{% endfor %}
+{% endblock content %}

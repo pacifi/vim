@@ -1,0 +1,1 @@
+{'<', 'php', 'class', 'Request', 'protected', '$url', '$controller', 'public', 'function', '__construct', '$this', 'url', '$segments', 'explode', 'getUrl', 'resolvecontroller', 'controller', 'array_shift', 'if', 'empty', 'this', 'defaultcontroller', 'return'}

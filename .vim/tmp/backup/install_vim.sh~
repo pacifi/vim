@@ -1,0 +1,63 @@
+#!/bin/bash 
+
+#NEED PACKS
+echo "Actualizando repositorios.."
+sudo apt-get update
+
+echo "Instalando dependencias ..."
+
+sudo apt-get install -y  liblua5.1-dev &&
+sudo apt-get install -y libncurses5-dev &&
+sudo apt-get install -y libgnome2-dev &&
+sudo apt-get install -y libgnomeui-dev &&
+sudo apt-get install -y libgtk2.0-dev &&
+sudo apt-get install -Y libatk1.0-dev &&
+sudo apt-get install -y libbonoboui2-dev &&
+sudo apt-get install -y libcairo2-dev &&
+sudo apt-get install -y libx11-dev &&
+sudo apt-get install -y libxpm-dev &&
+sudo apt-get install -y libxt-dev &&
+sudo apt-get instal -y python-dev &&
+sudo apt-get install -y ruby-dev &&
+sudo apt-get install -y mercurial &&
+sudo apt-get install -y git
+
+echo "Dependencias instaladas."
+
+
+#UNINSTALL VIM OTHER VERSION
+sudo apt-get remove vim vim-runtime gvim
+
+#UNINSTALL VIM ON Ubuntu 12.04 
+
+sudo apt-get remove vim-tiny vim-common vim-gui-common
+
+echo "Eliminando versiones antiguas de vim"
+
+cd ~
+hg clone https://code.google.com/p/vim/
+
+cd vim
+
+/configure --with-features=huge \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/lib/python2.7-config \
+            --enable-perlinterp \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr \
+            --enable-luainterp
+
+
+make VIMRUNTIMEDIR=/usr/share/vim/vim74
+sudo make install
+
+echo "Se ha terminado de instalar vim satisfactoriamente"
+
+sudo apt-get install -y checkinstall
+
+cd ~/vim
+sudo checkinstall
+
+
+
+

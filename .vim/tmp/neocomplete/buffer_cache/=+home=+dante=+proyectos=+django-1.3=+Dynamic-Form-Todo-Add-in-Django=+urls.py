@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'defaults', 'import', 'patterns', 'include', 'url', 'Uncomment', 'the', 'next', 'two', 'lines', 'to', 'enable', 'admin', 'contrib', 'autodiscover', 'urlpatterns', 'Examples', 'r', 'dynamicform', 'views', 'home', 'name', 'todo', 'doc', 'line', 'below', 'documentation', 'admindocs', 'site'}

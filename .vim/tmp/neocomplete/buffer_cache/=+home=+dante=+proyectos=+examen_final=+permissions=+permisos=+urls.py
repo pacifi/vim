@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'app', 'views', 'TodoList', 'TodoDetail', 'TodoCreate', 'TodoDelete', 'TodoUpdate', 'listar', 'contrib', 'admin', 'autodiscover', 'urlpatterns', 'r', 'as_view', 'name', 'app_list', 'Todo', 'P', 'pk', 'd', 'app_detail', 'New', 'app_create', 'Update', 'app_update', 'Delete', 'app_delete', 'todo', 'site'}

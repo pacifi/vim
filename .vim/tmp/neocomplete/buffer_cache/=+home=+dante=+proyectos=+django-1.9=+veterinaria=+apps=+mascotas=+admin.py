@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'models', 'Cliente', 'class', 'ClienteAdmin', 'ModelAdmin', 'list_display', 'persona', 'nombre', 'primer_apellido', 'exclude', 'site', 'register', 'Register', 'your', 'here'}

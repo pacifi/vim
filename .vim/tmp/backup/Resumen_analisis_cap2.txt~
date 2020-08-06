@@ -1,0 +1,168 @@
+COMPRENSIÓN Y MODELADO DE LOS SISTEMAS ORGANIZACIONALES
+=======================================================
+
+Los analistas deben saber que las organizaciones son sistemas complejos que son
+regidos por 3 fuerzas: Los niveles de administración, el diseño de las
+organizaciones y las culturas organizacionales, tales fuerzas movilizan todo el
+sistema organizacional, los subsistemas se ven influenciados por 3
+personas que toman decisiones; las organizaciones trabajan con un fin o una
+meta, para entender como funciona, el analista debe estudiar hasta el fondo de su
+estructura(sistemas pequeños) y detallar la información de manera apropiada.
+
+Todos los sistemas y subsistemas están interrelacionados y son
+interdependientes, si ocurre un cambio drástico o modificación afecta todo el 
+sistema, porque la falta de eso afectará al personal y sistema lo cual estaba 
+integrado en un inicio y todo se desmoronaría, por eso es necesario identificar
+todos los cambios que se dan, los entornos en el que trabajan y su adaptación
+con el exterior.
+
+La retroalimentación es una forma de control de un sistema, lo cual puede venir
+desde dentro o fuera de la organización, que ayuda de una forma administrativa,
+optimizando todos los productos, ante posibles perdidas o bajas. El sistema que
+toda organización desea, es la que se corrija o regule automáticamente sin 
+necesidad de decisiones en acontecimientos comunes.
+Fuera de la organización hay entornos que hay que tomar en cuenta y son: 
+El entorno comunitario, el entorno económico, el entorno político y el entorno
+legal.
+
+Las organizaciones nunca serán totalmente abiertas o cerradas eso está
+relacionado con el concepto de apertura o cerrazón interna, lo cual da a conocer los
+límites de una organización en cuanto a su interactividad con el
+mundo interior, eso se puede dar en los distintos departamentos donde
+hay limites que difieren la interacción entre departamentos, unidades, etc.
+
+Las organizaciones de hoy en día ya no se situan solo en lugares físicos,
+también en áreas virtuales, adaptarse al mercado de hoy es cuestión de tecnologías
+de información (redes de computadoras y tecnología de comunicaciones) que 
+administra a las organizaciones virtuales. Hay muchas ventajas trabajar
+virtualmente, ya que se reduce los costos de instalaciones físicas; mas
+tiempo para la familia y una mas cercana interacción con el usuario que necesita
+soporte técnico.
+
+Para lograr un trabajo eficiente es necesario la interacción de departamentos,
+es decir trabajo en equipo para lograr sus metas. El problema surge cuando el
+jefe de cada departamento pone en alce su departamento, tomando menos importancia
+al resto de departamentos, también está cuando los gerentes suben de rango y
+toman más importancia a su antiguo departamento o piden demasiados
+requerimientos, que los empleados no pueden cumplir, y eso también afecta a los
+analistas, ya que su visión periférica sigue en enfoque de su anterior puesto.
+
+ERP => Sistemas de planificación de recursos empresariales, evolucionó de
+MRP => Planificación de requerimientos de materiales;
+El ERP ayuda al flujo de información entre las áreas funcionales de la
+organización; los que distribuyen los paquetes ERP tienen el compromiso de
+capacitar especializadamente a los analistas y usuarios.
+Los ERP cubren todas las áreas de la organización, para un analista es dificil
+analizar un sistemas en uso y adaptarlo al modelo ERP, porque la magnitud del 
+problema se extiende, el tiempo, el costo también y el usuario pierde 
+la confianza de usarlo.
+
+Descripción gráfica de los sistemas 
+Una forma de ver como funciona, los límites y la información que usa.
+- Los sistemas y el diagrama de flujo de datos a nivel de contexto
+  - Proceso => Una o varias acciones
+  - Entidad => Persona, grupo, departamento o sistema que genera información.
+  - Flujo de datos => Proceso de pasar o recibir información.
+  
+  Se enfoca en los datos que fluyen hacia el sistema y salen de él, 
+  analiza la precisión e integridad del sistema.
+  Los procesos transforman los datos entrantes en información de salida y la
+  entidad recibe la información, esa líneas que conectan a las entidades
+  externas se llaman flujo de datos y representan los datos.
+
+- Los sistemas, el modelo de entidad-relación
+ * Entidad fundamental => Persona, lugar o cosa.
+ * Entidad asociativa => Algo creado que une a dos entidades
+ * Entidad atributiva => Para descubrir atributos (grupos repetitivos)
+
+ Cuando realiza bosquejos de algunos diagramas E-R, el analista necesita
+ * Enlistar las entidades en la organización.
+ * Elegir las entidades clave para reducir el alcance del problema
+ * Identificar cual debe ser la entidad principal.
+ * Confirmar los resultados con otros métodos de recopilación de datos
+   (investigación, entrevistas, etc)
+ Es necesario que el analista empiece a dibujar diagramas E-R al entrar a la
+ organización, ya que eso le ayudará ver la verdadera actividad, y determinar el
+ alcance del problema.
+
+ Modelado de casos de uso
+ Modelo lógico del sistema, un medio de comunicación entre negociantes y
+ desarrolladores verificando lo que para el usuario es necesario y de valor.
+ Un diagrama de caso de uso contiene simbolos del actor, un actor es un rol
+ específico de un usuario del sistema, una persona puede ser dos actores a la
+ vez ó mas, pues asi lo ve el sistema, un actor interactúa desde el exterior y un caso
+ de uso involucra a muchos actores, los actores principales suministran datos y
+ los secundarios son actores de soporte que dan mantenimiento al sistema.
+ Un caso de uso da a conocer, lo que desean los usuarios; desencadenan eventos,
+ son una serie de acciones que realiza el sistema manejado por un actor o
+ varios actores.
+
+ Los diagramas de casos de uso tienen 4 relaciones de comportamiento que son:
+     * Comunica ---------------
+                  << incluye >>
+     * Incluye  <--------------
+                  << extiende >>
+     * Extiende -------------->
+     * Generaliza ============>
+
+El desarrollo del alcance del sistema va ir cambiando de acuerdo a como se
+avance el proyecto, ya que no solo se toma en cuenta el alcance, sino también el
+tiempo y costo, eso también incluye en los diagramas de caso de uso.
+
+Para desarrollar diagramas de casos de uso, debe pedir a los usuarios una lista
+de todo lo que el sistema deba hacer por ellos (entrevistas, sesión de diseño de
+aplicación), se debe usar los siguientes lineamientos: 
+- Revisar las especificaciones
+- Identificar los eventos de alto nivel
+- Revisar cada caso de uso principal
+
+El desarrollo de escenarios de casos de uso
+Todo el escenario se centra en cada rol que cumple los usuarios como actores de
+cada actividad, muestra un ejemplo de conferencia, la cual el presidente y
+el proveedor son los actores que atienden a los demas actores. Los casos de uso
+se documentan en una plantilla de documento, donde describen todos los posibles
+sucesos y lo que resulta de tal acción.
+
+Los niveles de los casos de uso:
+1.- Blanco, es el nivel mas alto, puede haber solo 4 ó 5 para la organización
+2.- El cometa, ofrece una visión general, resumen de los objetivos.
+3.- Azul, para los objetivos de los usuarios.
+4.- Índigo o pez, muestra detalles a nivel funcional o subfuncional
+5.- Negro o almeja, más detallados a nivel de subfunción.
+
+ Las 3 áreas principales son:
+ - Un encabezado de área que contiene los identificadores e iniciadores de caso,
+   área de aplicación.
+ - Los pasos realizados
+ - Área de pie de página que contiene precondiciones, suposiciones, preguntas y
+   demás información relacionada.
+Para crear descripciones de casos de uso, hay que usar 4 pasos:
+ - Historias ágiles.
+ - Tareas por realizar
+ - Averigue si hay acciones iterativas o de ciclos.
+ - El caso de uso termina cuando se completa el objetivo del cliente.
+ Los diagramas de casos de uso es muy valioso para un analista, pues su sencillez
+ la hace popular, dando mas enfoque a los actores, y sus necesidades,
+ el usuario puede retroalimentar el caso de uso, el analista  puede recoletar 
+ información  e identificar los procesos; ayuda a comunicarse de una mejor 
+ manera entre analistas y ejecutivos de la empresa.
+
+ Niveles de administración
+ * Administración Estratéfica  (Lidian problemas semiestructurados) 
+ * Planeación y Control Administrativo  (Administración de nivel medio)  
+ * Control Operacional       (Lidian problemas estructurados)
+
+ Cada nivel administrativo es diferente y su modo para desarrollar sistemas de
+ información es diferente ya que requieren otra naturaleza de datos.
+ Los gerentes de operaciones necesitan información interna de naturaleza
+ repetitiva, los gerentes de nivel medio necesitan información de corto y largo
+ plazo y los gerentes estratégicos dependen mucho de la información proveniente
+ de fuentes externa.
+
+ La cultura organizacional es un aspecto importante dentro de una organización,
+ porque todo el comportamiento de los actores dentro de la organización 
+ se basa en el simbolismo verbal y no verbal, los analistas deben tomar en
+ cuenta eso al recabar información y al momento de desarrollar diagramas de
+ flujo, las subculturas tienen una poderosa influencia en el comportamiento de
+ sus miembros.
+

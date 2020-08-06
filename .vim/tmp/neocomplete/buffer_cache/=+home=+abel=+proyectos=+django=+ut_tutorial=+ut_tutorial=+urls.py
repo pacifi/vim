@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'bevolist', 'contrib', 'admin', 'autodiscover', 'urlpatterns', 'Examples', 'r', 'ut_tutorial', 'views', 'home', 'name', 'blog', 'site'}

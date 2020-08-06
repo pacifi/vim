@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscripción a CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/inscripcion.css" rel="stylesheet">
+</head>
+<body>
+    <form id="start" action="/" method="post">
+        <h1>Inscripción a CSS3</h1>
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" />
+        </p>
+        <p>
+            <label for="password">Contraseña</label>
+            <input id="password" type="password" />
+        </p>
+    <div id="options">
+        <p class="show">
+            <a href="#options">Ver mas opciones</a>
+        </p>
+        <p class="hide">
+            <a href="#start">Ocultar las opciones</a>
+        </p>
+        <p>
+            <label for="zipcode">Código Postal</label>
+            <input type="text" id="zipcode" />
+        </p>
+        <p>
+            <label for="town">Ciudad</label>
+            <input type="text" id="town">
+        </p>
+        <p>
+            <label for="country">País</label>
+            <select id="country">
+                <option value="">Francia</option>
+                <option value="">Alemania</option>
+                <option value="">Inglaterra</option>
+                <option value="">España</option>
+                <option value="">Italia</option>
+                <option value="">Países Bajos</option>
+                <option value="">Rusia</option>
+                <option value="">Suecia</option>
+            </select>
+        </p>
+    </div>
+    <!-- <p> -->
+    <!--     <input type="submit" class="submit" value="Enviar"> o -->
+    <!--     <a href="#form">Cancelar</a> -->
+    <!-- </p> -->
+    <p>
+        <a href="#finish" class="submit">ENVIAR</a> o 
+        <a href="#start">Cancelar</a>
+    </p>
+    <div id="finish">
+        <p>Inscripción Finalizada!</p>
+    </div>
+    </form>
+</body>
+</html>

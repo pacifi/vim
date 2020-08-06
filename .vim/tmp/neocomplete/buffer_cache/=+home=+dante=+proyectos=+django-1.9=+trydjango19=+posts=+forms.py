@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'models', 'Post', 'Area', 'Place', 'views', 'generic', 'edit', 'CreateView', 'class', 'PostForm', 'ModelForm', 'Meta', 'model', 'fields', 'titulo', 'contenido', 'costo', 'AreaForm', 'name', 'PlaceForm', 'area'}

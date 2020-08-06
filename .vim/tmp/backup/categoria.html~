@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADS - Categoría</title>
+</head>
+<body>
+    <h1>{{ cat.nombre|capfirst }}</h1>
+    <ul>
+        {% for elemento in elementos %}
+        <li>
+            <a href="/ads/elemento/{{ elemento.id }}/">
+                {{ elemento.nombre|capfirst }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

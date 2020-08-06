@@ -1,0 +1,1 @@
+[{'word': 'Inicio', 'menu': '[I]', 'kind': 'f', 'abbr': 'def Inicio(request):'}, {'word': 'Sobre', 'menu': '[I]', 'kind': 'f', 'abbr': 'def Sobre(request):'}, {'word': 'Usuarios', 'menu': '[I]', 'kind': 'f', 'abbr': 'def Usuarios(request):'}]

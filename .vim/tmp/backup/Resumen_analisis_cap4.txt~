@@ -1,0 +1,137 @@
+Recopilación de información: métodos interactivos
+=================================================
+
+Los métodos interactivos son formas de recopilar información apropiada y
+elaborar los requerimientos. Hay tres métodos interactivos: Entrevistas, Diseño
+de aplicaciones conjuntas (JAD) y encuestas aplicadas a las personas mediante
+cuestionarios.
+Cada método es distinto y el proceso es propio, pero el objetivo es el mismo.
+Estos 3 métodos interactivos son métodos no discretos.
+
+ENTREVISTAS
+- Primero entrevistese a usted mismo.
+- No olvide tener un propósito específico, tomar en cuenta sus reacciones (usuarios).
+- Planear que el entrevistado quede satisfecho.
+- Obtener opinión de lo que siente sobre el estado actual del
+  sistema, la entrevista debe durar mínimo 45 minutos a 1 hora.
+- Captar los sentimientos y la mayor cantidad posible de objetivos del
+  entrevistado; explorar las cuestiones sobre HCI (Interacción
+  Humano-Computadora)
+- Explorar la interactividad (placentero y divertido) y la usabilidad que le da
+  al sistema el usuario.
+
+Pasos para planear la entrevista
+
+1.- Leer el material sobre antecedentes.
+2.- Establecer los objetivos de la entrevista.
+3.- Decidir a quién entrevistar.
+4.- Preparar al entrevistado.
+5.- Decidir sobre los tipos de preguntas y su estructura.
+    5.1. Preguntas Abiertas.(Muchas opciones para responder)
+    5.2. Preguntas Cerradas.(Limitan las opciones del que responde)
+    5.3. Preguntas por sondeo.(Obtener respuestas más detalladas)
+
+Para entrevistar es necesario ordenar las preguntas en una secuencia lógica,
+usando formas generales reconocidas de razonamiento (inductivo y deductivo),
+se puede ordenar de diferentes formas usando estructuras:
+- Uso de una estructura de Pirámide.(Preguntas cerradas a Preguntas abiertas)
+- Uso de una estructura de Embudo. (Preguntas abiertas a Preguntas cerradas)
+- Uso de una estructura en forma de diamante. (Combinación de las dos
+  estructuras)
+
+Luego de la entrevista se hace un informe de toda la información, luego se hace
+otro más detallado donde enfoca puntos más importantes.
+
+DISEÑO DE APLICACIÓN CONJUNTA
+
+IBM lo desarrolló, como metodología para entrevistar en menos tiempo y costo a
+los usuarios en grupo. Empleado como técnica para realizar el análisis de
+requerimientos y diseño de la interfaz de usuario en forma conjunta con los
+usuarios. Las condiciones para usar el JAD es que los usuarios estén inquietos y
+deseen mejorar la solución del problema, solución en conjunto con los usuarios,
+la cantidad de ideas sea mayor que la entrevista cara a cara y que haya un buen
+flujo de trabajo durante la ausencia de personas clave.
+En el JAD están los analistas, usuarios, ejecutivos, etc, lo cual requiere de un
+líder de sesión, y el líder debe ser alguién con excelentes habilidades sociales
+que pueda manejar las cuestiones de sistemas, negociar y resolver
+conflictos de forma satisfactoria, debe haber 2 observadores que sean analistas
+para ofrecer explicación técnica y alguien que sea de secretario para que 
+escriba formalmente todo lo tratado en la sesión.
+
+La ubicación de las reuniones JAD, se debe llevar a cabo en un ambiente fuera de
+trabajo, la idea es minimizar las distracciones y responsabilidades, no puede
+faltar ninguno ya que sino de nada serviría para realizar la sesión, y se hace en
+instalaciones de soporte de decisiones, todo esto se debe anunciar una semana
+antes para que se preparen mentalmente y puedan estar listos.
+
+En un proyecto de sistemas se debe hacer la obtención de un análisis
+estructurado de las actividades del proyecto, tomando nota de lo ocurrido en la
+sesión y presentando sistemáticamente los objetivos de la administración, el alcance y los
+límites del proyecto.
+
+Los beneficios potenciales al usar JAD en vez de las entrevistas tradicionales
+son 4: Ahorro de Tiempo, Desarrollo rápido, posibilidad de mejorar la posesión
+del sistema de información y desarrollo creativo de los diseños (Lluvias de
+ideas que generan nuevas propuestas).
+
+Las desventajas potenciales de JAD son 3: Mucho tiempo para los participantes (2
+a 4 días), la preparación para las sesiones JAD son inadecuadas y que la
+organización y su cultura no esté bastante desarrollada para esta metodología.
+
+El uso de cuestionarios(Encuestas) es otra manera de obtener información, mediante
+preguntas cerradas, que busca de una manera estudiar los deseos de los usuarios
+en un sistema, las creencias, el comportamiento y las características de varias
+personas clave en la organización, buscando problemas y comparando los
+resultados con las entrevistas, de esa manera se puede afirmar mejor una
+solución no tan segura.
+
+Si se planea usar cuestionarios para recopilar información se debe preguntar, que
+se planea conseguir con la encuesta, y para ello se usa lineamientos para
+decidir usarlo ó no: Las personas esparcidas ocupan un área amplia, gran
+cantidad de personas involucrados en el proyecto de sistemas, Medir la opinión
+general antes de una tomar una ruta específica, desea seguridad en la identificación y
+consideración de los problemas con el sistema actual.
+
+La terminología de las preguntas.
+Para escribir una pregunta se tiene que verificar si es para una entrevista o si
+es para un cuestionario, ambos son distintos, lo cual para una entrevista el
+analista puede controlar el contexto, ya que puede aclarar cualquier pregunta,
+en cambio para un cuestionario, se debe definir bien la pregunta, es decir facil
+de entender, anticipar las preguntas del encuestado.
+Hay dos tipos de preguntas: Abiertas y Cerradas.
+
+El lenguaje de la encuesta debe ser lo mas familiar posible para la comprensión
+de los encuestados (simplicidad), ser específico en palabras, tener preguntas cortas,
+evitar preguntas censurables, hacer preguntas capaces de responder, definir preguntas
+correctas y verificar si las preguntas están en el nivel del encuestado.
+
+El uso de escalas en los cuestionarios es para medir o precisar una información
+que desamos obtener, hay 2 formas de escalas de medición: 
+1.- Escalas nominales => Clasificar cosas, totales de cada clasificación
+2.- Escalas de intervalo => Obtiene un análisis más completo.
+
+Luego para medir el rendimiento de escalas es usa la validez (la pregunta mide lo que el
+analista requiere) y confiabilidad (Implica consistencia).
+
+En la construcción de escalas se debe tener mucho cuidado, porque sino genera
+los siguientes problemas: Indulgencia, Tendencia central, efecto halo.
+
+El diseño de los cuestionarios es uno de los principios relevantes para que el
+encuestado pueda responder cómodamente, ya que no siempre se ven motivados, hay
+4 reglas para diseñar un buen cuestionario:
+1.- Incluya mucho espacio en blanco.
+2.- Incluya mucho espacio para escribir o teclear las respuestas.
+3.- Facilite a los encuestados la acción de marcar con claridad sus respuestas.
+4.- Mantenga un estilo consistente
+
+También es importante el orden de las preguntas y los lineamientos son:
+1. Coloque primero las preguntas que sean importantes para los encuestados.
+2. Agrupe elementos de contenido similar.
+3. Introduzca primero las preguntas menos controversiales.
+
+Para cada encuestado hay un tipo distinto de cuestionario, lo cual hay métodos
+para administrar el cuestionario de forma efectiva: Convocar a encuestados
+concernientes, entregar cuestionarios en blanco en forma personal, los
+encuestados administren su propio cuestionario en el trabajo, envío de
+cuestionarios por correo a los empleados y administrar el cuestionario en forma
+electrónica.

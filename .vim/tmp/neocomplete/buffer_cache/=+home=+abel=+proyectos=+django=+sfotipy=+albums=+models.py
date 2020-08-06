@@ -1,0 +1,1 @@
+{'from', 'django', 'db', 'import', 'models', 'artists', 'Artist', 'Create', 'your', 'here', 'class', 'Album', 'Model', 'title', 'CharField', 'max_length', 'cover', 'ImageField', 'upload_to', 'albums', 'artist', 'ForeignKey', 'def', '__unicode__', 'self', 'return'}

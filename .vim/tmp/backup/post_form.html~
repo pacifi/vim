@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block estilos %}
+<style>
+        .form{
+            position: relative;
+            top: 1em;
+            background: #C8E6C9;
+            padding: 1em;
+            width: 70%;
+            margin:0 auto;
+            border-radius: 10px;
+            border-right: 2px solid #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+        }
+        h1{
+            text-align: center;
+            border-bottom: 2px solid #4CAF50;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        label{
+            font-weight:bold;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        input{
+            margin-left:13.3%;
+        }
+        textarea{
+            margin-left:10%;
+        }
+        input[type="submit"]{
+            letter-spacing: 2;
+            font-size:16px;
+            padding: 1em;
+            background: #fff;
+            border: 1px solid #4caf50;
+            color:#4caf50;
+            border-radius:4px;
+            cursor:pointer;
+        }
+        input[type="submit"]:hover{
+            background: #009688;
+            color: #fff;
+
+</style>
+{% endblock %}
+{% block content %}
+{{ block.super }}
+<div class="form">       
+    <h1>Formulario Post</h1>
+    <form action="" method="post">{% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="" value="Guardar Post">
+    </form>
+</div>
+{% endblock content %}

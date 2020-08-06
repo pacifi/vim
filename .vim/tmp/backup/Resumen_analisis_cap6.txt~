@@ -1,0 +1,191 @@
+Modelado ágil y prototipos
+==========================
+
+El prototipado es una de las otras formas de recopilar requerimientos de
+información del usuario, los prototipos son una forma gráfica de mostrar su
+negocio al cliente, y a la vez este da a conocer sus puntos de vista para la
+mejora del prototipado, se usa una metodología de prototipo llamado Desarrollo
+rápido de aplicaciones (RAD).
+
+Los prototipos sirven para obtener información del usuario, mostrando
+gráficamente el Sistema de información, el analista de sistemas toma nota de las
+reacciones de los usuarios y con esa información puede establecer prioridades y
+redirigir sus planes, la creación del prototipos y planeación van de la mano.
+Hay varios tipos de prototipos:
+1.- Prototipo de Parches => Funcional, pero ineficiente.
+2.- Prototipo no operacional => Incluye solo características esenciales para
+                                probar.
+3.- Prototipo primero de una serie => Se usa cuando se realiza muchas
+                            instalaciones del mismo sistema, uno encima de otro.
+4.- Prototipo de características selectas =>Algunas características esenciales,
+        se usa para incorporar al sistema final sin mucho arreglos a esa parte.
+
+
+El uso de prototipos como alternativa para el SDLC, es buena porque no consume
+mucho tiempo comparado al SDLC, pero por otro lado no se llega a comprender
+perfectamente el problema, siendo inadecuado para las necesidades del sistema en
+general, lo cual no conviene de cierta forma, entonces lo recomendable es usar
+el prototipado como parte del SDLC, para que el analista pueda recopilar
+requerimientos de información mas eficientemente.
+
+Para desarrollar prototipos se debe calcular el costo del módulo del sistema, si
+está dentro del presupuesto se hace, sino se cancela. El costo incluye el
+trabajo del equipo de Desarrollo.
+
+Hay 4 lineamientos o reglas para desarrollar un prototipo:
+1.- Trabajar en módulos administrables.
+2.- Crear el prototipo con rapidez.
+3.- Modificar el prototipo.
+4.- Hacer énfasis en la interfaz de usuario.
+
+Los prototipos presentan varias desventajas: Dificil administración de un prototipo,
+los analistas y usuarios pueden adoptar el prototipado como un sistema completo
+cuando es inadecuado, la comunicación debe ser clara con los usuarios en el
+trabajo del prototipado.
+
+Las ventajas de hacer prototipos son 3: Potencial de cambiar el sistema en las
+primeras etapas, detener el desarrollo a tiempo parte del sistema que no esté
+funcionando y mejorar las necesidades y espectativas de los usuarios.
+
+La forma más rápida de crear prototipos es mediante software COTS, los usuarios
+también están involucrados en este proceso de prototipado, para eso se requiere 
+la participación honesta de ellos, ya que sin ayuda de los usuarios no tendría
+mucho sentido hacer los prototipos, pueden ayudar de tres maneras:
+1.- Experimentar con el prototipo.
+2.- Ofrecer reacciones abiertas al prototipo.
+3.- Sugerir lo que se puede agregar o quitar en el prototipo.
+
+El Desarrollo Rápido de Aplicaciones es una metodología orientada a objetos que
+cuenta con método de desarrollo y herramientas de software, que tiene por
+objetivo minimizar el tiempo que se necesita en el SDLC, tanto el RAD como la
+creación de prototipos tratan de cumplir óptimamente los requerimientos que
+cambian rápidamente, el RAD se considera como una implementación en el
+prototipado.
+El RAD tiene 3 fases: 
+1.- Fase de planeación de los requerimientos.- Identificar objetivos y
+                                               requerimientos de información.
+2.- Taller de diseño RAD.- Trabajar con los usuarios para diseñar el sistema,
+                           luego construir el sistema.
+3.- Fase de implementación.- Introducir el nuevo sistema.
+
+Para usar RAD, tanto los programadores y analistas deben tener experiencia usando 
+este método, la empresa tenga motivos para apresurar el desarrollo, cuando se
+crea que la empresa con la nueva aplicación pueda tener cierta ventaja sobre sus
+competidores y los usuarios sean sofisticados y comprometidos con los objetivos
+organizacionales.
+La desventajas del RAD es que no hay documentación, eso dificulta muchas cosas a
+los usuarios.
+
+MODELADO ÁGIL
+
+Esta metodología ágil ha sido acreditada por haber rescatado a empresas de un
+sistema fallido habiendo usado metodología estructurada.
+Se basa no solo en resultados, sino también en valores, principios y prácticas.
+Para ser analistas ágiles hay que adherirse al denominado "programación extrema"
+o "XP".
+
+Hay que tomar en cuenta 4 valores del Modelado ágil que ayudaran a crear un
+entorno igualotario, son: Comunicación, simpleza, retroalimentación y valor.
+Sin comunicación no hay buena comprensión entre usuarios y equipo de desarrollo.
+Sin simpleza todo luce complicado y difícil.
+Sin retroalimentación se tiende a un proyecto fallido por falta de ajustes.
+Sin valor o valentía no hay confianza entre el equipo de desarrollo y sus
+clientes, es una forma de retroalimentación concreta la interacción de ambos
+bandos.
+Todos esos valores pueden figurar por medio de una postura de humildad.
+A los expertos en computadoras se les denominan "gurús", los gurús carecen de
+humildad; los modeladores ágiles son analistas de sistemas, y ellos deben tener
+confianza en sí mismos para ser cuestionados por sus clientes, los analistas
+aprenden de sus clientes.
+Los Principios básicos del Modelado Ágil son reflejos y especificaciones de los
+valores ágiles, son 14:
+1.- Satisfacer al cliente por medio de la entrega de software funcional.
+2.- Adoptar el cambio, incluso si se introduce en las últimas etapas del desarrollo.
+3.- Seguir entregando software funcional en incrementos y con frecuencia.
+4.- Fomentar a los clientes y analistas a que trabajen juntos a diario.
+5.- Confiar en los individuos motivados para que realicen su trabajo.
+6.- Promover la conversación cara a cara.
+7.- Concentrarse en hacer que el software funcione.
+8.- Fomentar el desarrollo continuo, regular y sostenible.
+9.- Adoptar la agilidad con especial atención en un diseño lúcido.
+10.- Apoyar a los equipos autoorganizados.
+11.- Proveer retroalimentación rápida.
+12.- Fomentar la calidad.
+13.- Revisar y ajustar el comportamiento de vez en cuando.
+14.- Adoptar la simpleza.
+
+Actividades, recursos y prácticas del Modelado Ágil
+
+Hay 4 Actividades básicas del desarrollo ágil: Codificar, probar, escuchar y
+diseñar.
+Codificar: Elija una idea, codifíquela, pruébela y comprube si la idea era
+lógica, es la base viviente del sistema.
+Probar: Pruebas automatizadas =>Pruebas a corto (confianza extrema) y largo
+plazo(mantiene vivo un sistema, haciendo cambios).
+Escuchar: La escucha activa y efectiva, habilidad importante que se lleva al
+extremo, porque hay poca comunicación por escrito.
+Diseño: Un buen diseño está centrado en el usuario(DCU), es decir responde a las
+necesidades del usuario y del contenido, eso se llama Responsive Design.
+
+Luego 4 variables de control de recursos de Modelado Ágil: Tiempo, Costo,
+Calidad y alcance. Estos recursos trabajan juntos, pués si uno aumenta el resto
+también lo hará y viceversa.
+
+Por último 4 prácticas ágiles básicas que hacen la diferencia en comparación
+con las otras metodologías, que son: Entregas pequeñas, semana de trabajo de 40
+horas, alojar al cliente en el sitio y programar en pareja, todas aquellas
+prácticas se usan con el fin de reducir el tiempo y entregar un trabajo bien
+elaborado.
+
+El proceso de Desarrollo ágil es dar lógica al modelo que se está creando, la
+cual su proceso es:
+1.- Escuchar las historias de los usuarios por medio del cliente.
+2.- Dibujar un modelo del flujo de trabajo lógico para apreciar las decisiones 
+de negocios representadas en la historia de un usuario.
+3.- Crear historias de usuarios con base en el modelo lógico.
+4.- Desarrollar algunos prototipos de visualización. Para ello hay que mostrar a 
+los clientes el tipo de interfaz que tendrán.
+5.- Usar la retroalimentación de los prototipos y los diagramas del flujo de 
+trabajo lógico para desarrollar el sistema hasta crear un modelo físico de
+datos.
+Para escribir las historias de los usuarios se requiere la interacción oral
+entre los desarrolladores y usuarios, solo de esa manera se tendrá una noción
+general de lo que se quiere hacer.
+
+SCRUM es otra metodología ágil que requiere trabajo en equipo, teniendo en
+cuenta el éxito del proyecto es lo más importante.Se usa un periodo de tiempo 
+estricto de 30 días para su desarrollo y los componentes son:
+Acumulación(backlog) de productos, Acumulación de corrida(sprint), corrida,
+scrum diaria y demo.
+La metodología ágil es rápida, iterativa, flexible y participativa, se adapta
+facilmente a los cambios que se dan en la empresa.
+Se pudo aprender 6 lecciones:
+1.- Las entregas pequeñas permiten a los sistemas evolucionar.
+2.- La programación en pareja mejora la calidad en general.
+3.- Los clientes en el sitio son benéficos para ambas partes.
+4.- La semana de trabajo de 40 horas mejora la efectividad.
+5.- Los recursos y las actividades equilibradas apoyan los objetivos del proyecto.
+6.- Los valores ágiles son imprescindibles para el éxito.
+
+Hay 7 estrategias para mejorar la eficiencia en el trabajo del conocimiento:
+
+1.- Reducir el tiempo y los errores de la interfaz.
+2.- Reducir el tiempo de aprendizaje del proceso y las pérdidas duales de
+    procesamiento.
+3.- Reducir el tiempo y esfuerzo requeridos para estructurar las tareas y aplicar 
+    formato a las salidas.
+4.- Reducir la expansión improductiva del trabajo.
+5.- Reducir el tiempo y costos del almacenamiento, la investigación de datos y 
+    del conocimiento.
+6.- Reducir el tiempo y costos de la comunicación y la coordinación.
+7.- Reducir las pérdidas debido a la sobrecarga humana de información.
+
+Los analistas de sistemas deben conocer los riesgos al que se enfrentan al
+adoptar nuevas metodologías y buscar el equilibrio entre los riesgos, para eso
+se deben considerar 6 variables:
+1.- Cultura de la organización.
+2.- Sincronización
+3.- Costo.
+4.- Reacciones de los clientes.
+5.- Medición del impacto.
+6.- Derechos individuales de los programadores/analistas.

@@ -1,0 +1,78 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+{% if list_compras %}
+<table cellspacing="0">
+    <caption>Compras Realizadas</caption>
+    <thead>
+        <tr>
+            <th>Proveedor</th>
+            <th>Articulo</th>
+            <th>Cantidad</th>
+            <th>Precio Real</th>
+            <th>IGV</th>
+            <th>Descuento</th>
+            <th>TOTAL</th>
+            <th>Fecha de Modificación</th>
+            <th>Fecha de Creación</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for compra in list_compras %}
+        <tr>
+            <td>{{compra.proveedor.razon_social}}</td>
+            <td>{{compra.producto.nombre}}</td>
+            <td>{{compra.cantidad}}</td>
+            <td>{{compra.precio_real}}</td>
+            <td>{{compra.iva}}</td>
+            <td>{{compra.t_desc}}</td>
+            <td>{{compra.total}}</td>
+            <td>{{compra.updated}}</td>
+            <td>{{compra.timestamp}}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url 'compras:editar_orden_compra' compra.pk %}">Editar</a></li>
+                    <li><a href="{% url 'compras:detalle_orden_compra' compra.pk %}">Detalle</a></li>
+                    <li><a href="{% url 'compras:eliminar_orden_compra' compra.pk %}">Eliminar</a></li>
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{total_compras}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+{% if is_paginated %}
+<div class="pagination">
+    <span class="page-links">
+        {% if list_compras.has_previous %}    
+        <a href="?{{ page_request_var }}={{ list_compras.previous_page_number }}">Previous</a>
+        {% endif %}
+        <span class="page-current">
+            Page {{ list_compras.number }} of {{ list_compras.paginator.num_pages }}.
+        </span>
+        {% if list_compras.has_next %}
+        <a href="?{{ page_request_var }}={{ list_compras.next_page_number }}">Next</a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+
+{% else %}
+<h3>No hay compras hechas</h3>
+{% endif %}
+<a href="{% url 'compras:crear_orden_compra' %}">Nuevo Orden de Compra</a>
+<a href="{% url 'inicio' %}">Pagina Principal</a>
+{% endblock content %}

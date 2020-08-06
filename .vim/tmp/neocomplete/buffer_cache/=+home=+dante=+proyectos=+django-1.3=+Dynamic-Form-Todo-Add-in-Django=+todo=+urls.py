@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'defaults', 'import', 'urlpatterns', 'patterns', 'dynamicform', 'todo', 'views', 'r', 'index', 'thanks', 'generic', 'simple', 'direct_to_template', 'template', 'html'}

@@ -1,0 +1,21 @@
+# coding: utf-8
+class Estudiante(object):
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def hola(self):
+        return "Mi nombre es %s y tengo %d años " % (self.nombre, self.edad)
+
+l = []
+for es in range(10):
+    nombre = "Estudiante %i" % es
+    e = Estudiante(nombre, 23)
+    l.append(e)
+
+for es in l:
+    if es.nombre == "Estudiante 5":
+        print "Soy el estudiante 5"
+    else:
+        print "No soy el estudiante 5"
+#    print es.hola()

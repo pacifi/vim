@@ -1,0 +1,8 @@
+.jumbotron {
+background-color: #57D1D6;
+}
+/*
+p {
+    color: rgba(253, 0, 52, 0.29) !important;
+
+}*/

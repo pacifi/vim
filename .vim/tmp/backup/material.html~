@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+ 
+<div class="content">
+  <h1 class="title">Formulario</h1>
+  <div class="form">
+    <form action="" class="form-container">
+      <div class="form-item col-5">
+        <input type="text" required="required" id="name" class="input"/>
+        <label for="name" class="label">nombre</label>
+      </div>
+      <div class="form-item col-5">
+        <input type="text" required="required" id="lastname" class="input"/>
+        <label for="lastname" class="label">apellido</label>
+      </div>
+      <div class="form-item">
+        <input type="email" required="required" id="email" class="input"/>
+        <label for="email" class="label">correo</label>
+      </div>
+      <div class="form-item">
+        <textarea required="required" id="textarea" class="textarea"></textarea>
+        <label for="textarea" class="label">mensaje</label>
+      </div>
+      <div class="form-item">
+        <input type="submit" value="Enviar" class="btn-enviar"/>
+      </div>
+    </form>
+  </div>
+</div>
+    
+</body>
+</html>

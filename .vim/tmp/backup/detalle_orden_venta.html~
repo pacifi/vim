@@ -1,0 +1,24 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block content %}
+
+<h1>{{ object.producto.producto.nombre|upper }}</h1> 
+<figure>
+    {% for img in  object.producto %}
+    <a href="/"><img src="{{MEDIA_URL}}{{img.producto.avatar}}" height="210"></a>
+    {% endfor %}
+</figure>
+<ul> 
+    <li>Nombre:       {{ object.cliente.nombre }}</li> 
+    <li>Apellidos:    {{ object.cliente.apellido_paterno }} {{object.cliente.apellido_materno}}</li> 
+    <li>DNI:     {{ object.cliente.dni }}</li> 
+    <li>Código Venta: {{ object.codigo }}</li> 
+    <li>Productos:  {{ object.get_productos }}</li>
+    <li>Precio Real:     {{ object.precio_real }}</li> 
+    <li>IGV:             {{ object.iva }}</li>
+    <li>Total:           {{object.total}}</li>
+    <li>Fecha emitida:           {{ object.fecha }}</li> 
+</ul>
+<a href="{% url 'ventas:listar_ventas' %}">Ver Ventas</a>
+{% endblock content %}

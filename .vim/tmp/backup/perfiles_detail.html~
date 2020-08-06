@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load url from future %}
+{% block body %}
+<table class="pure-table" style="margin-left:5cm">{% csrf_token %}
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Usuario</th>
+            <th>Teléfono</th>
+            <th>Provincia</th>
+            <th>Distrito</th>
+            <th>Departamento</th>
+            <th>Zona Horaria</th>
+            <th>Imagen</th>
+            <th>Creado el:</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{perfiles.pk}}</td>
+            <td>{{perfiles.user}}</td>
+            <td>{{perfiles.telefono}}</td>
+            <td>{{perfiles.provincia}}</td>
+            <td>{{perfiles.distrito}}</td>
+            <td>{{perfiles.departamento}}</td>
+            <td>{{perfiles.zona_horaria}}</td>
+            <td>{{perfiles.picture}}</td>
+            <td>{{perfiles.editado}}</td>
+        </tr>
+    </tbody>
+</table>       
+<a href="{% url 'user_profile_update' userprofile.pk %}"class="pure-button
+    pure-button-primary" style="position:relative; top:12px; margin-left:13cm">Update</a>
+{% endblock %}

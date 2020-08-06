@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <ul>
+        <li> Name: {{ elemento.nombre }}</li>
+        <li> Categoria: {{ elemento.categoria.nombre }}</li>
+        <li> Tipo de ancuncio: {{ elemento.get_listado_display }}</li>
+        <li> Departamento: {{ elemento.departamento }}</li>
+        <li> Publicado: {{ elemento.publicado_en }}</li>
+    </ul>
+    <h2> Descripcion </h2>
+    <p>{{ elemento.descripcion | linebreaksbr }}</p>
+</body>
+</html>

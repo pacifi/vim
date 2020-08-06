@@ -1,0 +1,110 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}Proyecto Venta{% endblock %}</title>
+    <!-- Le styles -->
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap-responsive.css' %}" rel="stylesheet">
+    <script src="{% static 'jquery/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 1em;;
+    }
+    </style>
+    <script type="text/javascript">
+        $(document).on('ready',function(){
+              $.ajax({
+                  type:"GET",
+                  contentType: 'application/json; charset=utf-8',
+                  dataType:"json",
+                  url:"compras/retorno/productos/",
+                  success:function(response){
+                      var json = (response.length-1)-2;
+                      for (var i=0;i<json.length-1;++i)
+                          {
+                              $('#ProductosNuevos').append("<li>"+json[i].fields.cantidad+'</li>');
+                          }
+                  }
+              });
+            $.get("{% url 'ventas:get_carrito' %}",function(data){
+               $("#cuerpo_carrito").html(data)
+            });
+        });
+    </script>
+      {% block scripts %}
+      {% endblock %}
+      {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container-fluid">
+
+          <a class="navbar-brand" href="{% url 'ventas:area_ventas' %}">Modulo Ventas </a>
+            {% if user.is_authenticated %}
+            <p class="navbar-text pull-right">
+              Logged in as {{ user.username }}
+            </p>
+            {% endif %}
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'ventas:listar_productos' %}">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Acerca de ...</a></li>
+              {% if user.is_authenticated %}
+				<li><a href="{% url "logout_empleado" %}"> Cerrar Sesion </a></li>
+		{% else %}
+				<li><a href="{% url "login_empleado" %}"> Login </a></li>
+		{% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">
+          <div class="jumbotron" style="">
+            {% block content %}
+            {% endblock%}
+          </div>
+        </div><!--/span-->
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              {%  if user.is_authenticated %}
+              <li class="nav-header">Mi Carrito</li>
+              <br><p align="justify">
+              	Carrito de {{ user.username }}
+              </p>
+              <div id="cuerpo_carrito"></div>
+               {% else %}
+               <p>Por favor <a href="{% url "login_empleado" %}">identifiquese</a></p>
+               {% endif %}
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list" id="ProductosNuevos">
+              <li class="nav-header">Nuevos Productos</li>
+              
+            </ul>
+          </div><!--/.well -->
+          <img src="{% static 'img/django.gif' %}"/>
+        </div><!--/span-->
+      </div><!--/row-->
+      <hr>
+      <footer>
+        <p>&copy; Open Project 2016 </p> 
+      </footer>
+    </div><!--/.fluid-container-->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

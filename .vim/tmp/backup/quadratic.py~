@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system("clear")
+
+import cmath
+import math
+import sys
+
+def get_float(msg, allow_zero):
+    x = None
+    while x is None:
+        try:
+            x = float(input(msg))
+            if not allow_zero  and abs(x) < sys.float_info.epsilon:
+                print("Zero is not allowed")
+                x = None
+        except ValueError as err:
+            print(err)
+    return x
+
+print("ax\N{SUPERSCRIPT TWO} + bx + c = 0")
+# print("ax² + bx + c = 0")
+a = get_float("Enter a: ", False)
+b = get_float("Enter b: ", True)
+c = get_float("Enter c: ", True)
+
+x1 = None
+x2 = None
+discriminant = (b ** 2) - (4 * a * c)
+if discriminant == 0:
+    x1 = -(b / (2 * a))
+else:
+    if discriminant > 0:
+        root = math.sqrt(discriminant)
+    else: # discriminant < 0
+        root = cmath.sqrt(discriminant)
+    x1 = (-b + root) / (2 * a)
+    x2 = (-b - root) / (2 * a)
+
+def signal(valor):
+
+    def sinfactores(valor):
+        #Sin factores 0,0
+        sub = valor[1].split(".")
+        if not int(sub[1][0]) > 0:
+            valor[1] = sub[0]
+
+    if valor < 0 or valor >= 0:
+        if valor < 0:
+            valor = str(valor)
+            valor = [valor]
+            valor.append(valor[0][1:])
+            valor[0] = "- "
+            sinfactores(valor)
+        else:
+            valor = str(valor)
+            valor = [valor]
+            valor.append(valor[0])
+            valor[0] = "+ "
+            sinfactores(valor)
+    return valor
+a = signal(a)
+b = signal(b)
+c = signal(c)
+# print(a,b,c)
+equation = ("{0[0]}{0[1]}x² {1[0]}{1[1]}x {2[0]}{2[1]} = 0"
+            " \N{RIGHTWARDS ARROW} x = {3}").format(a,b,c,x1)
+
+if x2 is not None:
+    equation += " or x = {0}".format(x2)
+
+print(equation)
+# d = sys.argv
+
+# d1 = []
+
+# for i in range(len(sys.argv)-1):
+#     d1.append(d[i+1])
+
+# print(d1)

@@ -1,0 +1,39 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load formset_tags %}
+{% load i18n %}
+{% block script %}
+<script src="{% static 'js/jquery-2.1.1.min.js' %}"></script> 
+<script type="text/javascript">     
+    $(function() {
+        $('div#inline div tr').formset({
+            prefix: '{{formset.prefix}}',
+            formCssClass: 'dynamic-formset{{ forloop.counter }}'
+            addText: 'Agregar mas Productos',
+            deleteText: 'Eliminar'
+        })
+    }) 
+</script>        
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.as_table }}
+    </div>
+    <div id="inline">
+        {% for formset in inlines %}
+        <div id="FormSet{{ formset.prefix }}">
+            {% for subform in formset %}
+            <tr>
+                {{ subform.as_table}}
+            </tr>
+            {% endfor %}
+            {{ formset.management_form }}
+        </div>
+        {% endfor %}
+    </div>
+    <input type="submit" value="Guardar" class="submit"/>
+</form>
+{% endblock %}

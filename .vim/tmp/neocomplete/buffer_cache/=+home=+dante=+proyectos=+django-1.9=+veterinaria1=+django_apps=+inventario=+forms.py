@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'models', 'Articulo', 'Categoria', 'class', 'ArticuloForm', 'ModelForm', 'Meta', 'model', 'fields', 'nombre', 'marca', 'p_compra', 'p_venta', 'avatar', 'def', '__init__', 'self', 'args', 'kwargs', 'super', 'widget', 'attrs', 'update', 'form', 'control', 'input', 'mask', 'placeholder', 'eg', 'CategoriaForm'}

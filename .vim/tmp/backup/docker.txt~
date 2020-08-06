@@ -1,0 +1,34 @@
+sudo docker images => Para ver imagenes que se ha hecho PULL
+sudo docker run ubuntu
+sudo docker run ubuntu echo "hola"
+sudo docker run ubuntu ps -efa
+sudo docker run ubuntu ps -ax
+sudo docker run -it ubuntu bash ==> Entrar al contenedor
+#sudo docker run -it ubuntu:15.04 bash ==> Entrar al contenedor
+
+ID: a64904d017a5
+ID1: 784243dea832
+ID2: b07573b6b949  
+
+Para entrar a un contenedor ya existente:
+CTRL+p+q => Para mantener el contenedor al salir
+sudo docker attach <ID2>(Solo los 4 primeros digitos del ID)
+
+Levantando TOMCAT
+sudo docker run -P -d tomcat
+sudo docker run -P -d tomcat => Lo mismo para correr
+
+Para parar procesos de tomcat
+sudo docker stop <ID>(4 primeros digitos del ID)
+
+Para ver los LOGS
+sudo docker logs <ID>(4 primeros digitos del ID)
+
+Para ver procesos que se estan ejecutando
+sudo docker ps
+
+Para entrar a los servicios de tomcat 
+sudo docker exec -ti cfed bash
+
+Para ver los servicios que esta corriendo dentro del tomcat
+ps -ax

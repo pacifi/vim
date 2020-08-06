@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body>
+    <form action="" method="post">{% csrf_token %}
+        <legend>Crear Lugar</legend>
+        <fieldset>
+            {{ form }}<br/>
+            <input type="submit" name="" value="Guardar Place">
+    </form>
+    
+</body>
+</html>

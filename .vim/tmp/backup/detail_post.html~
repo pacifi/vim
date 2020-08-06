@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+<!-- <style> -->
+<!--         body{ -->
+<!--             background: #A7FFEB; -->
+<!--             letter-spacing:2; -->
+
+<!--         } -->
+<!--         table,th,td{ -->
+<!--             width:70%; -->
+<!--             margin: 0 auto; -->
+<!--             border: 1px solid #009688; -->
+<!--             color: #009688; -->
+<!--             text-align: center; -->
+<!--         } -->
+<!--         h1{ -->
+<!--             text-align:center; -->
+<!--             color:#009688; -->
+<!--             border-bottom: 2px solid #009688; -->
+<!--         } -->
+
+<!-- </style> -->
+{% load urlify %}
+
+{% block content %}
+<div class="col-sm-6 col-sm-offset-3">
+    {% if instance.image %}
+    <img src="{{ instance.image.url }}" id="img-dante">
+    {% endif %}
+    <h1>{{title}} <small>{{instance.timestamp}}</small></h1>
+    
+    {{ instance.contenido|truncatechars:20|urlify }} <br/>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">Facebook</a>
+    <a href="https://twitter.com/home?status={{ instance.contenido|urlify }}%20{{ request.build_absolute_uri }}">Twitter</a>
+    <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'>GooglePLus</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{instance.titulo}}&summary={{ share_string }}&source={{ request.build_absolute_uri }}">Linkedin</a>
+ <a href="http://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title={{ share_string }}">Reddit</a>                                                                                                                 
+    {{instance.contenido|linebreaks}}<br/>
+</div>
+{% endblock content %}
+    <!-- <h1>{{title}}</h1> -->  
+   
+    <!-- <table cellspacing="0"> -->
+    <!--     <caption>Detalle de Post</caption> -->
+    <!--     <thead> -->
+    <!--         <tr> -->
+    <!--             <th>Titulo</th> -->
+    <!--             <th>Contenido</th> -->
+    <!--             <th>Precio Real</th> -->
+    <!--             <th>IGV</th> -->
+    <!--             <th>Precio</th> -->
+    <!--             <th>Modificado</th> -->
+    <!--             <th>Creado</th> -->
+    <!--         </tr> -->
+    <!--     </thead> -->
+    <!--     <tbody> -->
+    <!--         <tr> -->
+    <!--             <td>{{instance.titulo}}</td> -->
+    <!--             <td>{{instance.contenido}} </td> -->
+    <!--             <td>{{precio_real}}</td> -->
+    <!--             <td>{{igv}}</td> -->
+    <!--             <td>{{instance.costo}} </td> -->
+    <!--             <td>{{instance.updated}}</td> -->
+    <!--             <td>{{instance.timestamp}}</td> -->
+    <!--         </tr> -->
+    <!--     </tbody> -->
+    <!--     <tfoot> -->
+    <!--         <tr> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--             <td>&nbsp;</td> -->
+    <!--         </tr> -->
+    <!--     </tfoot> -->
+    <!-- </table> -->

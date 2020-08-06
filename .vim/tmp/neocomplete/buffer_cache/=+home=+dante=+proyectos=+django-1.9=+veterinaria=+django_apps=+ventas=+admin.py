@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'models', 'OrdenVenta', 'DetalleTransaccion', 'class', 'DetalleTransaccionInline', 'TabularInline', 'model', 'extra', 'OrdenVentaAdmin', 'ModelAdmin', 'inlines', 'site', 'register'}

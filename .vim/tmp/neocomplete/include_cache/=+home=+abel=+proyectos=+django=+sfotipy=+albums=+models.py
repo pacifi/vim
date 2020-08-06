@@ -1,0 +1,1 @@
+[{'word': 'Album', 'menu': '[I]', 'kind': 'c', 'abbr': 'Album(models.Model): <class>'}, {'word': 'artist', 'menu': 'Album', 'kind': 'v', 'abbr': 'artist = models.ForeignKey(Artist)'}, {'word': 'cover', 'menu': 'Album', 'kind': 'v', 'abbr': 'cover = models.ImageField(upload_to=''albums'')'}, {'word': 'title', 'menu': 'Album', 'kind': 'v', 'abbr': 'title'}]

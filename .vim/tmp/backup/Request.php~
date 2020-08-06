@@ -1,0 +1,40 @@
+<?php
+class Request {
+    protected $url;
+    protected $controller;
+
+        public function __construct($url)
+        {
+            $this -> url = $url;
+            $segments = explode('/', $this -> getUrl());
+            $this->resolvecontroller($segments);
+
+        }
+
+        public function resolvecontroller(&$segments)
+        {
+            $this -> controller = array_shift($segments);
+        }
+
+        public function getUrl()
+        {
+            return $this->url; 
+        }
+
+        public function execute()
+        {
+            if (empty($name))
+            {
+                $name = 'home';
+            }
+
+            $file = "controllers/$name.php";
+
+            if (file_exists($file))
+            {
+                return require $file;
+            }
+            header("HTT")
+        }
+
+}

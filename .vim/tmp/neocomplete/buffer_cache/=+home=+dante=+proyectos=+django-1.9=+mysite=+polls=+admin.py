@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'models', 'Choice', 'Question', 'class', 'ChoiceInline', 'TabularInline', 'model', 'extra', 'QuestionAdmin', 'ModelAdmin', 'fieldsets', 'None', 'fields', 'question_text', 'Date', 'information', 'pub_date', 'classes', 'collapse', 'inlines', 'list_display', 'was_published_recently', 'list_filter', 'search_fields', 'site', 'register'}

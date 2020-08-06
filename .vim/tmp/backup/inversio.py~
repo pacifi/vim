@@ -1,0 +1,144 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system('clear')
+
+# Dinero de Alfredo para invertir durante los siguientes 5 años
+
+
+"""Interés en depósitos a plazo fijo de un año=> 8% paga el banco
+
+Interés en dopósitos a plazo fijo  de 2 años => 17% paga el banco
+
+Companía West World Limited ofrecerá certificados a tres años.
+Los certificados tendrán un ganancia del 27%.
+"""
+
+def maxima_ganancia_sin_certificacion():
+
+    """
+    Un año de interes de 8% = x1
+    Dos años de interes de 17% = x2
+    Certificados a tres años, ganancia del 27% = x3
+
+    Inversion_disponible = 2200
+    Inversion_inicial_por_a = Inversion_inicial/5
+
+    Z1 = Inversion_inicial_por_a
+    El año 1:
+        Deposita la Inversion_disponible_por_a (440)
+        No retira nada
+
+    EL año 2:
+        Retira el dinero mas la ganancia del 17%
+        Deposita la Inversion_disponible_por_a + el retiro con la ganancia
+        Empieza la ganancia del 27% por el certificado a tres años.
+    El año 3:
+        Modo sin Certificado:
+            Retira el dinero mas la ganancia del 17%
+            Deposita la Inversion_disponible_por_a + el retiro con la ganacia
+        Modo con Certificado:
+            Deposita la Inversion_disponible_por_a
+
+    El año 4:
+        Modo sin Certificado:
+            Retira el dinero mas la ganancia del 17%
+            Deposita la Inversion_disponible_por_a + el retiro con la ganancia
+        Modo con Certificado:
+            Retira el dinero mas la ganancia del 27%
+            Retira el dinero mas la ganancia de 17%
+            Deposita los dos retiros + la Inversion_disponible_por_a
+
+    El año 5:
+        Modo sin Certificado:
+            Retira el dinero mas la ganancia del 17%
+            Deposita el dinero que retiro + la Inversion_disponible_por_a
+            Retira el dinero mas la ganancia del 8% a fines del año.
+        Modo con Certificado:
+            Retira el dinero mas la ganancia del 17%
+            Deposita el dinero retirado + la Inversion_disponible_por_a
+            Retira el dinero mas la ganancia del 8% a fines del año.
+
+    De esa manera se maximiza la ganancia.
+
+    Un año de interes de 8% = x1
+    Dos años de interes de 17% = x2
+    Certificados a tres años, ganancia del 27% = x3
+    """
+    inversion_total =  int(input("Dinero que desea invertir: ")) #2200
+    anios_inversion = int(input("Años de Inversión: "))
+    Inversion_disponible_por_a = inversion_total / anios_inversion
+
+    # un_año = 8.0/100 # 8%
+    # dos_años = 17.0/100 #17%
+
+    valor_cambiante = inversion_total / anios_inversion
+
+    for i in range(anios_inversion):
+        if i == anios_inversion-1:
+            valor_cambiante = valor_cambiante + valor_cambiante*0.17 + Inversion_disponible_por_a
+            valor_cambiante = valor_cambiante + valor_cambiante*0.08
+            print("Año %s => %s" % (i+1, valor_cambiante))
+        elif i != 0:
+            valor_cambiante = valor_cambiante + valor_cambiante*0.17 + Inversion_disponible_por_a
+            print("Año %s => %s" % (i+1, valor_cambiante))
+        else:
+            valor_cambiante = Inversion_disponible_por_a
+            print("Año %s => %s" % (i+1, valor_cambiante))
+    print("El total del dinero es %s" % valor_cambiante)
+    print("El máxima ganancia sin certificación es: %s" % (valor_cambiante-inversion_total))
+    print("")
+
+
+def maxima_ganancia_con_certificacion():
+
+    inversion_total =  int(input("Dinero que desea invertir: ")) #2200
+    anios_inversion = int(input("Años de Inversión: "))
+    Inversion_disponible_por_a = inversion_total / anios_inversion
+
+    # un_año = 8.0/100 # 8%
+    # dos_años = 17.0/100 #17%
+
+    valor_cambiante = inversion_total / anios_inversion
+
+    # v = []
+
+    for i in range(anios_inversion):
+        if i == anios_inversion-1 or i % 2 == 0 and i >= 4:
+            valor_cambiante = valor_cambiante + valor_cambiante*0.17 + Inversion_disponible_por_a
+            valor_cambiante = valor_cambiante + valor_cambiante*0.08
+            print("Año %s => %s" % (i+1, valor_cambiante))
+            # v.append(valor_cambiante)
+            continue
+
+        if i % 2 != 0 and  i >= 3 :
+            retiro = (certificado + certificado*0.27) + (nueva_inversion + nueva_inversion*0.17)
+            valor_cambiante = retiro +  Inversion_disponible_por_a
+            # v.append(valor_cambiante)
+            print("Año %s => %s" % (i+1, valor_cambiante))
+            continue
+        if i % 2 != 0 and i <= anios_inversion - 4:
+            valor_cambiante = valor_cambiante + valor_cambiante*0.17 + Inversion_disponible_por_a
+            certificado = valor_cambiante
+            # v.append(certificado)
+            print("Año %s => %s" % (i+1, valor_cambiante))
+            continue
+
+        if i % 2 == 0 and i < anios_inversion - 1:
+            valor_cambiante = Inversion_disponible_por_a
+            nueva_inversion = valor_cambiante
+            # v.append(nueva_inversion)
+            print("Año %s => %s" % (i+1, valor_cambiante))
+            continue
+
+        else:
+            valor_cambiante = Inversion_disponible_por_a
+            # v.append(valor_cambiante)
+            print("Año %s => %s" % (i+1, valor_cambiante))
+    print("El total del dinero es %s" % valor_cambiante)
+    # print("Lista de datos: %s" % v)
+    print("El máxima ganancia con certificación es: %s" % (valor_cambiante-inversion_total))
+
+# maxima_ganancia_sin_certificacion()
+maxima_ganancia_con_certificacion()

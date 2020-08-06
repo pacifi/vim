@@ -1,0 +1,1 @@
+{'coding', 'utf', 'import', 'os', 'system', 'clear', 'class', 'Fecha', 'object', 'def', '__init__', 'self', '__dia', 'getDia', 'return', 'setDia', 'dia', 'if', 'and', 'else', 'print', 'Error', 'property', 'mi_fecha'}

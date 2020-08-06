@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'Register', 'your', 'models', 'here', 'ut_tutorial', 'bevolist', 'Category', 'Item', 'class', 'CategoryAdmin', 'ModelAdmin', 'pass', 'ItemAdmin', 'site', 'register'}

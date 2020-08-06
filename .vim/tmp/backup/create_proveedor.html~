@@ -1,0 +1,55 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<h1>Nuevo Proveedor</h1> 
+ 
+    {% if form.errors %} 
+        <p style="color: red;"> 
+            Por favor corrige lo siguiente: 
+        </p> 
+    {% endif %} 
+ 
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %} 
+        <div class="field"> 
+            {{ form.razon_social.errors }} 
+            <label>Razón Social:</label> 
+            {{ form.razon_social }} 
+        </div> 
+        <div class="field"> 
+            {{ form.ruc.errors }} 
+            <label>RUC:</label> 
+            {{ form.ruc }} 
+        </div>
+        <div class="field"> 
+            {{ form.estado.errors }} 
+            <label>Estado:</label> 
+            {{ form.estado }} 
+        </div>  
+        <div class="field"> 
+            {{ form.direccion.errors }} 
+            <label>Dirección:</label> 
+            {{ form.direccion }} 
+        </div>  
+        <div class="field"> 
+            {{ form.contacto.errors }} 
+            <label>Contacto:</label> 
+            {{ form.contacto }} 
+        </div>  
+        <div class="field"> 
+            {{ form.email.errors }} 
+            <label>Email:</label> 
+            {{ form.email }} 
+        </div> 
+        <div class="field"> 
+            {{ form.avatar.errors }} 
+            <label>Avatar:</label> 
+            {{ form.avatar }} 
+        </div> 
+        <div class="field"> 
+            {{ form.descripcion.errors }} 
+            <label>Descripción:</label> 
+            {{ form.descripcion }} 
+        </div>  
+        <input type="submit" value="Enviar"> 
+        <a href="{% url 'listar_proveedor' %}">Volver</a>
+    </form> 
+{% endblock content %} 

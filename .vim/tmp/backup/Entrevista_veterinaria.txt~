@@ -1,0 +1,78 @@
+PREGUNTAS:
+=========
+
+Objetivo:
+Recopilar información sobre como maneja el usuario el sistema actual,
+estructurar su sistema, para luego mejorarlo.
+Conocer sobre sus administrador, sus distribuidores y proveedores.
+    CLIENTES
+    =======
+    1.- ¿Qué campos tiene el formulario del cliente(familiar) y el(la) paciente
+        al momento de registrar los datos?
+    2.- Dígame paso a paso qué ocurre después de que  hace clic en el
+        botón “Enviar” en el formulario de registro Web.
+    3.- ¿Luego a donde va eso datos y como opera?
+    4.- ¿Cuantos clientes atiende por día?
+    5.- De esos clientes cuantos consumen su producto, el servicio y cuantos
+        solo preguntan?
+    6.- ¿Qué días tienen menos clientela? Especifique el numero de clientes de
+        esos días.
+    7.- Usted ¿Con qué porcentaje calcularía el nivel de satisfacción del
+        cliente?
+    8.- ¿En los días feriados continua la atención al cliente?
+
+
+    INVENTARIO (Almacen)
+    ====================
+    9.- ¿Su empresa lleva un inventario(almacén) manual o eletrónico?
+    10.- ¿Como está dividido su inventario?
+    11.- ¿La empresa cada cuanto tiempo agrega articulos a su inventario?
+    12.- ¿Está de acuerdo a como funciona actualmente el registro del inventario?
+    13.- Si no es así, ¿qué cosas cree que debería mejorar en el inventario?
+
+    SISTEMA
+    =======
+    14.- ¿Quién hace el registro de empleados?
+    15.- ¿Los empleados que con que permisos cuenta para accesar al sistema?
+    16.- ¿Cada cuento tiempo se le da el mantenimiento a su software?
+    17.- ¿Qué problemas ha solucionado el software?
+    18.- ¿Ha presentado algún fallo el sistema actual?
+    19.- ¿Qué aspectos del sistema cree que debería mejorar?
+
+    VENTAS ¿Cómo realizar una venta al cliente?
+    ====== 
+    20.- ¿Toda venta es registrado en el sistema? (SI)(NO)
+    21.- ¿Cuál es el precio mínimo para hacer una boleta?
+    22.- Las boletas ó facturas son realizadas manualmente o
+         electrónicamente(sistema)
+    23.- Si es electrónico, dígame paso a paso como procede y registra una venta.
+    24.- Si es manual, dígame paso a paso como registra las ventas.
+
+    COMPRAS
+    ======
+    25.- ¿Cón cuántos proveedores cuenta su empresa?, Nombre del proveedor.
+    26.- ¿Cada cuánto tiempo se hace la compra de articulos?
+    27.- ¿Cómo procede una compra?, explique paso a paso.
+    28.- ¿Cómo figura una compra en su sistema?
+
+    CAJA
+    ====
+    29.- ¿De qué manera está conenctado con VENTAS y COMPRAS?
+    30.- Si no es así, ¿Cómo opera el sistema de caja?
+    31.- ¿Ha presenciado problemas con el sistema de caja?
+    32.- ¿Cree usted que debería mejorar el sistema de caja?
+
+    DISTRIBUIDORES
+    =============
+    33.-.- ¿Cuántos distribuidores tiene Only Pets?
+    34.- ¿Cada cuanto tiempo se hace la distribución?
+
+    GENERAL
+    ======
+    35.-.- Su empresa, ¿Cuenta con una pagina web oficial para la atención al
+    cliente?
+    36.-.- Si no es así, tiene pensado lanzar la página web oficial.
+    37.- ¿Cuál es el sistema que más opera (ventas, compras,etc)?
+    38.- ¿Que tipo de consultas hace con frecuencia y en cuanto tiempo?
+    39.- ¿Hay algo de lo que no hayamos hablado que usted considere importante?
+

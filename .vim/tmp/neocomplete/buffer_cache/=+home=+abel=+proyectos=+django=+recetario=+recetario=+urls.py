@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'settings', 'contrib', 'admin', 'autodiscover', 'urlpatterns', 'Examples', 'r', 'recetario', 'views', 'home', 'name', 'blog', 'site', 'media', 'P', 'path', 'static', 'serve', 'document_root', 'MEDIA_ROOT', 'sobre', 'principal', 'Sobre', 'Inicio'}

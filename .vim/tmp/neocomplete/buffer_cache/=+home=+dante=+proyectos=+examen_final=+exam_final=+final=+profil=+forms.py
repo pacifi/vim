@@ -1,0 +1,1 @@
+{'from', 'django', 'import', 'forms', 'contrib', 'auth', 'models', 'User', 'Perfiles', 'class', 'UserForm', 'ModelForm', 'password', 'CharField', 'widget', 'PasswordInput', 'Meta', 'model', 'fields', 'username', 'email', 'UserProfileForm', 'telefono', 'provincia', 'departamento', 'distrito', 'zona_horaria', 'picture'}

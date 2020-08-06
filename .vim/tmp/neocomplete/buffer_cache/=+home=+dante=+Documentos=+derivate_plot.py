@@ -1,0 +1,1 @@
+{'import', 'numpy', 'as', 'np', 'from', 'scipy', 'ndimage', 'matplotlib', 'pyplot', 'plt', 'x', 'linspace', 'pi', 'sine', 'sin', 'im', 'None', 'd1', 'gaussian_filter', 'sigma', 'order', 'mode', 'wrap', 'd2', 'figure', 'subplot', 'imshow', 'title', 'original', 'first', 'derivative', 'second'}

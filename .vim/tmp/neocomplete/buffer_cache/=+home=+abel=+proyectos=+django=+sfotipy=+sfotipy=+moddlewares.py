@@ -1,0 +1,1 @@
+{'from', 'random', 'import', 'choice', 'django', 'shortcuts', 'redirect', 'paises', 'Colombia', 'Peru', 'Mexico', 'def', 'de_donde_vengo', 'request', 'return', 'class', 'PaisMiddleware', 'un', 'modelsare', 'tiene', 'funciones', 'de', 'process', 'o', 'response', 'process_request', 'self', 'pais', 'if', 'http', 'mejorando', 'la'}

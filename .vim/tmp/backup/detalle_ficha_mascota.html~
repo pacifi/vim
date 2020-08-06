@@ -1,0 +1,61 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<div>
+    <h2>Detalle del Paciente {{object.nombre}}</h2>
+    <div>
+        <section>
+            <h2>Datos del propietario</h2>
+            <li>Nombre:    {{object.propietario.nombre}}</li>
+            <li>Apellidos: {{object.propietario.apellido_paterno}} {{object.propietario.apellido_materno}}</li>
+            <li>DNI:       {{object.propietario.dni}}</li>
+            <li>Genero:    {{object.propietario.sexo}}</li>
+            <li>Domicilio: {{object.propietario.domicilio}}</li>
+            <li>Telefono:  {{object.propietario.telefono}}</li>
+        </section>
+        <section>
+            <h2>Datos de la Mascota</h2>
+            {% if object.avatar %}
+            <a href="#">
+                <img src="{{object.avatar.url}}">
+            </a>
+            {% endif %}
+            <h3>Ficha Número {{object.ficha}}</h3>
+            <li>Nombre: {{object.nombre}}</li>
+            <li>Raza: {{object.raza}}</li>
+            <li>Color: {{object.color}}</li>
+            <li>Especie: {{object.especie}}</li>
+            <li>Edad: {{object.edad}} años</li>
+            <li>Peso: Kg.{{object.peso}}</li>
+            <li>Descripción: {{object.descripcion|truncatechars:20}}</li>
+            <h4>Anamnesis</h4>
+            <li>Ambiental: {{object.ambiental|truncatechars:20}}</li>
+            <li>Alimento: {{object.alimento|truncatechars:20}}</li>
+            <li>Baño: {{object.bano|truncatechars:20}}</li>
+        </section>
+        <section>
+            <h2>Vacunas</h2>
+            {% for obj in vacunas %}
+            {% if object.nombre in obj.mascota.nombre %}
+            <li>Vacuna: {{obj.vacuna}}</li>
+            <li>Fecha: {{obj.fechav}}</li>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section>
+            <h2>Desparacitaciones</h2>
+            {% for obj in desparacitar %}
+            {% if object.nombre in obj.mascota.nombre %}
+            <li>Producto: {{obj.producto}}</li>
+            <li>Fecha: {{obj.fechap}}</li>
+            <li>Peso: {{obj.pesop}}</li>
+            {% endif %}
+            {% endfor %}
+        </section>
+    </div>
+    <div>
+        <a href="{% url 'persona:listar_clientes' %}">Ver clientes</a>
+        <a href="{% url 'clinica:listar_mascotas' object.propietario.slug %}">Volver</a>
+        <a href="{% url 'clinica:editar_mascota' object.slug %}">Editar</a>        
+    </div>
+</div>
+{% endblock content %} 

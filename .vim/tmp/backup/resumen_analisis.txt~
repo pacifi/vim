@@ -1,0 +1,249 @@
+Parte 1:
+=======
+
+Habla sobre el uso y la importancia que le dan las organizaciones a la información 
+mediante un sistema que administra y maneja grandes cantidades de datos de manera
+adecuada con el uso de la computadora y como la empresa lo usa para el 
+desarrollo de su empresa mediante la ayuda de un analista de sistemas.
+Enfoca los distintos tipos de sistemas de información (SDLC).
+
+Parte 2:
+=======
+
+Nivel estratégico de la administración:
+¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+  2.a1. ESS => Sistema de soporte para ejecutivos.
+
+      2.a1.1. Ayudan a los ejecutivos a organizar sus interacciones con el
+              entorno externo.
+      2.a1.2. Ayudan a sus usuarios a enfrentar los problemas relacionados con
+              decisiones no estructuradas inespecíficas de una aplicación.
+      2.a2.3. Les extiende las capacidades a los ejecutivos y les da  soporte a 
+              los ejecutivos a entender mejor sus entornos.
+
+  2.a2. GDSS => Sistemas de soporte de decisiones en grupo.
+
+      2.a2.1. Sirve para lograr que un grupo resuelva un problema con la yuda de 
+              varios apoyos como encuestas, cuestionarios, lluvias de ideas y creación
+              de escenarios.
+      2.a2.2. Se puede hacer uso de un software GDSS para minimizar los
+              comportamentos de grupos negativos típicos.
+      2.a2.3. También se pueden utilizar en un ambiente virtual.
+
+  2.a3. CSCWS => Sistemas de trabajo colaborativo asistido por computadora.
+  
+      2.a3.1. Se hace uso de un soporte de software conocido como groupware para
+              colaborar en equipo mediante computadoras conectadas en red.
+
+  Nota.- Ayudan en el proceso de toma de decisiones a nivel de grupo, de la
+         variedad semiestructurada y no estructurada. 
+
+Sistemas de Nivel Superior:
+¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+  2.b1. ES => Sistemas expertos.
+      2.b1.1. Usan las metodologías de razonamiento de la AI para resolver los     
+              problemas que los usuarios de negocios les presentan.
+      2.b1.2. Captura y utiliza en forma efectiva el conocimiento de uno o
+              varios expertos humanos para resolver un problema espepífico al
+              que una organización se enfrenta.
+      2.b1.3. Un ES selecciona la mejor solución para un problema o una clase
+              espepífica de problemas.
+
+  2.b2. DSS => Sistemas de soporte de decisiones. 
+
+      2.b2.1. Brinda respaldo a la toma de decisiones en todas sus fases.
+      2.b2.2. Se describen a veces como sistemas enfocados en la inteligencia de
+              negocios.
+
+  2.b3. MIS => Sistemas de información administrativa.
+      2.b3.1. Soporte  a los usuarios para realizar un espectro más amplio de
+              tareas organizacionales que los TPS.
+      2.b3.2. Produce información que se utliza en el proceso de toma de
+              decisiones.
+      2.b3.3. Ayuda a integrar algunas de las funciones de información
+              computarizadas de un empresa.
+
+Dan soporte para el trabajo a nivel de conocimiento de la organización:
+¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+  2.c1. OAS => Sistemas de automatización de Oficinas.
+
+      2.c1.1. Procesamiento de palabras
+      2.c1.2. Hojas de Cálculo.
+      2.c1.3. Diseño gráfico por computadora.
+      2.c1.4. Planificación electrónica.
+      2.c1.5. Comunicación a través de correo de voz.
+      2.c1.6. Correo eletrónico.
+      2.c1.7. Teleconferencias.
+
+  2.c2. KWS => Sistemas de trabajo de conocimiento.
+
+Nivel Operacional de la organización: 
+¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+  2.d1. TPS => Sistemas de procesamiento de transacciones.
+
+      2.d1.1. Procesa grandes cantidades de información para las transacciones de
+              negocios rutinarias.
+      2.d1.2. Elimina el tedio de las transacciones opreacionales.
+      2.d1.3. Reduce el tiempo que se requería para realizarlas en forma manual.
+      2.d1.4. Permite interactuar con los entornos externos. 
+
+La integración de las tecnologías en sistemas a revolucionado el mercado
+globalmente y los analistas de sistemas integran los sistemas tradicionales con
+los nuevos para asegurar en contexto útil y la vez las aplicaciones de comercio
+eletrónico y los sistemas web ayudan a mejorar la disponibilidad de un servicio,
+etc, las 24 horas del día mojorando la utilidad y estableciendo contacto con
+personas en ubicaciones remotas.
+La Planificación de recursos empresariales (ERP) lo usan muchas organizaciones
+para preveer beneficios potenciales mediante la integración y los analistas de
+sistemas actuan como consultores para proyectos de ERP que hacen el uso de
+software. Por lo general los analistas y usuarios requieren de capacitación,
+soporte y mantenimiento por parte del distribuidor para optimizar un paquete ERP
+espepífico.
+Los sistemas para dispositivos inalámbricos y móviles es un reto para los
+analistas de sistemas pués la complejidad se nota ya que se quiere mejorar la
+interactividad por ejemplo diseñar sistemas de redes inalámbricas de área local
+o también algo más avanzado como un diseño de Agentes Inteligentes que se capaz
+de aprender progresivamente por el patrón comportamiento del usuario.
+El Software de código fuente abierto es una plataforma que ayuda a usuarios y
+programadores tanto en el estudio y modificación de código en la cual 
+pueden compartir  proyectos en desarrollo ayudando a ser interactivos y también 
+ayuda a que la escasez de programadores baje y las herramientas que harán uso los 
+estudiantes de países en desarrollo ayudarán a resolver los grandes problemas 
+mediante la colaboración.
+Los analistas de sistemas se encargan de mejorar un proyecto y verificar
+problemas que amenazan al funcionamiento y  añaden estructuras a los
+sistemas para que el proceso no se pueda estropear y los usarios no queden
+insatisfechos, para lograr eso se trabaja con los usuarios para un diseño
+óptimo y en cuanto a la programción para crear aplicaciones se requerirá de más
+análisis.
+El analista debe ser capaz de trabajar con todo tipo de gente siendo experto en
+computadoras, tiende a cumplir muchos roles, pero los principales son:
+- Consultoría,  se encarga de analizar y diseñar sistemas de información
+               apropiado para el usuario y aprender la cultura organizacional. 
+- Experto de soporte, debe ser profesional sobre hardware y software y su uso en
+                      los negocios, actúa como recurso para quienes lo
+                      administran.
+- Agente de cambio, es aquel analista que hace cambios a la empresa y desarrolla
+                    un plan de cambio interactuando con los usuarios y la
+                    administración, garantizando después de un análisis, luego
+                    se debe orientar a los usuarios que van a cambiar, eso
+                    afecta a toda la organización.
+
+El analista de sistemas debe ser un solucionador de problemas (idear soluciones
+factibles), comunicador, comprensivo con las personas al interactuar con la
+tecnología, experiencia para programar, sólida ética personal y profesional,
+debe tener motivación, coordinar tanto a personas como recursos,  ser bien
+disciplinado y saber que está en contínua evolución con nuevos desafíos.
+
+El ciclo de vida del Desarrollo de Sistemas es una metodología en fases para el
+análisis y diseño lo cual se divide en 7 fases:
+1.- Identificación de los problemas, oportunidades y objetivos.
+2.- Determinación de los requerimientos humanos de información.
+3.- Análisis de las necesidades del sistema.
+4.- Diseño del sistema recomendado.
+5.- Desarrollo y documentación del software.
+6.- Prueba y mantenimento del sistema.
+7.- Implementación y evalución del sistema.
+
+La interacción de humano-computadora (HCI) se ha vuelto muy importante para los
+analistas de sistemas ya que pone por encima a las personas y luego le siguen la
+estructura al crear sistemas, con la HCI se puede minimizar los errores que
+anteriormente provocaban el abandono de los usuarios por los errores de diseño
+poco después de la implementación. Es una metodología que vale la pena usar, ya
+que pone en el centro a los humanos (necesidades humanas) desde el inicio de un proyecto.
+
+** En la primera fase el analista junto con los otros miembros de la organización
+deben identificar los problemas y si es posible solucionarlo mediante el uso de
+los sistemas de información computarizados, también el analista debe plantear los objetivos y
+oportunidades espepíficos, si es asi se procederá a continuar el proyecto.
+
+** En la segunda fase el analista debe ser una investigación a toda la empresa,
+tanto a sus empleados o usuarios como al sistema en el que trabajan , 
+cuales son sus limitaciones, y responder las preguntas con la interacción 
+humano-computadora (HCI), el analista tiene que llegar a entender 
+detalladamente como funciona la empresa y tener su información completa, 
+para plantear soluciones que ayuden a mejorar su trabajo de los usuarios.
+
+** En la tercera face el analista analiza las necesidades del sistema, haciendo
+uso de las herramientas ilustra el sistema de manera estraucturada y gráfica,
+presentando también las recomendaciones según la capacidad del analista, si la
+administración acepta una de esas recomendaciones se seguira por ese camino y
+todo eso se logra si el analista hizo un adecuado analisis e interacción con los
+usuarios.
+
+** En la cuarta fase el diseño del sistema debe ser con la información
+recolectada, pero la interfaz de usuario debe ser hecho con la ayuda de los
+usuarios, la seguridad para proteger el sistema debe también estar bien
+elaborado.
+
+** En la quinta fase esta el desarrollo y documentación del software, esto
+indica que aqui se hace el código es decir el back-ned y en cuanto a la
+documentación, debe decir como usar el software y todas las dudas que hicieron
+los usuarios.
+
+** En la sexta fase esta la prueba y mantenimiento del sistema, en lo que
+respecta a pruebas eso se debe hacer a comienzos de la programación para que todo
+fluya de manera adecuada y sin errores, y el mantenimento lo hace el programador
+y se da rutinariamente, por lo cual  las empresas invierten mucho dinero en eso.
+
+** En la séptima fase esta la implementación y evalución del sistema, la cual
+consta en la capacitación a los usuarios y supervisión, también el proceso
+incluye en pasar toda la información (archivos) al nuevo sistema y ponerlo a
+producción, la evalución se realiza siempre en cada fase y verificar que los
+usuarios usen el nuevo sistema satisfactoriamente.
+
+El impacto del mantenimiento es darle mantenimiento al sistema una vez instalado
+lo cual puede ocupar hasta un 60% del tiempo total invertido en los proyectos de
+sistemas y se llevan a cabo para corregir los errores del software sin importar
+que tan minuciosas sean las pruebas, la otra razón es para mejorar las
+capacidades del software en respuesta a los cambios de la organización. 
+El mantenimento es un proceso continuo que gasta tiempo y dinero, esto será
+necesario siempre porque habra cambios constantes a medida que pasa el tiempo.
+
+El uso de herramientas CASE es para aumentar la productividad, permitiendo a los
+analistas realizar planificación, análisis y diseño en forma gráfica para crear
+DB y aplicaciones cliente/servidor complejas, viendo también como fluyen los
+datos. Esta herramienta tiene CASE Superior(administrar la información
+almacenada) e Inferior (generar código fuente de computadora).
+
+La metodología ágil es una metodología de software que se basa en valores,
+principios, y prácticas básicas, también poniendo en práctica la comunicación,
+simpleza, retroalimentación y valentía, sin embargo para asegurar el éxito de un
+proyecto hay que tener en cuenta los siguientes recursos: Tiempo, costo, calidad
+y alcance.
+
+El proceso de desarrollo para un proyecto ágil consta de 5 etapas:
+
+- Exploración, es verificar el entorno de trabajo y las habilidades de sus
+               miembros, la tecnología cuenta también , ser curioso para
+               encontrar la solución, esto puede durar unos cuantos meses.  
+- Planeación, dura solo unos cuantos días, consiste en poner fecha para entregar
+              las soluciones a sus problemas empresariales, maximizando el valor
+              del sistema y dando la solución más simple pero segura, pero
+              siempre los clientes deciden todo.
+
+- Iteraciones para la liberación de la primera versión, dura mas o menos 3
+              semanas, realizando pruebas funcionales y celebrando cada
+              iteración exitosa como motivación para seguir con fuerza el
+              proyecto.
+- Puesta en producción, es la parte mas emocionante y las revisiones
+                         (retroalimentación) de software se entregan en una
+                         semana.
+- Mantenimiento, es cuando uno hace cuidados al sistemas y posiblemente se puede
+                 agregar características.
+
+Análisis y diseño  de sistemas orientado a objetos es una metodología diseñada
+para facilitar el desarrollo de sistemas que deben cambiar con rapidez en
+respuesta a los entornos empresariales dinámicos; los objetos se representan y
+agrupan mediante clases. 
+El estandar UML sigue un breve proceso:
+- Define el modelo de caso de uso.
+- Durante la fase de análisis de sistemas, empezar a dibujar diagramas de UML.
+- Continuar en la fase de análisis, desarrollar diagramas de clases.
+- Aún en la fase de análisis, dibujar diagramas de estado.
+- Empezar el diseño de sistemas mediante la modificación de los diagramas de
+  UML; después, completar las especificaciones.
+- Desarrollar y documentar el sistema.
+
+
+

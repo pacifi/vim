@@ -1,0 +1,1 @@
+{'extends', 'index', 'html', 'load', 'url', 'from', 'future', 'block', 'title', 'object_name', 'Confirm', 'delete', 'endblock', 'content', '<h3>', 'Are', 'you', 'sure', 'want', 'to', 'object', '</h3>', '<form ', 'action=""', 'method="post"', 'csrf_token', '<input ', 'type="submit"', 'value="Yes!"', 'type="button"', 'value="No..."', 'onclick="window.history.go(-1);"', '</form>'}

@@ -1,0 +1,466 @@
+INSTALACIÓN Y CREACIÓN DE UN PROYECTO DJANGO
+============================================
+
+Crear entornos virtuales con virtualenv, esta es una buena practica para tener
+distintas versiones de una librería y/o programa,
+
+crear un proyecto virtualenvwrapper con el nombre skillshare
+
+1. $ mkproject skillshare
+
+
+activiar el entorno virtual mkproject
+
+verificar que paquetes tiene instalado con
+$pip freeze
+
+2. Instalar Django
+
+pip install django==1.6.5
+
+3. creamos un proyecto django
+
+$ django-admin.py startproject mvp_landing
+
+cd mvp_landing
+
+vemos manage.py y mvp_landing
+
+manage.py es básicamente para controlar diferentes comandos que django ejecuta
+por nosotros, este archivo no debería cambiar para un principiante, si eres un
+usuario avanzado de python entonces seguramente lo modificaras a tu gusto
+
+
+la carpeta mvp_landing contiene los archivos 
+__init__.py  settings.py urls.py wsgi.py 
+
+el primero hace que la carpeta se comporte como un paquete, en settings.py se
+realizan los ajustes necesarios del proyecto, urls.py contiene las direcciones
+urls que despachara el proyecto, finalmente wsgi.py es el modulo que permite
+poner en producción el proyecto.
+
+
+mostrar la estructura de carpetas con tree o con un explorador de archivos
+
+
+4. Ejecutar el proyecto django
+
+$python manage.py runserver
+
+el comando anterior ejecuta el servidor de desarrollo, que no debe ser usado en
+producción, ya que estamos en una pc de desarrollo
+
+abrimos el url en http://localhost:8000
+
+
+es exactamente lo que quería mostrarles, para cancelar presionamos control C.
+
+
+el siguiente paso es instalar algunos paquetes
+
+instalar django south
+
+$pip install south django-registration stripe
+
+nos ayudan a desarrollar proyectos más rápidos, se instalan los tres paquetes
+juntos separados por espacios.
+
+ahora solo queda configurar algunos aspectos del proyecto.
+
+
+
+
+SETUP DJANGO PROJECT AND TEXT EDITOR
+====================================
+
+djangoproject.com es el lugar por donde se debe iniciar para el framework
+django, si alguna vez necesita una respuesta a una pregunta, usted tiene que
+visitar esta página, o si quiere saber algo más, definitivamente este es el
+lugar, la documentación es realmente extensa y abundante, cubrir a más detalle
+las cuestiones que tenga.
+
+ahora quiero permitirme navegar en localhost:8000
+
+1. Proyecto django 
+el nombre del proyect root es igual al carpeta del proyecto
+podemos cambiar el nombre de root proyect (carpeta raiz) por usr para
+distinguirlo del nombre del proyecto, para que sea mas distinguible por nosotros
+
+
+dentro de la carpeta del proyecto, vemos el archivo settings.py, trae la
+configuración por defecto.
+
+BASE_DIR = directorio base actual, se consigue a partir del archivo actual
+gracias a __file__, que daria como resultado la carpeta usr 
+
+
+explicar todas las configuraciones existentes en settings.py 
+
+sincronizar la base de datos para crear las tablas predetermiandas del djangoproject
+
+$ python manage.py syncdb
+
+explicar la creación de las tablas por default
+
+explicar que se crea un superusuario para el sistema
+
+Ejecutar el servidor de desarrollo
+
+$python manage.py runserver
+
+mencionar el ip y puerto que usa
+
+explicar lo que vemos en el navegador web por primera vez
+
+entrar al backend de administracion de django 
+
+localhost:8000/admin 
+
+explicar la administracion de grupos y usuarios
+
+CREANDO LA PRIMERA APLICACION (APP) DJANGO
+==========================================
+
+demostrar que sucede si cambiamos en el archivo urls.py
+
+...
+   
+    url(r'^admin/', include(admin.site.urls)),
+...
+
+por url(r'^administracion/'...)
+
+
+demostrar que sucede si ponemos DEBUG = False
+
+Creando una app
+$ python manage.py startapp signups
+
+mostrar la carpeta y archivos creados por el framework
+
+explicar el por que de los archivos:
+
+__init__.py 
+admin.py 
+models.py 
+test.py 
+views.py 
+
+un metodo dentro de views es ejecutado por una entrada de url en urls.py 
+
+
+CREANDO MODELOS DE LA APP
+=========================
+
+SETUP THE MODEL 
+
+editar models.py en signups app
+crear todos los campos
+explicar unicode
+agregar smart_unicode e importar, explicar
+
+instalar la app en el  proyecto para crear la base de datoS
+
+buscar la directiva...
+
+...
+INSTALLED_APPS = (
+...
+...
+'signups',
+)
+
+ver el contenido sql generado a partir del modelo de la app signups
+
+$ python manage.py sqlall signups 
+
+sincronizar la base de datosi
+
+$ python manage.py syncdb
+
+resaltar que se ha creado una nueva tabla
+
+ejecutar el servidor de producción
+
+entrar a: localhost:8000/admin 
+
+
+ADD MODEL IN  DJANGO ADMIN
+
+notar que no se ve el acceso a la app recientemente instalada explicar que es
+necesario editar el archivo admin.py para ser gestionado por el admin backend
+
+editar el archivo admin.py y agregar el contenido: ....
+
+actualizar el navegador en la ruta: localhost:8000/admin/
+
+notar que ya existen un enlace de nombre Signups dentro de admin
+
+haciendo click en el podemos agregar los valores a los campos creados en el
+modelo
+
+ejemplo de agregar un nuevo registro en signups
+
+notar que se ve el nuevo usuario con el nombre de emai
+
+notar que se ve el nuevo usuario con el nombre  email 
+demostrar que si cambiamos el valor de unicode por una cadena "some unicode data
+here" luego actualizar el navegador
+
+podemos cambiar el valor de __unicode__ por first_name o first_name + last_name
+
+DJANGO VIEWS FOR THE SIGNUP MODEL 
+=================================
+
+agregar template location in settings.py 
+
+escribir en comentario la ruta de la carpeta
+
+explicar y poner la ruta completa de base_dir
+
+creamos la carpeta template
+
+
+creamos dentro de templates una carpeta con el nombre de la app y dentro creamos
+el archivo signup.html
+
+editar el archivo urls.py del proyecto y descomentar el url examples, cambiar el
+nombre del proyecto por el de la app en el primer url, luego dirigirse al
+archivo views.py para escribir su vista 
+
+al actualizar el navegador y dirigirse a la ruta / se verá el siguiente error:
+
+ValueError at /
+The view signups.views.home didn't return an HttpResponse object.
+
+
+refrezcar el navegador en el url raiz del proyecto, debería verse el contenido
+renderizado con el mensaje "Join Now"
+
+
+modificar el archivo signup.html para:
+- agregar un formulario 
+- agregar un solo input text, actualizar el navegador
+- agregar un input type submit, actualizar navegador
+- agregar en el tag form, el method="POST" y action=""
+
+al actualizar el navegador y hacer clic en submit veremos un error csrf
+
+DJANGO MODELS AND MODEL FORM
+============================
+
+eliminamos el input type="text"
+
+Creamos el archivo forms.py dentro de la app signups
+
+actualizar el navegador en el url raiz y ver no que pasa nada
+
+agregamos el formulario en la vista.
+- importamos el form creado 
+
+agregamos en el archivo signup.html las variables de contexto
+
+dentro de form agregar
+{{ form.as_p }}
+
+actualizar el navegador
+
+
+guala, tenemos el formulario django listo para usar
+
+al hacer click en submit sigue saliendo el error CSRF
+
+
+agregamos en signup.html, al costado de form, {% csrf_token %}
+
+al refrescar y hacer click en submit veremos que ya no manda ningun error
+
+
+ahora queda procesar el formulario, editar views.py
+
+agregamos en 
+form = SignUpForm()
+
+form = SignUpForm(request.POST  or None) 
+if form.is_valid():
+    save_it = form.save(commit=False)
+    save_it.save()
+
+DJANGO STATIC FILES IN LOCAL DEVELOPMENT ENVIRONMENT
+====================================================
+
+Podemos usar bootstrap para el frontend, entonces tendremos css, javascript,
+images
+
+modificamos en settings.py 
+
+if DEBUG:
+    MEDIA_URL=...
+    STATIC_ROOT = 
+    MEDIA_ROOT = 
+
+
+editamos urls.py importamos:
+
+from django.conf import settings
+from django.conf.urls.static import static
+          
+
+agregamos al final 
+
+
+if settings.DEBUG:
+    urlpatterns +=  static(settings.STATIC_URL,
+                           document_root=settings.STATIC_ROOT)
+
+    urlpatterns +=  static(settings.MEDIA_URL,
+                           document_root=settings.MEDIA_ROOT)
+
+
+$ python manage.py collectstatic
+
+
+refrescar el navegador para ver de donde objtiene los archivos estaticos
+inspeccionamos los elementos en el navegador
+
+podemos entrar al url: http://localhost:8000/static/admin/css/base.css 
+y darnos cuenta que estos archivos son mostrados
+
+
+
+nos dirigimos a la página de BOOTSRAP getbootstrap.com
+
+
+ADD TWITTER BOOTSTRAP VERSION 3 FRAMEWORK TO DJANGO PROJECT TEMPLATES
+====================================================================
+
+    vemos los ejemplos que trae bootstrap 
+
+seleccionamos el ejemplo clasico de bootstrap
+
+inspeccionamos elementos en http://getbootstrap.com/examples/jumbotron/
+
+creamos un archivo de nombre base.html en la raiz de templates 
+
+editamos el archivo signup.html, borramos lo necesario solo para quedarnos con
+el form, extendemos de base.html
+
+creamos un bloque content
+
+copiamos el cotenido inspecionado del ejemplo en base.html
+
+antes del tag <footer> creamos: 
+
+            {% block content %} {% endblock %}
+
+luego movemos a un div nuevo
+
+actualizamos el navegador en el url raiz del proyecto, y veremos que se ha
+perdido el diseño, etilo
+
+
+del ejemplo bootstrap copiamos los estilos desde su ubicacion:
+ http://getbootstrap.com/dist/css/bootstrap.css
+para luego guardarlo en la carpeta css de static
+
+hacer lo mismo con el estilo:
+
+ http://getbootstrap.com/examples/jumbotron/jumbotron.css 
+
+cambiamos la ruta de css en el archivo base.html
+
+quedaría así:
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/jumbotron.css" rel="stylesheet">
+
+descargar todos los css y js en la carpeta static/css static/js, respectivamente
+
+ADD CUSTOM STYLES & CSS TO TWITTER BOOTSTRAP 3
+==============================================
+
+Usar el inspeccionador de elementos de chrome y cambiar el aspecto
+
+editar un parrafo <p> </p>
+
+
+poner fondo a jumbotron div 
+crear un archivo custom.css 
+agregarlo base.html
+cambiar de posicion
+usar !important
+
+LEARN TO CUSTOMIZE TWITTER BOOTSTRAP 3
+======================================
+
+Ver http://getbootstrap.com/css/#grid
+
+explicar xs, sm, mg, lg
+
+luego cambiar los mg por lg en tres columnas
+
+
+        <div class="col-lg-4">
+
+reducir la ventana del navegador y explicar lo que sucede
+
+cambiar por md
+
+        <div class="col-md-4">
+
+cambiar por xs
+
+cambiar en <div class="col-md-4">
+por 
+cambiar en <div class="col-md-1">
+cambiar en <div class="col-md-1">
+cambiar en <div class="col-md-10">
+
+recordar que todos deben sumar 12
+
+
+hacer que todas las columas entren de forma horizontal, poner el valor 3 a las 4
+columnas
+
+basicamente hicimos que las 4 columnas entren en una sola fila cambiando a 3 X 4
+
+BOTONES:
+=======
+
+getbootstrap.com/css/$buttons
+
+estilos de botones
+cambiar de color a un boton
+
+cambiar el boton por default en signup.html
+de: 
+        <input type="submit">
+
+por:
+        <input type="submit" class="btn btn-success btn-lg">
+
+IMAGNES
+=======
+
+
+DJANGO MESSAGES AND MESSANGING FRAMEWORK
+========================================
+
+http://docs.djangoproject.com/en/1.6/ref/contrib/messages/
+
+mostrar settings.py  INSTALLED_APPS y MIDDLEWARE_CLAASSES
+
+agrega en la views.py 
+
+from django.contrib import messages
+
+
+ir a la documentacion y ver la parte done dice:
+
+ messages.success(request, 'Profile details updated.')
+
+pegar a la vista, en la línea 21

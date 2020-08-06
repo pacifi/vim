@@ -1,0 +1,1 @@
+{'usr', 'bin', 'python', 'coding', 'utf', 'from', 'punto', 'import', 'Punto', 'math', 'os', 'system', 'clear', 'class', 'Vector', 'def', '__init__', 'self', 'p1', 'p2', 'Distancia', 'd', 'sqrt', 'x2', 'x1', 'y2', 'y1', 'getx', 'gety', 'return', 'Pendiente', 'p', 'Datos_angulo', 'a', 'x', 'b', 'y', 'c'}

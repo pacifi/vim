@@ -1,0 +1,1 @@
+{'Framework', 'Django', '1', '6', '2', 'pinax', 'theme', 'bootstrap', '5', '0', 'django', 'user', 'accounts', '0c1', 'Analytics', 'and', 'metrics', 'integration', 'metron', '3', 'eventlog', '7', 'jsonfield', '9', '12'}

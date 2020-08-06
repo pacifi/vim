@@ -1,0 +1,169 @@
+ADMINISTRACIÓN DE PROYECTOS
+===========================
+
+Este capítulo esta enfoncado a resolver problemas de las organizaciones mediante
+la elaboración de sistemas, que se inicia cuando se requiere de un cambio en la
+organización, el analista trabaja con los usuarios para plantear el problema en
+si, y ver si se puede realizar o no.
+
+Para iniciar proyectos los empresarios definen dos amplios tipos de razones:
+1.- Porque experimentan problemas que se prestan por si solos a las soluciones
+de sistema.
+2.- Porque reconocen oportunidades para mejorar mediante la actualización de los
+sistemas existentes, o la instalación de sistemas nuevos.
+
+Los problemas en la organización surge cuando no se cumple un objetivo que se
+tenía en un principio, mucha inconformidad de trabajo, mucha rotación, lentitud. 
+La retroalimentación práctica ayuda a descubrir los problemas que estan ocasionando
+caos dentro de la organización, los problemas también vienen desde fuera, ya sea
+por la queja de cliente, proveedores, etc, y es necesario tomarlo muy en cuenta
+ese aspecto. El analista de sistemas tiene la función de proveer ayuda en esa
+situaciones de peligro para la organización y se sabe que cumple tres roles:
+Como consultor, experto de soporte y agente de cambio, y esta en la necesidad de
+mejorar cada vez mas.
+
+La forma de definir los problemas varía de muchas maneras y se puede ponderar
+de mayor a menor importancia para una mejor visión del problema y dar más
+enfasis a problema principal. El ejemplo que planta es EL SERVICIO DE BANQUETES
+CATHERINE.
+
+Para la selección de proyectos el analista debe tener buen criterio, razones
+claras para el estudio de sistemas o dar lugar a una mejora, no siempre el
+proyecto mencionado va ser exitoso, también suele ser mal concebido. Por eso hay
+que examinar el proyecto desde la perspectiva de sistemas y tener los 5
+criterios específicos para la selección de proyectos:
+1.- Contar con el respaldo de la administración.
+2.- Que sea el momento oportuno para comprometerse con el proyecto.
+3.- La posibilidad de mejorar la obtención de los objetivos de la organización.
+4.- Que sea práctico en términos de recursos para el analista de sistemas y la
+organización.
+5.- Que el proyecto valga la pena en comparación con las demás formas en que la
+organización podría invertir sus recursos.
+
+Una vez definidos los proyectos es necesario ver si es viable o no recopilando
+datos más generales para los miembros de la administración, el tiempo debe ser
+corto, los datos se obtienen mediante entrevistas. Luego determinar si es
+posible o no, en caso que afecte a un área, para eso hay que tener tres
+elementos clave de viabilidad:
+1.- Viabilidad Técnica
+2.- Viabilidad Económica
+3.- Viabilidad Operacional
+El analista determinará el avance del proyecto o no, dependiendo si cumple las
+tre formas de viabilidad.
+
+La viabilidad técnica depende de hardware y software, ya que con eso trabajarán
+y para eso se debe seguir una secuencia de pasos:
+
+1.- Hacer un inventario de hardware computacional.
+2.- Estimar la cargas de trabajo.
+3.- Evaluación del hardware computacional.
+4.- Elegir el distribuidor.
+5.- Adquirir el equipo de cómputo.
+    5.1. Comprar
+    5.2. Arrendar
+    5.3. Rentar
+
+Cuando se quiere hacer la compra de equipo tecnológico hay que hacer una
+evaluación de soporte al hardware de computadora. Los distribuidores tienen la
+tendencia de ofrecer soporte, pero es necesario investigar primero y luego
+negociar. Los lineamientos para seleccionar distribuidores son: 
+  a.- Servicios del distribuidor 
+  b.- Soporte de Hardware
+  c.- Soporte de software
+  d.- Instalación y capacitación
+  e.- Mantenimiento
+
+En la evaluación de software está en comprar paquetes COTS, subcontratar Servicios de aplicación
+(ASP) y el software personalizado, que es mucho mejor de las anteriores, ya que
+obtiene una ventaja competitiva, respondiendo a las necesidades de los usuarios
+y empresas.
+
+Para comprar software COTS, se requiere que la integración de las aplicaciones
+sean faciles y no tan complejos.
+
+También para subcontratar servicios de un ASP, la empresa a decidido estancarse y
+dedicarse a lo que mejor saben hacer, la ASP se encargará de los aspectos
+tecnológicos, produciendo ahorros e invirtiendo poco tiempo, pero perdiendo
+ventaja corporativa estratégica que pudo haberlos elevado.
+
+También para la evaluación de soporte distribuidores en relación con el software
+y los ASPS, debe tener claros fines y no tambalear ante criticas, para la
+calificación del software se requiere:
+1.- Efectividad en el rendimiento.
+2.- Eficiencia del rendimiento.
+3.- Facilidad de uso.
+4.- Flexibilidad
+5.- Calidad de la documentación 
+6.- Soporte del fabricante.
+
+El analista para presentar un propuesta tiene que haber hecho un análisis en
+cuanto a la economía de la empresa, o mejor dicho pronosticado en cuanto a
+costo-beneficios para que sea creíble, significativa y valiosa.
+
+La estimación de las tendencias sirve para predecir datos del futuro usando
+datos recientes esto es el método de la  media móvil.
+
+La identificación de beneficios y costos se dividen en dos: B.Tangibles e
+Intangibles y C.Tangibles e Intangibles. B.Tangible son ventajas que podemos medir los beneficios en
+términos de ahorro, recursos o tiempo. B.Intangibles son datos del sistema de
+información que no se pueden medir. C.Tangible son costos que se pueden
+pronosticar con precisión y los C.Intangibles son lo opuesto.
+
+En compararación de costos y beneficios se incluyen: Análisis de punto de
+equilibrio, Retribución, análisis de flujo de efectivo y análisis del valor
+presente.
+
+En una planeación y control de actividades se toma en cuenta lo siguiente:
+1.- Estimación del tiempo requerido: Análisis, Diseño, Implementación.
+2.- Uso de gráficos de Gantt para programar proyectos
+3.- Uso de diagramas Técnicas de evaluación y revisión de programas (PERT):
+    3.1. Identificar con facilidad el orden de precedencia.
+    3.2. Identificar con facilidad  la ruta crítica y, en consecuencia, las
+         actividades críticas.
+    3.3. Determinar con facilidad  el tiempo de inactividad.
+
+Cuando se desea desarrollar un proyecto grande o complejo es necesario verificar
+la complejidad del sistema, y para eso usamos el modelo Constar o Construx, la
+otra forma es usando el análisis de punto de función que toma 5 componentes:
+Entradas externas, salidas externas, consultas externas, archivos lógicos
+internos y archivos de interfaz externos. El equipo de trabajo debe estar
+conformado por un gerente de proyecto, arquitecto de software, analistas,
+programadores,sistemas operativos, lo cual deben tener valores éticos para
+trabajar con integridad. En el equipo se necesita también una estrategia de
+comunicación para administrar equipos, y normalmente suelen ser dos líderes:
+Líder de tareas y Líder socioemocional. Con el tiempo el líder puede saber
+proyectar lo que el equipo puede lograr en determinado tiempo, así también el
+modo de poder motivar al equipo de trabajo, ya que es imprescindible.
+
+La administración de proyectos de comercio electrónico es una tendencia hoy en
+día, pero hacer requiere de mucho esfuerzo y también la vulnerabilidad en cuanto a
+la seguridad es alta, por ello el gerente de proyectos se debe dedicar primero a la seguridad,
+establecer más personal con distintas habilidades. Los datos de la organización debe
+ser bien protegido y el sistema de comercio electrónico debe estar conectado a
+la organización, para una mejor interacción.
+
+En un proyecto se debe acordar lo que se va a hacer y en qué momento se va
+realizar para eso se crea los estatutos del proyecto que ponen en énfasis
+preguntando lo que espera el usuario, el alcance, el método de análisis,
+participantes claves, entregables, la evaluación, cronograma, capacitación y
+mantenimiento.
+
+Para evitar los fracasos en los proyectos se debe tomar en cuenta usar métodos
+ágiles, y para verificar errores se hace uso al diagrama de esqueleto de
+pescado (Calidad, Costo, Alcance, Tiempo, Diseño, Prueba, Codificación, Escucha)
+
+Por último para hacer una propuesta de un proyecto de Sistemas se debe tomar
+varias pautas, lo primero es por escrito, que tiene 10 secciones: 
+1.- Carta de presentación
+2.- Portada del proyecto
+3.- Índice de contenido.
+4.- Resumen ejecutivo
+5.- Esquema del estudio de sistemas con la documentación adecuada
+6.- Resultados detallados del estudio de sistemas.
+7.- Alternativas de sistemas.
+8.- Recomendaciones de los analistas de Sistemas
+9.- Resumen de la propuesta.
+10.- Apéndices
+
+También se hace uso de figuras para una comunicación efectiva, donde incluyes tablas y
+gráficos.

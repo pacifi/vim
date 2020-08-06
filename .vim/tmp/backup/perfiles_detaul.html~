@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block title %}{{perfiles}}{% endblock %}
+
+{% block content %}
+<table>
+<tr><th>Usuario:</th><td>{{perfiles.user}}</td></tr>
+<tr><th>Teléfono:</th><td>{{perfiles.telefono}}</td></tr>
+<tr><th>Provincia:</th><td>{{perfiles.provincia}}</td></tr>
+<tr><th>Distrito:</th><td>{{perfiles.distrito}}</td></tr>
+<tr><th>Departamento:</th><td>{{perfiles.departamento}}</td></tr>
+<tr><th>Zona Horaria:</th><td>{{perfiles.zona_horaria}}</td></tr>
+<tr><th>Fecha de Creacion<th><td>{{perfiles.editado}}</td></th>
+</table>
+{% if perms.perfiles.change_profil %}<a href="{% url 'profil_update' perfiles.pk %}">Update</a>{% endif %} | {% if perms.perfiles.delete_profil %}<a href="{% url 'profil_delete' perfiles.pk %}">Delete</a>{% endif %}
+{% endblock %}

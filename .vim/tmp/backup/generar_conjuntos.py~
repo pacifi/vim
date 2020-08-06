@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system("clear")
+
+import random
+
+print("""Crear un diccionario con la conbinación de caracteres de la  oración
+que ingrese por consola, eso sera la clave, el valor sera generado por random,va a poder ingresar la cantidad de datos que desea""")
+
+cant = int(input("Cantidad de datos: "))
+cadena = input("Escriba una oracion: ")
+
+
+def new_dict(s,cantidad):
+    print("Oración con la que se hara la combinación es: ")
+    # print("%s" % s)
+
+    s = s.strip("'[]}{^-¿!_.:;><123456,7890~|°¬!#$%&/()=?¡*¨´+~")
+    s = s.split(" ")
+    ns = "".join(s)
+    d = {}
+    print("{0},{1}".format(ns,len(ns)))
+
+    for i in range(cantidad):
+        a = random.randint(1,len(ns))
+        b = random.randint(1,len(ns))
+        f1 = ns[a-1]
+        f2 = ns[b-1]
+        # f1 = random.choice(s)
+        # f2 = random.choice(s)
+        Cf = f1 + f2
+        d.setdefault(Cf,random.randint(9000,10000))
+    print(d)
+    conversion = list(d.values())
+
+    precio_real = sum(conversion)/1.18
+    iva = precio_real*0.18
+    sin_desc = precio_real + iva
+
+    des = sum(conversion) * 10/100
+    total = sum(conversion)-des
+
+    print("Precio Real: {0}, IVA: {1}, TOTAL:{2}".format(precio_real,iva,sin_desc))
+    print("Descuento: {0}, Total: {1}".format(des,total))
+    print(conversion)
+    print("La suma de los valores es: {0}".format(sum(conversion)))
+
+
+new_dict(cadena,cant)

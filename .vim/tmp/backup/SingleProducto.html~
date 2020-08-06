@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Producto {{producto.nombre}} {% endblock %}
+{% block scripts %}
+    <script>
+        $(document).ready(function(){
+            $("#comprar").click(function(){
+                $("#venta").submit();
+            });
+        });
+    </script>
+{% endblock %}
+{%block content %}
+<h1> {{ producto.nombre }}</h1><br>
+<img src="{{MEDIA_URL}}{{ producto.imagen }}" width="150px" heigth="150px"/>
+<p> {{ producto.descripcion }}</p>
+<p>PRECIO: ${{ producto.precio }}</p>
+<p>IVA:  ${{ producto.igv }}</p>
+<p> Cantidad en Existencia: {{ producto.stock }} Unidades </p>
+<br>
+<h5> Categorias:</h5>
+{% for cat in categorias %}
+<span class="label label-info"> {{cat.nombre}}</span>
+{% endfor %}
+<br><br>
+{% if producto.stock > 0 %}
+	<a id="comprar" class="btn btn-primary" href="#" style="text-decoration:none"><i class="icon-shopping-cart"></i> Añadir al carrito </a>
+{% endif %}
+<a class="btn btn-primary" style="text-decoration:none" href="javascript:window.history.go(-1);"> Regresar a la Lista </a>
+<form id="venta" method="POST" action="/buy/producto/{{ producto.id }}/">{% csrf_token %}
+<input type="hidden" value="{{ producto.id }}">
+</form>
+{% endblock %}

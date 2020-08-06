@@ -1,0 +1,1 @@
+[{'word': 'Request', 'menu': '[I]', 'kind': 'c', 'abbr': 'Request { <class>'}, {'word': '__construct', 'menu': '[I]', 'kind': 'f', 'abbr': 'public function __construct($url)'}, {'word': 'getUrl', 'menu': '[I]', 'kind': 'f', 'abbr': 'public function getUrl()'}]

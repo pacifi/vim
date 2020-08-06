@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+os.system('clear')
+import random
+
+def agente_viaje(asientos_avion,asientos_ocup):
+    vuelos_dispon = []
+
+    for i in range(asientos_ocup):
+        v = "Buy "
+        v += str(i+1)
+        vuelos_dispon.append(v)
+    for j in range(asientos_ocup,asientos_avion):
+        v = j+1
+        vuelos_dispon.append(v)
+    return vuelos_dispon
+
+def reservacion_aerolinea(pasajero):
+
+    import os
+    os.system('clear')
+    print ("BIENVENIDO A LAN %s " % pasajero)
+
+    print("""
+    =====================
+    Que desea hacer:
+        1.- Comprar pasaje
+        2.- Reservar pasaje
+        3.- Consultas
+        4.- Salir
+    """)
+
+    opcion = int(input("Seleccione una opción: "))
+    if opcion == 1:
+        import os
+        os.system('clear')
+        vuelos_dispon = agente_viaje(asientos_avion,asientos_ocup)
+        print(vuelos_dispon)
+        num_pasaj = int(input("Que asiento desea comprar: "))
+        vuelos_dispon[num_pasaj-1] = "Buy "
+        vuelos_dispon[num_pasaj-1] += str(num_pasaj)
+        print(vuelos_dispon)
+        print("Muchas gracias por comprar %s" % pasajero)
+        # comprar = input("Desea comprar mas vuelos [y/n]: ")
+        # si = "y"
+        # SI = "Y"
+        # if comprar == si or comprar == SI:
+        #     reservacion_aerolinea()
+        # else:
+        #     break
+
+    elif opcion == 2:
+        import os
+        os.system('clear')
+        vuelos_dispon = agente_viaje(asientos_avion,asientos_ocup)
+        print(vuelos_dispon)
+        print("Usuario %s. " % pasajero)
+        num_pasaj = int(input("Que asiento desea reservar: "))
+        vuelos_dispon[num_pasaj-1] = "Reservado "
+        vuelos_dispon[num_pasaj-1] += str(num_pasaj)
+        print(vuelos_dispon)
+        # reservar = input("Desea comprar mas vuelos [y/n]: ")
+        # si = "y"
+        # SI = "Y"
+        # if reservar == si or reservar == SI:
+        #     reservacion_aerolinea()
+        # else:
+        #     break
+
+    elif opcion == 3:
+        print("Por favor vaya a la sala de consultas. ")
+
+
+asientos_avion = int(input("N° de asientos: "))
+asientos_ocup = int(input("N° de asientos ocupados: "))
+
+if asientos_ocup < asientos_avion:
+    pasajero = input("Por favor ingrese su nombre: ")
+    reservacion_aerolinea(pasajero)
+else:
+    print("Por favor ingrese bien los datos!!")
+    asientos_avion = int(input("N° de asientos: "))
+    asientos_ocup = int(input("N° de asientos ocupados: "))
+    pasajero = input("Por favor ingrese su nombre: ")
+    reservacion_aerolinea(pasajero)
+

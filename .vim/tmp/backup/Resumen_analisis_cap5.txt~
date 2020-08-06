@@ -1,0 +1,168 @@
+Recopilación de Información: Métodos discretos
+==============================================
+
+Los métodos discretos son otra forma de recopilar requerimientos de información,
+pero por si solo es insuficiente, se requiere de los métodos interactivos para
+ver un panorama más completo de la organización; se llama metodología mixta a
+esta combinación de métodos.
+
+Hay tre métodos discretos: Muestreo, la investigación y la observación del 
+comportamiento del encargado de las decisiones y su interacción con su entorno
+físico.
+
+MUESTREO
+
+Es el acto de seleccionar elementos representativos de una población, y con esos
+elementos revelar información útil de la población en general. Hay 2 cuestiones
+claves para indagar en el muestro, que son: ¿A que tipo de información poner     
+atención y cuales ignorar? y ¿A quién entrevistar y que método interactivo usar?
+
+Es necesario el muestro y son por 4 razones:
+1.- Contener los costos.
+2.- Agilizar el proceso de recopilación de datos.
+3.- Mejorar la efectividad.
+4.- Reducir la predisposición.
+El muestreo ayuda a la efectividad en precisión y rapidez en recopilación de datos
+seleccionados, disminuye la cantidad de personas a entrevistar, ya que solo 
+recopilará información del número total de personas del muestro.
+
+Se necesita también un buen diseño de muestreo si se quiere buena información,
+hay 4 pasos a seguir:
+1.- Determinar los datos a recolectar o describir. 
+    1.1. Objetivos de estudio.
+    1.2. Tipo de método de recopilación de datos.
+2.- Determinar la población a muestrear.
+3.- Elegir el tipo de muestra.
+    3.1. De conveniencia (Menos confiable)
+    3.2. Intencionada (Mente => Propio Juicio, Confiable solo en un nivel
+         moderado)
+    3.3. Simple (No es práctico)
+    3.4. Compleja
+        3.4.1. Muestreo Sistemático (Menos apropiado)
+        3.4.2. Muestreo Estratificado (Recopilar datos con eficiencia)
+        3.4.3. Muestreo de Conglomerados (Seleccionar por suposición)
+4.- Decidir sobre el tamaño de la muestra. (Depende del Costo o tiempo)
+    4.1. Determinar el atributo (en este caso, el tipo de errores a buscar).
+    4.2. Localizar la base de datos o los informes en los que se pueda encontrar el atributo.
+    4.3. Examinar el atributo. Estimar p, la proporción de la población que cuenta con el atributo.
+    4.4. Tomar la decisión subjetiva en relación con la estimación del intervalo aceptable, i.
+    4.5. Elegir el nivel de confianza y buscar el coeficiente de confianza (valor z) en una tabla.
+    4.6. Calcular Ep , el error estándar de la proporción, de la siguiente
+         manera:  Ep = i/z
+    4.7. Determinar el tamaño de muestra necesario, n, mediante la siguiente
+         fórmula: n = (p(1 - p)/(Ep)²) + 1
+El tiempo es el factor importante en las entrevistas, una buena regla es
+entrevistar  tres personas en todos los niveles de la organización y una de cada
+área funcional que trabaje directamente con el nuevo sistema, si el muestreo
+estratificado se lleva adecuadamente, pocos individuos serán suficientes.
+
+INVESTIGACIÓN
+
+Es descubrir y analizar información, el analista va aprendiendo como funciona
+una empresa a medida que interactua más con el usuario, examinando tipos de
+datos "duros", que revela de cierta forma hacia donde se dirige la empresa, el 
+analista de sistemas examina datos tanto cuantitativos como cualitativos.
+
+El analista de sistemas debe tener acceso a informes para la toma de decisiones,
+puede ser un informe de ventas o informes de producción, todo eso ayudará a
+entender de una mejor manera el rumbo de la organización.
+Los informes de rendimiento son datos importantes que mide entre el rendimiento 
+actual y el rendimiento esperado.
+Los registros si están actualizados y bien hechos, también son otra forma de 
+proveer información al analista y se puede inspeccionar de 4 formas:
+1.- Revisar errores en montos y totales.
+2.- Buscar oportunidades para mejorar el diseño de los formularios de registro.
+3.- Observar el número y tipo de transacciones.
+4.- Estar al tanto de los casos en los que la computadora pueda simplificar el
+    trabajo.
+
+Los formularios de captura de datos, deben adecuarse a la empresa que está en
+funcionamiento, el flujo de información variará considerablemente, todos los
+formularios creados, deben poder imprimirse, su proceso de llenado debe ser
+eficiente y la recepción del formulario debe ser exacta (la persona correcta
+debe recibir el formulario), también deben ser almancenados los versiones
+electrónicas de los formularios, luego:
+1.- Recolectar ejemplos de todos los formularios en uso, sin importar que estén 
+    aprobados o no por la empresa.
+2.- Observar el tipo de formulario.
+3.- Documentar el patrón de distribución deseado.
+4.- Comparar el patrón de distribución deseado con quienes realmente recibieron 
+    el formulario.
+Hay otra metodología que muestrea los formularios llenos, es decir a su DB de
+los consumidores, muestrea las entradas de usuarios y proyectan preguntas
+específicas con aspectos de HCI en enfocan la capacidad de uso, estética y la
+utilidad.
+
+El Análisis de los Documentos cualitativos expone las expectativas de los
+autores con respecto al comportamiento de los demás y lo que espera el usuario
+al interactuar  con las tecnologías de información, se dan lineamientos para
+adoptar un enfoque sistemático relacionado con HCI y la sociabilidad en la
+organización.
+1.- Examine los documentos en busca de metáforas clave o que sirvan como guía.
+2.- Busque discrepancias entre internos contra externos o una mentalidad del tipo “nosotros contra ellos”.
+3.- Haga una lista de los términos que caractericen el bien o el mal y que aparezcan varias veces en los
+    documentos.
+4.- Busque el uso de mensajes y gráficos significativos que se publiquen en áreas comunes o en páginas Web.
+5.- Reconozca un sentido del humor, si es que lo hay.
+
+La identificación de aspectos en los documentos, ayuda a entender como se comunica 
+la organización, como frases de persuación, humor, etc, todo eso es básico para llevar un proyecto.
+
+Los memos revelan un diálogo activo, revelando los valores, postura y creencias
+de los miembros de la organización.
+Los anuncios o pancartas en tableros de anuncios o en áreas de trabajo sirve de
+refuerzo y da al analista una idea de la cultura oficial de la organización.
+Los sitios Web Corporativos, brindan información y debe verse de 3 perspectivas:
+técnica, estética y gerencial, verificar su nivel de interactividad, accesibilidad
+y seguridad de la página web.
+Los manuales son documentos cualitativos reflejan el comportamiento ideal de 
+las máquinas y personas.
+Los manuales de Políticas se enfoca en reglas relacionadas de todo tipo, pero el
+analista debe solo ver con relación a servicios de cómputo, su uso, seguridad y
+cuotas, una vez analizado tendrá noción de los valores, posturas y creencias que
+guían a la empresa.
+
+OBSERVACIÓN DEL COMPORTAMIENTO DEL ENCARGADO DE TOMAR DECISIONES
+
+El analista observa al que toma decisiones y la interacción que hay entre el 
+que toma decisiones y los miembros de la organización, de esa manera puede saber
+si hay buena relación, también considerar la interacción de los empleados con la
+tecnología.
+
+La observación de las actividades de toma de decisiones de un gerente común
+implica utilizar entrevistas interactivas y cuestionarios, aunque se puede
+graficar de cierta forma su trabajo, se usa una metodología mas humanista para
+describir su trabajo como gerente, es el método guión (playscript) del analista.
+Se puede ver poniendo al lado izquierdo al actor y sus acciones al lado
+derecho. El guión ayuda a organizar y sistematizar la información de los que
+toman decisiones, pero siempre requiere de información externa para hacer este
+trabajo específico.
+
+OBSERVACIÓN DEL ENTORNO FÍSICO
+
+Es importante conocer también su entorno donde trabaja, eso ayudará a recolectar
+mas requerimientos humanos de información, la observación estructurada y el uso
+de métodos interactivos nos ayuda a conocer detalles de HCI.
+
+La Observación estructurada del entorno (STROBE)
+Se usa para la observación estructurada del entorno, para que el analista tenga
+éxito debe observar 7 elementos concretos, eso ayudará sobre la forma en que un
+encargado toma decisiones: recopila, procesa, almancena y comparte información.
+
+1.- Ubicación de la Oficina
+2.- Colocación del escritorio
+3.- Equipo estacionario
+4.- Accesorios
+5.- Fuentes externas de información
+6.- Iluminación y colores de la Oficina
+7.- Ropa que utilizan los encargados de tomar decisiones
+
+Para aplicar el método STROBE se hace uso a una lista de verificación de
+anécdotas con símbolos de taquigrafía representativos, son 5:
+1.- Una marca de verificación indica que se confirmó la narrativa.
+2.- Una “X” indica que se invierte la narrativa.
+3.- Un óvalo o símbolo en forma de ojo sirve como pista para que el analista de 
+    sistemas busque más detalles.
+4.- Un cuadrado indica que la observación de los elementos STROBE modifica la
+    narrativad.
+5.- Un círculo indica que la narrativa se complementa con lo que se observó.

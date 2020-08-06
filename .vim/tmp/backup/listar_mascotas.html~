@@ -1,0 +1,46 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+<div>
+    <table cellspacing="0">
+        {% for m in list_pets|slice:"1" %}
+        <caption><b>Mascotas de {{m.propietario.nombre}}</b></caption>
+        {% endfor %}
+        <thead>
+            <tr>
+                <th>Mascota</th>
+                <th>Especie</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in list_pets %}
+            <tr>
+                <td>{{m.nombre}}</td>
+                <td>{{m.especie}}</td>
+                <td>
+                    <li><a href="{{m.get_absolute_url}}">Detalle</a></li>
+                    <li><a href="{% url 'clinica:editar_mascota' m.slug %}">Editar</a></li>
+                    <li><a href="{% url 'clinica:listar_seguimientos' m.slug %}">Ver Historial</a></li>
+                    <li><a href="{% url 'clinica:nuevo_seguimiento' m.slug %}">Nuevo Seguimiento</a></li>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div>
+        <a href="{% url 'persona:listar_clientes' %}">Volver</a>
+    </div>
+    <div>
+        {% for m in list_pets|slice:"1" %}
+        <a href="{% url 'clinica:nueva_mascota' m.propietario.slug %}">Nueva Mascota</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

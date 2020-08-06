@@ -1,0 +1,1 @@
+{'Pasos', 'para', 'hacer', 'correr', 'el', 'proyecto', 'Carrito_Compras', 'Instalamos', 'pip', 'install', 'django', '1', '5', 'Pillow', 'south', 'wkhtmltopdf', 'Despues', 'ejecutamos', 'python', 'manage', 'py', 'runserver'}

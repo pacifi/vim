@@ -1,0 +1,19 @@
+from mpmath import *
+
+import matplotlib.pyplot as plt
+# plot(lambda x: exp(x)*li(x), [1, 4])
+# plot([cos, sin], [-4, 4])
+# plot([fresnels, fresnelc], [-4, 4])
+# plot([sqrt, cbrt], [-4, 4])
+# plot(lambda t: zeta(0.5+t*j), [-20, 20])
+# plot([floor, ceil, abs, sign], [-5, 5])
+
+f = lambda x, y: sin(x+y)*cos(y)
+splot(f, [-pi,pi], [-pi,pi])
+
+r, R = 1, 2.5
+f = lambda u, v: [r*cos(u), (R+r*sin(u))*cos(v), (R+r*sin(u))*sin(v)]
+a = splot(f, [0, 2*pi], [0, 2*pi])
+plt.show()
+plt.savefig("img.png")
+

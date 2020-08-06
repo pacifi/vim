@@ -1,0 +1,1 @@
+{'from', 'django', 'db', 'import', 'models', 'class', 'Artist', 'Model', 'first_name', 'CharField', 'max_length', 'last_name', 'blank', 'True', 'biography', 'TextField', 'agregando', 'una', 'relacion', 'muchos', 'a', 'favorite_songs', 'ManyToManyField', 'tracks', 'Track', 'related_name', 'is_favorite_of', 'def', '__unicode__', 'self', 'return'}

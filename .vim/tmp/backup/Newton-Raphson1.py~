@@ -1,0 +1,80 @@
+# coding: utf-8
+
+import os
+os.system('clear')
+
+print """Aplicación del Método Newton-Raphson para calcular la aproximación
+de la raíz de una función real.
+"""
+"""
+¿Qué es SymPy?
+Es una biblioteca para hacer Cálculo Simbólico en Python
+a la vez que es un  sistema de álgebra computacional
+(o CAS en inglés) muy prometedor.
+
+¿Qué es Eval?
+Es una función que evalúa el contenido
+pasado como parámetro como si fuera una expresión"""
+
+# from math import *
+from sympy import *
+import numpy as np
+# import matplotlib.pyplot as plt
+# from mpmath import *
+import pylab
+
+
+x, y, z, t = symbols('x y z t', real=True)
+
+def f(x):
+    return eval(ecuacion)
+
+
+def MNR(xi, err):
+    # fx = f(xi)
+    # print fx
+    # fo = f(x)
+    # dfx = diff(f(x),x)
+    # r = str(object=dfx)
+    def g(x):
+        return eval(r)
+    # print g(xi)
+    i = 0
+    print  "{0}\t{1}\t{2}".format(' N°', 'Xi','Et(100%)')
+    print "|====|========|===============|"
+    while True:
+        fx = f(xi)
+        dfx = diff(f(x),x) # Saca la derivada de la funcion ingresada
+        r = str(object=dfx) # Para reemplezar la derivación, lo convertimos a
+        #string y luego utilizamos eval para pasarlo a una expresión matemática
+        #para  luego reemplezar la x de la ecuación con el nuevo valor de xi.
+        dfr = g(xi) #Estamos reemplazando la derivación con el valor de xi.
+        xi1= xi - (fx/dfr) #Se aplica la fórmula de Newton-Raphson
+        va = xi1 - xi #Una de las fórmulas de error mas útiles
+                      #es la del error relativo porcentual aproximado:
+        er = va/xi1
+        Et = er*100
+        print "|",i," |","\t{:.4}|\t{:.6}".format(xi,Et)
+        xi = xi1
+        i += 1
+        if Et == 0.0:
+            print "\nLa raíz encontrada es: %s " % xi
+            break
+        elif Et<err and Et>0:
+            print "\nLa raíz encontrada es: %s " % xi
+            break
+
+print "INGRESO DE DATOS"
+    ecuacion = raw_input("Ingrese la funcion f(x): ")
+xi = float(input("Por favor ingrese el valor inicial:  "))
+err = float(input("Error Deseado: "))
+MNR(xi, err)
+
+x = np.arange(-10,10,0.00001)
+fx = np.exp(-x)-x
+pylab.plot(x,fx)
+pylab.xlabel('x')
+pylab.xlabel('fx')
+pylab.title('f(x) = e**-x - x')
+pylab.grid(True)
+pylab.show()

@@ -1,0 +1,390 @@
+# coding: utf-8
+
+#Dante Cunurana Mamani
+
+import os
+os.system("clear")
+
+import pytz
+from sympy import *
+from time import time
+from datetime import datetime
+from dateutil.tz import tzlocal
+now = datetime.now(tzlocal())
+print "Fecha y Hora exacta: %s " %now
+print ""
+x,y,z = symbols("x y z", float=True)
+init_printing(use_unicode=True)
+
+print"""Eliminación de Gauss-Jordan
+
+Encuentra los valores de las variables x, y, z
+"""
+
+def identi():
+    os.system("clear")
+    # if f == c != 1 and f == c != 0:
+    #     p = 0
+    #     for i in range(len(m)):
+    #         if m[i][i] == 1:
+    #             p = p + 1
+
+    #     if p == len(m):
+    #         return"La matriz es identidad"
+    print "Ejemplo"
+    M = eye(3)
+    print """
+    [%s, %s, %s]
+    [%s, %s, %s]
+    [%s, %s, %s]
+    """ %(M[0],M[1],M[2],M[3],
+          M[4],M[5],M[6],M[7],M[8])
+
+def escala():
+    os.system("clear")
+    # if f == c != 1 and f == c != 0:
+    #     h = 0
+    #     r = m[0][0]
+    #     for j in range(len(m)):
+    #         if m[j][j] == r:
+    #             h = h + 1
+
+    #         if h == len(m):
+    #             return "La matriz es escalar"
+    print "Ejemplo"
+    num = input("Ingrese un número: ")
+    M = eye(3)*x
+    R= M.subs(x,num)
+    print """
+    [%s, %s, %s]
+    [%s, %s, %s]
+    [%s, %s, %s]
+    """ %(R[0],R[1],R[2],R[3],
+          R[4],R[5],R[6],R[7],R[8])
+
+def tsuperior():
+    os.system("clear")
+    # if f == c != 1 and f == c != 0:
+    #     z = 1
+    #     s = 0
+    #     for k in range(1,len(m)):
+    #         for l in range(0,z):
+    #             if m[k][l] == 0:
+    #                 s = s + 1
+    #             else:
+    #                 break
+    #         z = z + 1
+
+    #     if s == t:
+    #         return "Es una matriz triangular superior"
+    print "Ejemplo"
+    A = Matrix([[1,1,1],[1,1,3],[2,3,4]])
+    Q, R = A.QRdecomposition()
+    print """
+    [%s, %s, %s]
+    [%s, %s, %s]
+    [%s, %s, %s]
+    """ %(R[0],R[1],R[2],R[3],
+          R[4],R[5],R[6],R[7],R[8])
+
+def tinferior():
+    os.system("clear")
+    # if f == c != 1 and f == c != 0:
+    #     w = 0
+    #     for o in range(len(m)-1):
+    #         for ll in range(c):
+    #             if m[o][c-1-ll] == 0:
+    #                 w = w + 1
+    #             else:
+    #                 break
+    #     if w == t:
+    #         return "Es una matriz triangular inferior"
+    print "Ejemplo"
+    A = Matrix(((25,15,-5),(15,18,0),(-5,0,11)))
+    L, D = A.LDLdecomposition()
+    print """
+    [%s, %s, %s]
+    [%s, %s, %s]
+    [%s, %s, %s]
+    """ %(L[0],L[1],L[2],L[3],
+          L[4],L[5],L[6],L[7],L[8])
+
+def diagonal():
+    os.system("clear")
+    # if f == c != 1 and f == c != 0:
+    #     if tsuperior(m) and tinferior(m) and not escala(m) and not identi(m):
+    #         return "Es una matriz diagonal"
+    print "Ejemplo"
+    A = Matrix(((25,15,-5),(15,18,0),(-5,0,11)))
+    L, D = A.LDLdecomposition()
+    print """
+    [%s, %s, %s]
+    [%s, %s, %s]
+    [%s, %s, %s]
+    """ %(D[0],D[1],D[2],D[3],
+          D[4],D[5],D[6],D[7],D[8])
+
+def gaussJordan(m):
+    os.system("clear")
+    start_time1 = datetime.now()
+    start_time = time()
+    if f == 3 and c == 4:
+        mr = []
+        for i in range(f):
+            mr.append(m[i])
+        # print "Normalizando, dividiendo entre pivote %s" % m[0][0]
+        tmp1 = []
+        if m[0][0] ==  0:
+            for j in range(c):
+                if j==3:
+                    a=m[0][j] +3.0
+                    tmp1.append(a)
+                else:
+                    a=m[0][j] + 1.0
+                    tmp1.append(a)
+        else:
+            for i in range(c):
+                a1 = m[0][i]/m[0][0]
+                tmp1.append(a1)
+        m[0] = tmp1
+
+        # print """Proceso 1
+        # """
+        # for i in m:
+        #     print i
+
+        tmp2 = []
+        for r in range(c):
+            r1 = m[1][0]*-1
+            r2 = m[0][r]
+            r3 = m[1][r]
+            r4 = (r1*r2)+r3
+            r5 = tmp2.append(r4)
+        m[1] = tmp2
+        # print """Proceso 2
+        # """
+        # for i in m:
+        #     print i
+
+        tmp3 = []
+        for t in range(c):
+            t1 = m[2][0]*-1
+            t2 = m[0][t]
+            t3 = m[2][t]
+            t4 = (t1*t2)+t3
+            t5 = tmp3.append(t4)
+        m[2] = tmp3
+        # print """
+        # Proceso 1
+        # """
+        # for i in m:
+        #     print i
+
+        n2r = []
+        if m[1][1] ==  0:
+            for j in range(c):
+                if j==3:
+                    nsr=m[1][j] + 3.0
+                    n2r.append(nsr)
+                else:
+                    nsr=m[1][j] + 1.0
+                    n2r.append(nsr)
+        else:
+            for i in range(c):
+                nsr1 = m[1][i]/m[1][1]
+                n2r.append(nsr1)
+        m[1] = n2r
+        # print """Proceso 4
+        # """
+        # for i in m:
+        #     print i
+
+        tmp4 = []
+        for s in range(c):
+            s1 = m[0][1]*-1
+            s2 = m[1][s]
+            s3 = m[0][s]
+            s4 = (s1*s2)+s3
+            s5 = tmp4.append(s4)
+        m[0] = tmp4
+        # print """Proceso 5
+        # """
+        # for i in m:
+        #     print i
+
+        tmp5 = []
+        for w in range(c):
+            w1 = m[2][1]*-1
+            w2 = m[1][w]
+            w3 = m[2][w]
+            w4 = (w1*w2)+w3
+            w5 = tmp5.append(w4)
+        m[2] = tmp5
+        # print """
+        # Proceso 2
+        # """
+        # for i in m:
+        #     print i
+
+        n3r = []
+        if m[2][2] ==  0:
+            for j in range(c):
+                if j==3:
+                    ntr=m[2][j]+3.0
+                    n3r.append(ntr)
+                else:
+                    ntr=m[2][j]+1.0
+                    n3r.append(ntr)
+        else:
+            for i in range(c):
+                ntr1 = m[2][i]/m[2][2]
+                n3r.append(ntr1)
+        m[2] = n3r
+        # print """Proceso 7
+        # """
+        # for i in m:
+        #     print i
+
+        tmp6 = []
+        for l in range(c):
+            l1 = m[0][2]*-1
+            l2 = m[2][l]
+            l3 = m[0][l]
+            l4 = (l1*l2)+l3
+            l5 = tmp6.append(l4)
+        m[0] = tmp6
+        # print """Proceso 8
+        # """
+        # for i in m:
+        #     print i
+
+        tmp7 = []
+        for d in range(c):
+            d1 = m[1][2]*-1
+            d2 = m[2][d]
+            d3 = m[1][d]
+            d4 = (d1*d2)+d3
+            d5 = tmp7.append(d4)
+        m[1] = tmp7
+        # print """
+        # Proceso 3
+        # """
+        # for i in m:
+        #     print i
+        elapsed_time = time() - start_time
+        elapsed_time1 = datetime.now() - start_time1
+        print ""
+        print  "{0}\t{1}\t{2}".format(' Ecuaciones dados a resolver',' ==>','Respuesta de las ecuaciones')
+        extra='==>'
+        for i in range(f):
+            print "\t{:.30}\t{:.8}\t{:.30}".format(mr[i],extra,m[i])
+            # print """%s ==>  %s""" %(mr[i],m[i])
+        print ""
+        # if (m[0][3]*mr[1][0]) + (m[1][3]*mr[1][1]) + (m[2][3]*mr[1][2]) == mr[1][3]:
+        #     print "Segunda ecuación concuerda"
+        # if (m[0][3]*mr[0][0]) + (m[1][3]*mr[0][1]) + (m[2][3]*mr[0][2]) == mr[0][3]:
+        #     print """Primera ecuación concuerda """
+        # if (m[0][3]*mr[2][0]) + (m[1][3]*mr[2][1]) + (m[2][3]*mr[2][2]) == mr[2][3]:
+        #     print "Tercera ecuación concuerda"
+        print """PORQUE"""
+        print """
+        Siendo la primera, segunda y tercera
+        ecuación que es:
+            (%s)x + (%s)y + (%s)z = %s
+            (%s)x + (%s)y + (%s)z = %s
+            (%s)x + (%s)y + (%s)z = %s
+        """ % (mr[0][0],mr[0][1],mr[0][2],mr[0][3],
+               mr[1][0],mr[1][1],mr[1][2],mr[1][3],
+               mr[2][0],mr[2][1],mr[2][2],mr[2][3],)
+        print """
+        Reemplazando resultaría asi:
+            (%s)(%s) + (%s)(%s) + (%s)(%s) = %s
+            (%s)(%s) + (%s)(%s) + (%s)(%s) = %s
+            (%s)(%s) + (%s)(%s) + (%s)(%s) = %s
+        """ % (mr[0][0],m[0][3],mr[0][1],m[1][3],mr[0][2],m[2][3],mr[0][3],
+               mr[1][0],m[0][3],mr[1][1],m[1][3],mr[1][2],m[2][3],mr[1][3],
+               mr[2][0],m[0][3],mr[2][1],m[1][3],mr[2][2],m[2][3],mr[2][3],)
+        print """
+        Quedando asi:
+            (%s) + (%s) + (%s) = %s
+            (%s) + (%s) + (%s) = %s
+            (%s) + (%s) + (%s) = %s
+        """ % (m[0][3]*mr[0][0],m[1][3]*mr[0][1],m[2][3]*mr[0][2],mr[0][3],
+               m[0][3]*mr[1][0],m[1][3]*mr[1][1],m[2][3]*mr[1][2],mr[1][3],
+               m[0][3]*mr[2][0],m[1][3]*mr[2][1],m[2][3]*mr[2][2],mr[2][3],)
+        print """
+        Resultando de esta manera:
+             %s = %s
+             %s = %s
+             %s = %s
+        """ % ((m[0][3]*mr[0][0]) + (m[1][3]*mr[0][1]) + (m[2][3]*mr[0][2]),(mr[0][3]),
+               (m[0][3]*mr[1][0]) + (m[1][3]*mr[1][1]) + (m[2][3]*mr[1][2]),(mr[1][3]),
+               (m[0][3]*mr[2][0]) + (m[1][3]*mr[2][1]) + (m[2][3]*mr[2][2]),(mr[2][3]))
+        print("Elapsed time: %.10f seconds." % elapsed_time)
+        print("Elapsed time: %s seconds." % elapsed_time1)
+matriz = []
+f = input("Ingrese el numero de filas: ")
+c = input("Ingrese el numero de columnas: ")
+if f == 3 and c == 4:
+    for i in range(f):
+        print """
+        Ecuación %i
+        """% int(i+1)
+        tmp = []
+        for j in range(c):
+            elemento = float(input("Coeficiente %s,%s: " % (i,j)))
+            tmp.append(elemento)
+        matriz.append(tmp)
+        print ""
+        os.system("clear")
+        for k in matriz:
+            print k
+else:
+    print "Fuera de rango"
+
+while True:
+    print"""
+    MENU DE OPCIONES
+	================
+	¿Qué desea hacer?
+    1: Matriz Identidad
+    2: Matriz Escalar
+    3: Matriz Triangular Superior
+    4: Matriz Triangular Inferior
+    5: Matriz Diagonal
+    6: Operar la Eliminación de Gauss-Jordan y finalizar
+    7: Salir"""
+
+    op = input("Ingrese la opción: ")
+
+    if op == 7:
+        break
+    elif op == 1:
+        identi()
+    elif op == 2:
+        escala()
+    elif op == 3:
+        tsuperior()
+    elif op == 4:
+        tinferior()
+    elif op == 5:
+        diagonal()
+    elif op == 6:
+        gaussJordan(matriz)
+        # elapsed_time = datetime.now() - start_time
+        # def count_elapsed_time(f):
+        #     def wrapper():
+        #         start_time = time()
+        #         ret = f()
+        #         elapsed_time = time() - start_time
+        #         print("Elapsed time: %0.10f seconds." % elapsed_time)
+        #         return ret
+        #     return wrapper
+
+        # @count_elapsed_time
+        # def test():
+        #     for i in range(10000):
+        #         # "Hello, world!".replace("Hello", "Goodbye")
+        #         # gaussJordan()
+        # test()
+        break

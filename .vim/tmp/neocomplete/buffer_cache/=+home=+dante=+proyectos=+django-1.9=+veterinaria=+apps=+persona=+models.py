@@ -1,0 +1,1 @@
+{'from', '__future__', 'import', 'unicode_literals', 'django', 'db', 'models', 'class', 'Persona', 'model', 'nombre', 'CharField', 'max_length', 'apellido_paterno', 'apellido_materno', 'dni', 'def', '__str__', 'self', 'return'}

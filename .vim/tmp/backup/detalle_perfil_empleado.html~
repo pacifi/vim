@@ -1,0 +1,39 @@
+{% extends "base_sistema.html" %}
+{% load staticfiles %}
+{% load static %}
+{% load i18n %}
+{% block estilos %}
+<style type="text/css">
+    #container{
+        background: #00E5FF;
+        padding:1em;
+        border-radius:12px;
+    }
+    #container #img{
+        width:30%;
+        height:30%;
+        margin-left: 36%;
+        border-radius:20%;
+    }
+    h2{
+        text-align:center;
+    }
+</style>
+{% endblock estilos %}
+{% block content %}
+<img id="img" src="{{MEDIA_URL}}{{object.avatar}}" />
+<h2>{{ object.nombre }} {{object.apellido_paterno}} {{object.apellido_materno}}</h2>
+
+<ul>
+    <li>Usuario: {{object.user.username}}</li>
+    <li>Correo: {{object.user.email}}</li>
+    <li>DNI: {{object.dni}}</li>
+    <li>Fecha de Nacimiento: {{object.fecha_nac}}</li>
+    <li>Lugar de Nacimiento: {{object.lugar_nac}}</li>
+    <li>Grado de Instrucción: {{object.grado_instruc}}</li>
+    <li>Domicilio: {{object.domicilio}}</li>
+    <li>Teléfono: {{object.telefono}}</li>
+    <li>Estado Civil: {{object.est_civil}}</li>
+</ul>
+    <a href="{% url 'inicio' %}">Inicio</a>
+{% endblock content %}

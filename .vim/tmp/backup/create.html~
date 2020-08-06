@@ -1,0 +1,27 @@
+{% extends "polls/index.html" %}
+{% block cuerpo %}
+<h3>Crea tu pregunta</h3>
+<form enctype="multipart/form-data" method="post">{% csrf_token %} 
+    <tr>
+        <th>
+            <label for="id_question_text">Nueva pregunta:</label>
+        </th>
+        <td>
+            <input id="id_question_text" maxlength="200" name="question_text" type="text" />
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="id_pub_date">Fecha de publicación:</label>
+        </th>
+        <td>
+            <input id="id_pub_date" name="date-time" type="text" placeholder="DD/MM/YYYY 00:00:00" />
+        </td>
+    </tr>
+    <tr>
+        <button class="btn waves-effect waves-light" type="submit" value="Vote">Guardar</button>
+        <a href="{% url 'polls:index' %}" class="btn waves-effect waves-light  right"> Cancel </a>
+    </tr>
+</form>
+{% endblock cuerpo %}
+

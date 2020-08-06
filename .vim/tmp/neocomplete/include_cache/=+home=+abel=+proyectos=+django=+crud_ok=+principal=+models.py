@@ -1,0 +1,1 @@
+[{'word': 'Producto', 'menu': '[I]', 'kind': 'c', 'abbr': 'Producto(models.Model): <class>'}, {'word': 'cantidad', 'menu': 'Producto', 'kind': 'v', 'abbr': 'cantidad = models.IntegerField()'}, {'word': 'nombre', 'menu': 'Producto', 'kind': 'v', 'abbr': 'nombre'}, {'word': 'precio', 'menu': 'Producto', 'kind': 'v', 'abbr': 'precio = models.FloatField()'}]

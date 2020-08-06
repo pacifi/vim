@@ -1,0 +1,46 @@
+class Calculadora:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def Suma(self):
+        print "la suma de 2 numeros es: ", (self.num1 + self.num2)
+
+    def Resta(self):
+        print "La resta de 2 numeros es: ", (self.num1 - num2)
+
+    def Multiplicacion(self):
+        print "La Multiplicacion de los dos numeros es: ", (self.num1*self.num2)
+
+    def Division(self):
+        try:
+            print "La division de los 2 numeros es: ", (self.num1/self.num2)
+        except Exception:
+            print "No se puede dividir con 0!"
+
+#    def __del__(self):
+#        self.num1 = None
+#        self.num2 = None
+
+try:
+    numero1 = int(raw_input("numero 1: "))
+    numero2 = int(raw_input("numero 2: "))
+
+    Objeto = Calculadora(numero1,numero2)
+
+    try:
+        opcion = int(input("Desea\n1 - sumar \n2 - Restar \n3 - Multiplicar \n4 - Dividir\n"))
+        if opcion == 1:
+            Objeto.Suma()
+        elif opcion == 2:
+            Objeto.Resta()
+        elif opcion == 3:
+            Objeto.Multiplicacion()
+        elif opcion == 4:
+            Objeto.Division()
+        else:
+            print "Debes elegir o uno o dos\n"
+    except Exception:
+        print "Debes ingresar solo numeros!"
+except Exception:
+    print "debes ingresar solo numeros"

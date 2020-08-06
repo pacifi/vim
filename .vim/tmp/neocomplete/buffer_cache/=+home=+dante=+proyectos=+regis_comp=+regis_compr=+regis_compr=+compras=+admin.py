@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'site', 'ModelAdmin', 'models', 'Proveedores', 'ProductProvee', 'CategoriaProducto', 'Factura', 'ComprasHechas', 'forms', 'ComprasHechasForm', 'class', 'ProductProveeAdmin', 'Admin', 'TabularInline', 'model', 'ComprasHechasAdmin', 'form', 'register'}

@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/dante/html5/Js Fireworks/canvas'
+let g:netrw_dirhist_2='/home/dante/proyectos/django-1.9/veterinaria/veterinaria'
+let g:netrw_dirhist_3='/home/dante/proyectos/django-1.9/sermul/django_apps/home'

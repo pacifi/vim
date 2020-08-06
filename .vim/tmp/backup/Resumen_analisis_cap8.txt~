@@ -1,0 +1,129 @@
+ANÁLISIS DE SISTEMAS MEDIANTE EL USO DE DICCIONARIOS DE DATOS
+
+El uso de diccionarios es para ayudar en el análisis de los sistemas orientados
+a objetos, con el fin de mantenerlos limpios los datos; es decir para
+conservarlos consistentes.
+Los diccionarios de datos automatizados son valiosos por su capacidad de
+realizar referencias cruzadas con los elementos de datos.
+El analista de sistemas debe comprender el diccionario de datos de la empresa
+para poder conceptualizar con más facilidad el sistema y forma en que funciona,
+se puede usar el diccionario de datos para:
+1.- Validar la integridad y precisión del diagrama de flujo de datos.
+2.- Proveer un punto de partida para desarrollar pantallas e informes.
+3.- Determinar el contenido de los datos almacenados en archivos.
+4.- Desarrollar la lógica para los procesos del diagrama de flujo de datos.
+5.- Crear XML (lenguaje de marcado extensible).
+
+Un Repositorio de Datos es una colección bien grande de información sobre el
+proyecto: el repositorio, que pu contener lo siguiente:
+1. Información sobre los datos que mantiene el sistema, incluyendo flujos de 
+datos, almacenes de datos, estructuras de registros, elementos, entidades y mensajes.
+2. Lógica de procedimiento y casos de uso.
+3. Diseño de pantallas e informes.
+4. Relaciones de datos, como la forma en que una estructura de datos está 
+vinculada con otra.
+5. Requerimientos del proyecto y entregables finales del sistema.
+6. Información administrativa del proyecto, como calendarios de entrega, logros, 
+cuestiones que hay que resolver y usuarios del proyecto.
+
+Hay cuatro categorías del diccionario de datos (flujos de datos, estructuras de datos, ele-
+mentos de datos y almacenes de datos) para promover la comprensión de los datos
+del sistema.
+
+Flujo de datos => Entradas y salidas del sistema por medio de recopilación de
+                 información, sintetizando la información mediante el siguiente
+                 formulario:
+1. ID
+2. Un nombre descriptivo único para este flujo de datos.
+3. Una descripción general del flujo de datos.
+4. El origen del flujo de datos.
+5. El destino del flujo de datos.
+6. Una indicación para determinar si el flujo de datos es un registro que entra 
+   o sale de un archivo, o un registro que contiene un informe, formulario o pantalla.
+7. El nombre de la estructura de datos que describe a los elementos que se encuentran en este flujo de datos.
+8. El volumen por unidad de tiempo.
+9. Un área para comentarios adicionales y anotaciones sobre el flujo de datos.
+
+Estructura de datos => Utilizamos la notación algebraica y se usan estos
+símbolos:
+1. Un signo de igual (=) significa “está compuesto de”.
+2. Un signo positivo (+) significa “y”.
+3. Las llaves { } indican elementos repetitivos, también conocidos como grupos repetitivos o tablas repetitivas.
+4. Los corchetes [ ] representan una situación del tipo cualquiera/o (either/or).
+5. Los paréntesis ( ) representan un elemento opcional.
+
+Estructura de datos lógicas y físicas.- Esta etapa es el diseño lógico que
+muestra lo que la empresa necesita para sus operaciones diarias.
+Elementos de diseño físico:
+1. Los campos clave que se utilizan para localizar registros en la tabla de una base de datos.
+2. Los códigos para identificar el estado de los registros maestros, como si un empleado está activo (si trabaja
+en la actualidad) o inactivo.
+3. Los códigos de transacción se utilizan para identificar los tipos de registros cuando un archivo contiene
+distintos tipos de éstos.
+4. Las entradas de grupos repetitivos que contienen el conteo de los elementos en el grupo.
+5. Los límites en cuanto al número de elementos en un grupo repetido.
+6. La contraseña que utiliza un cliente para acceder a un sitio Web seguro.
+
+Elementos de datos.- Cada elemento de datos se debe definir una vez en el
+diccionario de datos y en el formulario de descripción de un elemento, sus
+caraterísticas son:
+1. ID de elemento.
+2. El nombre del elemento.
+3. Los alias, que son sinónimos u otros nombres para el elemento.
+4. Una descripción corta del elemento.
+5. Si el elemento es base o derivado.
+6. La longitud de un elemento.
+7. El tipo de datos: numérico, fecha, alfabético, carácter variable (varchar) o carácter, que algunas veces se
+denomina alfanumérico o datos de texto.
+8. Hay que incluir los formatos de entrada y salida mediante el uso de símbolos de codificación especiales para
+indicar cómo se deben presentar los datos.
+9. Los criterios de validación para asegurar que el sistema capture datos precisos.
+10. Cualquier valor predeterminado que pueda tener el elemento.
+11. Un área adicional para comentarios.
+
+Los almacenes de Datos.- Se crean almacenes de datos para cada entidad de datos distinta que se piense guardar.
+Se usa un formulario de datos para describir un almacén de datos.
+1. El ID del almacén de datos.
+2. El nombre del almacén de datos, que es descriptivo y único.
+3. Un alias para la tabla.
+4. Una descripción corta del almacén de datos.
+5. El tipo de archivo, ya sea de computadora o manual.
+6. El formato designa si el archivo es una tabla de base de datos o si tiene el formato de un simple archivo
+plano.
+7. El número máximo y promedio de registros en el archivo, así como el crecimiento por año.
+8. El nombre del archivo o conjunto de datos especifica el nombre del archivo, si se conoce.
+9. La estructura de datos debe usar un nombre que se encuentre en el diccionario de datos y que provea un
+vínculo a los elementos para este almacén de datos.
+
+Creación de un diccionario de Datos:
+1.- Análisis de la entrada y la salida:
+    1.1 Un nombre descriptivo para la entrada o salida.
+    1.2 El contacto del usuario responsable de la aclaración de los detalles posteriores, la retroalimentación sobre el
+    diseño y la aprobación final.
+    1.3 Si los datos son de entrada o salida.
+    1.4 El formato del flujo de datos.
+    1.5 Los elementos que indican la secuencia de los datos en un informe o pantalla (tal vez en columnas).
+    1.6 Una lista de elementos, incluyendo sus nombres, longitudes y si son base o derivados, además de sus
+    criterios de edición.
+2. Desarrollo de almacenes.- Se puede almacenar en forma distinta, los almacenes 
+                             de datos representan los datos estáticos.
+
+El Uso de Diccionario de Datos.- El diccionario de datos ideal es automatizado, interactivo, en línea y evolutivo.
+A medida que el analista de sistemas aprende sobre los sistemas de la organización, 
+se agregan elementos de datos al diccionario de datos.
+El analista de sistemas debe considerarlo como una actividad paralela al análisis y diseño de sistemas.
+Debe mantenerse actualizado.
+
+Uso de diccionarios de datos para crear XML.- XML es un lenguaje que se puede 
+usar para intercambiar datos entre las empresas o entre los sistemas dentro de una empresa, aborda el problema de 
+compartir los datos cuando los usuarios tienen distintos sistemas
+computacionales  y distinto software, o distintos sistemas de administración de
+basesde datos.
+Estructura del XML
+A menudo la estructura del contenido de XML se define mediante el uso de una definición de tipo de documento
+(DTD).Esta definición se utiliza para determinar si el contenido del documento de XML es válido
+Esquemas de XML.- Es otra manera más precisa de definir el contenido de un documento de XML. Los esquemas pueden
+incluir el número exacto de veces que puede ocurrir un elemento.
+Un diccionario de datos es un excelente punto de partida para desarrollar un documento de XML y un tipo
+de documento de definición o esquema.
+

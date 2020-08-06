@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link href="css/buyform.css" rel="stylesheet">
+</head>
+<body>
+    <form action="" id=payment method="#">
+        <fieldset>
+            <legend>Your Details</legend>
+            <ol>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="First and last name" required autofocus>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="exameple@domain.com" required>
+                </li>
+                <li>
+                    <label for="phone">Phone</label>
+                    <input type="number" id="phone" name="phone" placeholder="Eg. +447500000000" required />
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Delivery address</legend>
+            <ol>
+                <li>
+                    <label for="address">Address</label>
+                    <textarea name="address" rows="5" required></textarea>
+                </li>
+                <li>
+                    <label for="postcode">Post Code</label>
+                    <input id="postcode" type="text" name="postcode" required>
+                </li>
+                <li>
+                    <label for="country">Country</label>
+                    <input id="country" type="text" name="country" required>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Card Details</legend>
+            <ol>
+                <li>
+                    <fieldset>
+                        <legend>Card Type</legend>
+                        <ol>
+                            <li>
+                                <input type="radio" id="visa" name="cardtype">
+                                <label for="visa">VISA</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="amex" name="cardtype">
+                                <label for="amex">AmEx</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="mastercard" name="cardtype">
+                                <label for="mastercard">Mastercard</label>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="cardnumber">Card number</label>
+                    <input type="number" id="cardnumber" name="cardnumber" required>
+                </li>
+                <li>
+                    <label for="secure">Security code</label>
+                    <input type="number" id="secure" name="secure" required>
+                </li>
+                <li>
+                    <label for="namecard">Name on card</label>
+                    <input type="text" id="namecard" name="namecard" placeholder="Exact name as on the card" required />
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <button type="submit">Buy it!</button>
+        </fieldset>
+    </form>
+</body>
+</html>

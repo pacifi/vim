@@ -1,0 +1,66 @@
+# coding: utf-8
+
+import os
+os.system('clear')
+
+"Aplicación del Método Newton-Raphson para calcular la aproximación "
+"de la raíz de una función real"
+
+
+# from math import *
+# from sympy import *
+# from mpmath import *
+import pylab
+import numpy as np
+# import matplotlib.pyplot as plt
+#f'(xi)=f(xi)-0/xi-x(i+1)
+
+#x(i+1)=xi- (f(xi)/f'(xi))
+
+# e = 2.71828182845904523536028747135266249775724709369995
+
+#EJEMPLO
+# x, y, z, t = symbols('x y z t')
+
+# print float(diff(exp(9) - 4,x))
+
+#END
+
+def fnNR(xi, err):
+
+    #f'(x)=-e**-x -1
+    # dfx=diff(exp(-x)-x,x)
+    # xi = 0.0
+    i=0
+    print  "{0}\t{1}\t{2}".format('N°', 'Xi', 'Et(100%)')
+
+    while type(i)==int:
+        a = np.exp(-xi) - xi
+        b = -np.exp(-xi)- 1.0
+        xi1=xi - (a/b)
+        va = xi1 - xi
+        er = va/xi1
+        Et = er*100
+        print i, "\t{:.4}\t{:.9}".format(xi,Et)
+        xi = xi1
+        i += 1
+        if Et == 0.0:
+            print "\nLa raíz encontrada es: %s " % xi
+            # pylab.plot(mpf(xi1), ylim=[0,10])
+            break
+        elif Et<err and Et>0:
+            print "\nLa raíz encontrada es: %s " % xi
+            break
+#INGRESO DE DATOS
+xi = float(input("Por favor ingrese el valor inicial:  "))
+err = float(input("Error Deseado: "))
+fnNR(xi, err)
+
+x = np.arange(-10,10,err)
+fx = np.exp(-x)-x
+pylab.plot(x,fx)
+pylab.xlabel('x')
+pylab.xlabel('fx')
+pylab.title('f(x) = e**-x - x')
+pylab.grid(True)
+pylab.show()

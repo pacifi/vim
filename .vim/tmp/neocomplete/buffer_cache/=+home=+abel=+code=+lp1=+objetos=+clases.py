@@ -1,0 +1,1 @@
+{'coding', 'utf', 'class', 'Estudiante', 'object', 'def', '__init__', 'self', 'nombre', 'edad', 'hola', 'return', 'Mi', 'es', 's', 'y', 'tengo', 'd', 'a', 'os', 'l', 'for', 'in', 'range', 'i', 'e', 'append', 'if', 'print', 'Soy', 'el', 'estudiante', 'else', 'No', 'soy'}

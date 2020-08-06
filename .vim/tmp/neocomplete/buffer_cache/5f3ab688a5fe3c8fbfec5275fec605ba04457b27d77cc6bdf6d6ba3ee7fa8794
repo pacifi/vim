@@ -1,0 +1,1 @@
+{'extends', 'base', 'html', 'block', 'title', 'super', 'Person', 'object', 'endblock', 'content', '<img ', 'src="{{MEDIA_URL}}{{ imagenp.imagen }}"', 'width="150px"', 'heigth="150px"', '<form ', 'action=""', 'method="POST"', 'enctype="multipart/form-data"', 'csrf_token', 'form', 'as_p', '<input ', 'type="SUBMIT"', 'value="Guardar"', '</form>'}

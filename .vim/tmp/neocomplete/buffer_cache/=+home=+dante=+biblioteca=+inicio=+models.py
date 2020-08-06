@@ -1,0 +1,1 @@
+{'from', 'django', 'db', 'import', 'models', 'contrib', 'auth', 'User', 'class', 'Perfiles', 'Model', 'usuario', 'OneToOneField', 'telefono', 'IntegerField', 'def', '__unicode__', 'self', 'return', 'username'}

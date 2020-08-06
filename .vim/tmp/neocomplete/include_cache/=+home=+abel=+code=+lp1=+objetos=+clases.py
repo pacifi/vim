@@ -1,0 +1,1 @@
+[{'word': 'Estudiante', 'menu': '[I]', 'kind': 'c', 'abbr': 'Estudiante(object): <class>'}, {'word': '__init__', 'menu': 'Estudiante', 'kind': 'm', 'abbr': 'def __init__(self, nombre, edad):'}, {'word': 'hola', 'menu': 'Estudiante', 'kind': 'm', 'abbr': 'def hola(self):'}]

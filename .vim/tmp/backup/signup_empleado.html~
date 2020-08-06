@@ -1,0 +1,35 @@
+{% extends "base_sistema.html" %}
+{% block content %}
+ <h1>Nuevo Usuario de Empleado</h1> 
+ 
+    {% if form.errors %} 
+        <p style="color: red;"> 
+            Por favor corrige lo siguiente: 
+        </p> 
+    {% endif %} 
+ 
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %} 
+        <div class="field"> 
+            {{ form.username.errors }} 
+            <label for="id_username">Usuario:</label> 
+            {{ form.username }} 
+        </div>  
+        <div class="field"> 
+            {{ form.email.errors }} 
+            <label for="id_email">Email:</label> 
+            {{ form.email }} 
+        </div>  
+        <div class="field"> 
+            {{ form.password.errors }} 
+            <label for="id_password">Contraseña:</label> 
+            {{ form.password }} 
+        </div>  
+        <div class="field"> 
+            {{ form.password2.errors }} 
+            <label for="id_password2">Confirmar Contraseña:</label> 
+            {{ form.password2 }} 
+        </div>  
+        
+        <input type="submit" value="Enviar"> 
+    </form>  
+{% endblock content %}

@@ -1,0 +1,1 @@
+{'from', 'django', 'contrib', 'import', 'admin', 'bevolist', 'models', 'Categoria', 'Item', 'class', 'CategoriaAdmin', 'ModelAdmin', 'list_display', 'nombre', 'prepopulated_fields', 'slug', 'ItemAdmin', 'categoria', 'departamento', 'publicado_en', 'list_filter', 'site', 'register'}

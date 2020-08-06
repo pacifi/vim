@@ -1,0 +1,1 @@
+{'from', 'django', 'conf', 'urls', 'import', 'patterns', 'include', 'url', 'urlpatterns', 'r', 'bevolist', 'views', 'index', 'name', 'item_id', 'd', 'details', 'detalils', 'categori', 'categorias', 'slug', 'w', 'categoria'}
